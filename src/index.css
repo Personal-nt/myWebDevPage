@@ -1,0 +1,9 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* In your global.css or similar file */
+:root {
+  --color-primary: #5B21B6;
+  --color-secondary: #10B981;
+}
