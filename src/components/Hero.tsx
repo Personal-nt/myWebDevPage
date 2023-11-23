@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useAnimate } from "framer-motion";
-import SplineFrost from "../components/SplineFrost";
+import FollowSpheres from "../components/FollowSpeheres";
+import HandScroll from "./HandScroll";
 
 export const GridHoverHero = () => {
     const [scope, animate] = useAnimate();
@@ -47,9 +48,9 @@ export const GridHoverHero = () => {
     return (
         <div className="flex bg-neutral-950">
             <div className="w-[50vw] bg-yellow-500">
-                <SplineFrost />
+                <FollowSpheres />
             </div>
-            <div className="w-[50vw] bg-pink-400">
+            <div className="w-[50vw] h-full bg-pink-400">
                 <div
                     ref={scope}
                     className="grid h-screen w-full grid-cols-[repeat(auto-fit,_minmax(75px,_1fr))] grid-rows-[repeat(auto-fit,_minmax(75px,_1fr))]"
@@ -60,22 +61,20 @@ export const GridHoverHero = () => {
                             id={`square-${i}`}
                             onMouseLeave={handleMouseLeave}
                             onMouseEnter={handleMouseEnter}
-                            className="h-full w-full border-[1px] border-neutral-900"
+                            className="h-full w-full border-[0.5px] border-neutral-900"
                         />
                     ))}
                 </div>
-                <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center p-8 border w-full border-teal-400">
+                <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center p-8 w-full">
                     <h1 className="text-center text-7xl font-black uppercase text-white sm:text-8xl md:text-9xl">
                         Néstor Torres
                     </h1>
-                    <p className="mb-6 mt-4 max-w-3xl text-center text-lg font-light text-neutral-500 md:text-xl">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Labore quisquam nemo excepturi officia necessitatibus
-                        veritatis enim ipsam! Laudantium, reiciendis officia!
-                    </p>
-                    <button className="pointer-events-auto bg-indigo-400 px-4 py-2 text-xl font-bold uppercase text-neutral-950 mix-blend-difference">
-                        <a href="https://www.as.com">Join waitlist</a>
-                    </button>
+                    <h2 className="mb-6 mt-4 max-w-3xl text-center text-lg font-light text-slate-800/50 md:text-xl rounded-2xl border-1 border-slate-700 bg-slate-300/30 p-6 shadow-xl backdrop-blur-lg">
+                        I'm a web developer and I love to build things.
+                    </h2>
+                    <div className="w-[90px] h-[90px] pointer-events-auto">
+                        <a href="/#isometricRoom"><HandScroll /></a>
+                    </div>
                 </div>
             </div>
         </div>
