@@ -4,8 +4,8 @@ import { FiEye, FiPlay, FiSearch } from 'react-icons/fi'
 import Badge from '../../components/Badge'
 import ButtonIcon from '../ButtonIcon'
 
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 
 const Projects = () => {
     return (
@@ -15,39 +15,30 @@ const Projects = () => {
     )
 }
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger)
 
 const SwapColumnFeatures = () => {
     const [featureInView, setFeatureInView] = useState(features[0])
 
     return (
-        <section className="relative mx-auto max-w-7xl scr">
+        <section className="scr relative mx-auto max-w-7xl -mt-[0px]">
             <SlidingFeatureDisplay featureInView={featureInView} />
-
             {/* Offsets the height of SlidingFeatureDisplay so that it renders on top of Content to start */}
             <div className="-mt-[100vh] hidden md:block" />
-
-            {/* {features.map((s) => (
-                <Content
-                    key={s.id}
-                    featureInView={s}
-                    setFeatureInView={setFeatureInView}
-                    {...s}
-                />
-            ))} */}
             <div className="scroll-container">
-            {/* Other components */}
-            {features.map((feature, index) => (
-                <div key={index} className="snap-element">
-                    <Content
-                    key={feature.id}
-                    featureInView={feature}
-                    setFeatureInView={setFeatureInView}
-                    {...feature}
-                />
+                <div className="align-items-start flex flex-col justify-start">
+                    {features.map((feature, index) => (
+                        <div key={index} className="snap-element">
+                            <Content
+                                key={feature.id}
+                                featureInView={feature}
+                                setFeatureInView={setFeatureInView}
+                                {...feature}
+                            />
+                        </div>
+                    ))}
                 </div>
-            ))}
-        </div>
+            </div>
         </section>
     )
 }
@@ -70,8 +61,10 @@ const SlidingFeatureDisplay = ({ featureInView }) => {
                     stiffness: 400,
                     damping: 25,
                 }}
-                className="h-fit w-[50%] rounded-xl p-8" 
-            > {/* Left side project details */}
+                className="h-fit w-[50%] rounded-xl p-8"
+            >
+                {' '}
+                {/* Left side project details */}
                 <ExampleFeature featureInView={featureInView} />
             </motion.div>
         </div>
@@ -93,15 +86,19 @@ const Content = ({ setFeatureInView, featureInView }) => {
     return (
         <section
             ref={ref}
-            className="relative z-0 flex h-fit md:h-screen justify-center px-8"
+            className="relative z-0 flex h-fit justify-center px-8 md:h-screen"
             style={{
                 justifyContent:
                     featureInView.contentPosition === 'l'
                         ? 'flex-start'
                         : 'flex-end',
             }}
-        > {/* Projects total section */}
-            <div className="grid h-full w-full place-content-center px-4 py-12 md:w-[50%] md:px-8 md:py-8"> {/* Right side projects */}
+        >
+            {' '}
+            {/* Projects total section */}
+            <div className="grid h-full w-full place-content-center px-4 py-12 md:w-[50%] md:px-8 md:py-8">
+                {' '}
+                {/* Right side projects */}
                 <motion.div
                     initial={{ opacity: 0, y: 25 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -115,7 +112,7 @@ const Content = ({ setFeatureInView, featureInView }) => {
                             <img
                                 src={featureInView.projectScreenShot}
                                 alt={featureInView.title}
-                                className="scale-[100%] sm:scale-[115%] rounded-xl h-[300px] w-[1000px] object-cover shadow-xl"
+                                className="h-[300px] w-[1000px] scale-[100%] rounded-xl object-cover shadow-xl sm:scale-[115%]"
                             />
                         </a>
                     </div>
@@ -152,12 +149,12 @@ const ExampleFeature = ({ featureInView }) => {
                         {featureInView.description}{' '}
                     </span>{' '}
                 </p>
-                <div className="flex gap-2 flex-wrap">
+                <div className="flex flex-wrap gap-2">
                     {featureInView.techStack.map((tech) => (
                         <Badge key={tech} txt={tech} />
                     ))}
                 </div>
-                <div className="flex gap-4 pointer-events-auto">
+                <div className="pointer-events-auto flex gap-4">
                     <a
                         target="_blank"
                         href={featureInView.repoLink}
@@ -189,7 +186,13 @@ const features = [
             'https://raw.githubusercontent.com/0xNordian/0xNordian/main/assets/anomalie-app.png',
         repoLink: 'https://github.com/0xNordian/anomalie-app-supabase',
         deployLink: 'https://anomalie.vercel.app/',
-        techStack: ['Next.js', 'TypeScript', 'TailwindCSS', 'PostgreSQL', 'Framer Motion'],
+        techStack: [
+            'Next.js',
+            'TypeScript',
+            'TailwindCSS',
+            'PostgreSQL',
+            'Framer Motion',
+        ],
         description:
             'A twitter clone built with Next.js, TypeScript, TailwindCSS and Framer Motion. Its a Fullstack app with CRUD operations, authentication and authorization.',
         contentPosition: 'r',

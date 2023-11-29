@@ -88,7 +88,7 @@ small {
   @apply block md:hidden fixed top-10 py-2 w-full h-full bg-gray-900 duration-500;
 }  */
 
-/* .scroll-container {
+.scroll-container {
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     height: 100vh; 
@@ -96,15 +96,16 @@ small {
 
 .snap-element {
     scroll-snap-align: start;
-} */
+}
 
-.scroll-container {
+/* .scroll-container {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   height: 100vh;
-  scrollbar-width: none; /* For Firefox */
+  scrollbar-width: none; 
 }
+*/
 
 .scroll-container::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Opera */
-}
+  display: none; 
+} 
