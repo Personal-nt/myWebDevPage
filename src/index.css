@@ -6,8 +6,105 @@
 :root {
   --color-primary: #5B21B6;
   --color-secondary: #10B981;
+
+  --color-primary-opacity: rgba(91, 33, 182, 0.4); /* Adjust the opacity value (0.4) as needed */
+  --color-secondary-opacity: rgba(16, 185, 129, 0.4);
+}
+
+body {
+  overflow-y: scroll; /* Keep the browser behavior of having the vertical scroll */
+  scrollbar-width: none; /* For Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Header 1 */
+h1 {
+  font-size: 2.986rem;
+}
+
+/* Header 2 */
+h2 {
+  font-size: 2.488rem;
+}
+
+/* Header 3 */
+h3 {
+  font-size: 2.074rem;
+}
+
+/* Header 4 */
+h4 {
+  font-size: 1.728rem;
+}
+
+/* Header 5 */
+h5 {
+  font-size: 1.44rem;
+}
+
+/* Header 6 */
+h6 {
+  font-size: 1.2rem;
+}
+
+/* Paragraph */
+p {
+  font-size: 1rem;
+}
+
+/* Small Text */
+small {
+  font-size: 0.833rem;
+}
+
+/* Extra Small Text */
+/* If you meant to have a font size of 0.694rem for some elements, 
+   you can add a specific class to those elements and apply this style */
+.small-text {
+  font-size: 0.694rem;
+}
+
+
+.card {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.25);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+/* .stroke-text {
+  text-shadow: 3px 2px #000;
+} */
+
+/* .mobile-nav {
+  @apply block md:hidden fixed top-10 py-2 w-full h-full bg-gray-900 duration-500;
+}  */
+
+/* .scroll-container {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    height: 100vh; 
+}
+
+.snap-element {
+    scroll-snap-align: start;
+} */
+
+.scroll-container {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  scrollbar-width: none; /* For Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
 }

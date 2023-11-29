@@ -1,48 +1,49 @@
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
 
 type ProjectCardProps = {
-    title: string;
-    link: string;
-};
+    title: string
+    link: string
+    id: string
+}
 
-const ProjectCard = ({title, link}: ProjectCardProps) => {
-    const x = useMotionValue(0);
-    const y = useMotionValue(0);
+const ProjectCard = ({ id, title, link }: ProjectCardProps) => {
+    const x = useMotionValue(0)
+    const y = useMotionValue(0)
 
-    const mouseXSpring = useSpring(x);
-    const mouseYSpring = useSpring(y);
+    const mouseXSpring = useSpring(x)
+    const mouseYSpring = useSpring(y)
 
     const rotateX = useTransform(
         mouseYSpring,
         [-0.5, 0.5],
-        ["17.5deg", "-17.5deg"]
-    );
+        ['17.5deg', '-17.5deg'],
+    )
     const rotateY = useTransform(
         mouseXSpring,
         [-0.5, 0.5],
-        ["-17.5deg", "17.5deg"]
-    );
+        ['-17.5deg', '17.5deg'],
+    )
 
     const handleMouseMove = (e) => {
-        const rect = e.target.getBoundingClientRect();
+        const rect = e.target.getBoundingClientRect()
 
-        const width = rect.width;
-        const height = rect.height;
+        const width = rect.width
+        const height = rect.height
 
-        const mouseX = e.clientX - rect.left;
-        const mouseY = e.clientY - rect.top;
+        const mouseX = e.clientX - rect.left
+        const mouseY = e.clientY - rect.top
 
-        const xPct = mouseX / width - 0.5;
-        const yPct = mouseY / height - 0.5;
+        const xPct = mouseX / width - 0.5
+        const yPct = mouseY / height - 0.5
 
-        x.set(xPct);
-        y.set(yPct);
-    };
+        x.set(xPct)
+        y.set(yPct)
+    }
 
     const handleMouseLeave = () => {
-        x.set(0);
-        y.set(0);
-    };
+        x.set(0)
+        y.set(0)
+    }
 
     return (
         <motion.div
@@ -51,21 +52,40 @@ const ProjectCard = ({title, link}: ProjectCardProps) => {
             style={{
                 rotateY,
                 rotateX,
-                transformStyle: "preserve-3d",
+                transformStyle: 'preserve-3d',
             }}
-            className="relative h-80 w-[600px] rounded-xl bg-gradient-to-br from-yellow-300 to-yellow-500"
+            className="flex h-[500px] w-[350px] flex-col rounded-xl border-4 border-secondary bg-gradient-to-b from-teal-100 to-teal-200"
         >
             <div
                 style={{
-                    transform: "translateZ(75px)",
-                    transformStyle: "preserve-3d",
+                    transform: 'translateZ(75px)',
+                    transformStyle: 'preserve-3d',
                 }}
-                className="absolute inset-4 grid place-content-center rounded-xl bg-white shadow-2xl"
+                className="rounded-xl border-[15px] border-yellow-400 bg-white"
             >
-                <img src={link} title={title} alt={title} />
+                <img
+                    key={id}
+                    src={link}
+                    title={title}
+                    alt={title}
+                    className="p-0"
+                />
+                <ul className="p-6">
+                    <li>title1</li>
+                    <li>title2</li>
+                    <li>title3</li>
+                    <li>title4</li>
+                </ul>
+                <div className="flex gap-4 bg-pink-500 px-6">
+                    <div className="">Repository</div>
+                    <div className="">Deploy</div>
+                </div>
+                <p key={id} className="text-center">
+                    {title}
+                </p>
             </div>
         </motion.div>
-    );
-};
+    )
+}
 
-export default ProjectCard;
+export default ProjectCard

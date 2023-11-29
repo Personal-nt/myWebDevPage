@@ -1,30 +1,24 @@
-import { GridHoverHero } from "../components/Hero";
-import IsometricRoom from "../components/IsometricRoom";
-import ProjectCard from "../components/ProjectCards";
-import { projectsData } from "../utils/projects"
+import { Hero } from '../components/Hero'
+import { toggleDarkMode } from '../utils/toggleDarkMode'
+import Projects from '../components/componentCss/Projects'
 
 const Home = () => {
-    const projectsArr = projectsData.projects;
-    console.log(projectsArr)
     return (
-        <div className="h-[100lvh] bg-slate-900">
-            <GridHoverHero />
-            <div
-                id="isometricRoom"
-                className="text-black h-[100lvh] w-[100lvw] bg-teal-400"
-            >
-                <IsometricRoom />
+        <div className="flex w-[70%] flex-col items-center justify-center">
+            <input
+                type="checkbox"
+                className="toggle dark:border-[#00D6C1] dark:bg-[#00D6C1]"
+                onClick={() => toggleDarkMode()}
+            />
+            <div className="flex flex-col">
+                <Hero />
+                <h3 className="">Projects</h3>
             </div>
-            <div className="flex flex-wrap gap-4 justify-center items-center w-full h-[500px] mt-12">
-                {projectsArr.map((project) => (
-                    <div key={project.id} className="flex flex-col gap-4">
-                    <ProjectCard key={project.id} title={project.title} link={project.link}/>
-                    <p key={project.id} className="text-center">{project.title}</p>
-                    </div>
-                ))}
+            <div className="">
+            <Projects />
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default Home;
+export default Home

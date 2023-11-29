@@ -2,8 +2,7 @@ import { Outlet } from "react-router-dom";
 
 const RootLayout = () => {
     return (
-        <div className="w-[100dvw] h-[100dvh]">
-            {/* <h1>ROOT LAYOUT HEADER</h1> */}
+        <div className="flex justify-center w-screen h-auto bg-slate-200 dark:bg-[#001412]"> {/*dark:bg-[#001412] */}
             <Outlet />
         </div>
     );

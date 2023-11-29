@@ -6,7 +6,7 @@ export default function FollowSpheres() {
     return (
         <div className="w-[50lvw] h-[100lvh]">
             <Suspense fallback={<div>Loading...</div>}>
-                    <Spline scene="https://prod.spline.design/QvDWLtrUWfqQoV4E/scene.splinecode"/>
+                    <Spline event-target="global" scene="https://prod.spline.design/QvDWLtrUWfqQoV4E/scene.splinecode"/>
             </Suspense>
         </div>
     );
