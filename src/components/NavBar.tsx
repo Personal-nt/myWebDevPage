@@ -2,7 +2,7 @@ import { toggleDarkMode } from '../utils/toggleDarkMode'
 
 const NavBar = () => {
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 sticky top-0 z-[999]">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div
@@ -29,7 +29,7 @@ const NavBar = () => {
                         <li>
                             <a href="">Projects</a>
                         </li>
-                        <li>
+                        {/* <li>
                             <a>Parent</a>
                             <ul className="p-2">
                                 <li>
@@ -39,9 +39,15 @@ const NavBar = () => {
                                     <a>Submenu 2</a>
                                 </li>
                             </ul>
+                        </li> */}
+                        <li>
+                            <a href="#skills">Skills</a>
                         </li>
                         <li>
-                            <a>Item 3</a>
+                            <a>About</a>
+                        </li>
+                        <li>
+                            <a>Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -53,7 +59,8 @@ const NavBar = () => {
                         <a href="#projects">Projects</a>
                     </li>
                     <li>
-                        <details>
+                        <a href="#skills">Skills</a>
+                        {/* <details>
                             <summary>Parent</summary>
                             <ul className="p-2">
                                 <li>
@@ -63,21 +70,24 @@ const NavBar = () => {
                                     <a>Submenu 2</a>
                                 </li>
                             </ul>
-                        </details>
+                        </details> */}
                     </li>
                     <li>
-                        <a>Item 3</a>
+                        <a>About</a>
+                    </li>
+                    <li>
+                        <a>Contact</a>
                     </li>
                 </ul>
             </div>
 
-            <div className="navbar-end">
-            <input
-                type="checkbox"
-                className="toggle dark:border-[#00D6C1] dark:bg-[#00D6C1]"
-                onClick={() => toggleDarkMode()}
-            />
-                <a className="btn">Button</a>
+            <div className="navbar-end pr-4">
+                <input
+                    type="checkbox"
+                    className="toggle dark:border-[#00D6C1] dark:bg-[#00D6C1]"
+                    onClick={() => toggleDarkMode()}
+                />
+                {/* <a className="btn">Button</a> */}
             </div>
         </div>
     )

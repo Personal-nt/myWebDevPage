@@ -9,9 +9,9 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 
 const Projects = () => {
     return (
-        <>
+        <div className="">
             <SwapColumnFeatures />
-        </>
+        </div>
     )
 }
 
@@ -21,7 +21,7 @@ const SwapColumnFeatures = () => {
     const [featureInView, setFeatureInView] = useState(features[0])
 
     return (
-        <section className="scr relative mx-auto max-w-7xl -mt-[0px]">
+        <section className="scr relative mx-auto -mt-[250px] max-w-7xl bg-slate-600/0 w-screen h-screen">
             <SlidingFeatureDisplay featureInView={featureInView} />
             {/* Offsets the height of SlidingFeatureDisplay so that it renders on top of Content to start */}
             <div className="-mt-[100vh] hidden md:block" />
@@ -107,7 +107,7 @@ const Content = ({ setFeatureInView, featureInView }) => {
                     {/* <span className="rounded-full bg-indigo-600 px-2 py-1.5 text-xs font-medium text-white">
                         {featureInView.callout}
                     </span> */}
-                    <div>
+                    {/* <div>
                         <a target="_blank" href={featureInView.deployLink}>
                             <img
                                 src={featureInView.projectScreenShot}
@@ -115,6 +115,22 @@ const Content = ({ setFeatureInView, featureInView }) => {
                                 className="h-[300px] w-[1000px] scale-[100%] rounded-xl object-cover shadow-xl sm:scale-[115%]"
                             />
                         </a>
+                    </div> */}
+                    <div className="relative h-fit w-full rounded-xl bg-slate-800 shadow-xl dark:bg-slate-200">
+                        <div className="flex w-full gap-1.5 rounded-t-xl bg-slate-900 p-3 dark:bg-slate-400">
+                            <div className="h-3 w-3 rounded-full bg-red-500" />
+                            <div className="h-3 w-3 rounded-full bg-yellow-500" />
+                            <div className="h-3 w-3 rounded-full bg-green-500" />
+                        </div>
+                        <div className="flex flex-col gap-4 p-0">
+                            <a target="_blank" href={featureInView.deployLink}>
+                                <img
+                                    src={featureInView.projectScreenShot}
+                                    alt={featureInView.title}
+                                    className="h-full w-full object-cover shadow-xl rounded-b-xl"
+                                />
+                            </a>
+                        </div>
                     </div>
                 </motion.div>
                 <motion.div
@@ -188,9 +204,12 @@ const features = [
         deployLink: 'https://anomalie.vercel.app/',
         techStack: [
             'Next.js',
-            'TypeScript',
+            'HTML',
+            'CSS',
             'TailwindCSS',
+            'TypeScript',
             'PostgreSQL',
+            'Supabase',
             'Framer Motion',
         ],
         description:
