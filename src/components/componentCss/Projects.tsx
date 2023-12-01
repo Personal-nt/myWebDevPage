@@ -19,9 +19,22 @@ gsap.registerPlugin(ScrollTrigger)
 
 const SwapColumnFeatures = () => {
     const [featureInView, setFeatureInView] = useState(features[0])
+    const [isMouseOver, setIsMouseOver] = useState(false)
+
+    const handleMouseEnter = () => {
+        setIsMouseOver(true)
+    }
+
+    const handleMouseLeave = () => {
+        setIsMouseOver(false)
+    }
 
     return (
-        <section className="scr relative mx-auto -mt-[250px] max-w-7xl bg-slate-600/0 w-screen h-screen">
+        <section
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            className="scr relative mx-auto -mt-[250px] h-screen w-screen max-w-7xl bg-slate-600/0"
+        >
             <SlidingFeatureDisplay featureInView={featureInView} />
             {/* Offsets the height of SlidingFeatureDisplay so that it renders on top of Content to start */}
             <div className="-mt-[100vh] hidden md:block" />
@@ -33,6 +46,7 @@ const SwapColumnFeatures = () => {
                                 key={feature.id}
                                 featureInView={feature}
                                 setFeatureInView={setFeatureInView}
+                                isMouseOver={isMouseOver}
                                 {...feature}
                             />
                         </div>
@@ -59,7 +73,7 @@ const SlidingFeatureDisplay = ({ featureInView }) => {
                 transition={{
                     type: 'spring',
                     stiffness: 400,
-                    damping: 25,
+                    damping: 50,
                 }}
                 className="h-fit w-[50%] rounded-xl p-8"
             >
@@ -71,17 +85,17 @@ const SlidingFeatureDisplay = ({ featureInView }) => {
     )
 }
 
-const Content = ({ setFeatureInView, featureInView }) => {
+const Content = ({ setFeatureInView, featureInView, isMouseOver }) => {
     const ref = useRef(null)
     const isInView = useInView(ref, {
-        margin: '-350px',
+        margin: '-300px',
     })
 
     useEffect(() => {
-        if (isInView) {
+        if (isInView && isMouseOver) {
             setFeatureInView(featureInView)
         }
-    }, [isInView])
+    }, [isInView, isMouseOver])
 
     return (
         <section
@@ -104,18 +118,6 @@ const Content = ({ setFeatureInView, featureInView }) => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, ease: 'easeInOut' }}
                 >
-                    {/* <span className="rounded-full bg-indigo-600 px-2 py-1.5 text-xs font-medium text-white">
-                        {featureInView.callout}
-                    </span> */}
-                    {/* <div>
-                        <a target="_blank" href={featureInView.deployLink}>
-                            <img
-                                src={featureInView.projectScreenShot}
-                                alt={featureInView.title}
-                                className="h-[300px] w-[1000px] scale-[100%] rounded-xl object-cover shadow-xl sm:scale-[115%]"
-                            />
-                        </a>
-                    </div> */}
                     <div className="relative h-fit w-full rounded-xl bg-slate-800 shadow-xl dark:bg-slate-200">
                         <div className="flex w-full gap-1.5 rounded-t-xl bg-slate-900 p-3 dark:bg-slate-400">
                             <div className="h-3 w-3 rounded-full bg-red-500" />
@@ -127,7 +129,7 @@ const Content = ({ setFeatureInView, featureInView }) => {
                                 <img
                                     src={featureInView.projectScreenShot}
                                     alt={featureInView.title}
-                                    className="h-full w-full object-cover shadow-xl rounded-b-xl"
+                                    className="h-full w-full rounded-b-xl object-cover shadow-xl"
                                 />
                             </a>
                         </div>
@@ -156,7 +158,7 @@ const ExampleFeature = ({ featureInView }) => {
             </div>
             <div className="flex flex-col gap-4 p-6">
                 <h3 className="text-3xl">{featureInView.title}</h3>
-                <p className="flex flex-col gap-6 font-mono text-sm text-slate-200">
+                <div className="flex flex-col gap-6 font-mono text-sm text-slate-200">
                     <div>
                         <span className="text-green-300">~</span> Project
                         description:{' '}
@@ -164,7 +166,7 @@ const ExampleFeature = ({ featureInView }) => {
                     <span className="inline-block rounded px-1 font-semibold">
                         {featureInView.description}{' '}
                     </span>{' '}
-                </p>
+                </div>
                 <div className="flex flex-wrap gap-2">
                     {featureInView.techStack.map((tech) => (
                         <Badge key={tech} txt={tech} />
@@ -225,7 +227,17 @@ const features = [
             'https://raw.githubusercontent.com/0xNordian/0xNordian/main/assets/sw.jpeg',
         repoLink: 'https://github.com/0xNordian/sprint8',
         deployLink: 'https://sw-sprint8.vercel.app/',
-        techStack: ['React', 'HTML', 'TailwindCSS', 'Typescript', 'Axios','Vite', 'Jest', 'React Router', 'Zustand'],
+        techStack: [
+            'React',
+            'HTML',
+            'TailwindCSS',
+            'Typescript',
+            'Axios',
+            'Vite',
+            'Jest',
+            'React Router',
+            'Zustand',
+        ],
         description:
             'React app to consult the StarWars starships API. It has a search bar to filter the results and a pagination system to navigate through the results.',
         contentPosition: 'l',
@@ -234,15 +246,36 @@ const features = [
     {
         id: 3,
         callout: 'Have fun',
-        title: "Doyt (Vue)",
+        title: 'Doyt (Vue)',
         projectScreenShot:
             'https://raw.githubusercontent.com/0xNordian/0xNordian/main/assets/doyt2.png',
         repoLink: 'https://github.com/0xNordian/you-do',
         deployLink: 'https://doyt.netlify.app/',
-        techStack: ['Vue', 'HTML', 'CSS', 'JavaScript', 'Pinia', 'TailwindCSS', 'Vite'],
+        techStack: [
+            'Vue',
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'Pinia',
+            'TailwindCSS',
+            'Vite',
+        ],
         description:
             'To-do app built with Vue, TailwindCSS and Pinia. It has CRUD operations, authentication and authorization.',
         contentPosition: 'r',
+        Icon: FiPlay,
+    },
+    {
+        id: 4,
+        callout: 'Have fun',
+        title: 'More projects',
+        projectScreenShot:
+            'https://raw.githubusercontent.com/0xNordian/0xNordian/main/assets/sw.jpeg',
+        repoLink: 'https://github.com/0xNordian/sprint8',
+        deployLink: 'https://sw-sprint8.vercel.app/',
+        techStack: [],
+        description: 'Discover the rest of my projects in here',
+        contentPosition: 'l',
         Icon: FiPlay,
     },
 ]

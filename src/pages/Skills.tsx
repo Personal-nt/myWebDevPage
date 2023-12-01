@@ -210,8 +210,8 @@ const otherSkills = [
 
 const Skills = () => {
     return (
-        <div className="grid w-full grid-cols-1 gap-4">
-                <div className="">
+        <div className="grid w-screen grid-cols-1 gap-24 bg-slate-200">
+                <div className="w-1/2 flex flex-col gap-4">
                     <h3>Frontend skills</h3>
                     <div className="flex flex-wrap gap-3">
                         {frontendSkills.map((skill, index) => (
@@ -222,7 +222,7 @@ const Skills = () => {
                                 <img
                                     src={skill.src}
                                     alt={skill.alt}
-                                    className="mx-auto h-12 w-12"
+                                    className="mx-auto h-6 w-6"
                                 />
                                 <p className="mt-2 text-center">
                                     {skill.title}
@@ -231,7 +231,7 @@ const Skills = () => {
                         ))}
                     </div>
                 </div>
-                <div>
+                <div className="w-1/2 flex flex-col gap-4">
                     <h3>Backend skills</h3>
                     <div className="flex flex-wrap gap-3">
                         {backendSkills.map((skill, index) => (
@@ -242,7 +242,7 @@ const Skills = () => {
                                 <img
                                     src={skill.src}
                                     alt={skill.alt}
-                                    className="mx-auto h-12 w-12"
+                                    className="mx-auto h-6 w-6"
                                 />
                                 <p className="mt-2 text-center">
                                     {skill.title}
@@ -251,7 +251,7 @@ const Skills = () => {
                         ))}
                     </div>
                 </div>
-                <div>
+                <div className="w-1/2 flex flex-col gap-4">
                     <h3>Other skills</h3>
                     <div className="flex flex-wrap gap-3">
                         {otherSkills.map((skill, index) => (
@@ -262,7 +262,7 @@ const Skills = () => {
                                 <img
                                     src={skill.src}
                                     alt={skill.alt}
-                                    className="mx-auto h-12 w-12"
+                                    className="mx-auto h-6 w-6"
                                 />
                                 <p className="mt-2 text-center">
                                     {skill.title}

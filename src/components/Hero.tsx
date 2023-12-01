@@ -68,12 +68,12 @@ export const Hero = () => {
                             Programming is to have the power to create.
                             <br />
                         </h5>
-                        <button className="border-1 btn btn-outline w-1/3 border-teal-400 bg-teal-400 text-[#081421c5] dark:bg-[#081421c5] hover:dark:bg-teal-400 hover:dark:text-[#081421c5] dark:text-teal-400 mt-4">
+                        <button className="border-1 btn btn-outline mt-4 w-1/3 border-teal-400 bg-teal-400 text-[#081421c5] dark:bg-[#081421c5] dark:text-teal-400 hover:dark:bg-teal-400 hover:dark:text-[#081421c5]">
                             Let's build!
                         </button>
                     </div>
                 </div>
-                <div className="relative -top-[0px] left-[0px] flex h-[750px] w-1/2 items-center justify-center border-0 border-black bg-emerald-600/0">
+                <div className="relative -top-[0px] left-[50px] flex h-[750px] w-1/2 items-center justify-center border-0 border-black bg-emerald-600/0">
                     <IsometricRoom />
                 </div>
             </div>
