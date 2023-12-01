@@ -1,10 +1,11 @@
 import { Hero } from '../components/Hero'
+import Skills from '../pages/Skills'
 
 import Projects from '../components/componentCss/Projects'
 
 const Home = () => {
     return (
-        <div className="flex h-full flex-col items-center justify-center">
+        <div className="flex h-full flex-col items-center justify-center border-0 border-red-400">
             <div className="flex w-full flex-col border-0 border-red-500/0">
                 <div className="z-30 bg-slate-200 dark:bg-[#001412]">
                     <Hero />
@@ -19,9 +20,9 @@ const Home = () => {
                 </div>
                 <h1
                     id="skills"
-                    className="left-[35px] top-[100px] h-[1000px] w-full bg-pink-400"
+                    className="relative z-20 bg-slate-200 dark:bg-[#001412]"
                 >
-                    Skills
+                    <Skills />
                 </h1>
             </div>
         </div>

@@ -225,7 +225,7 @@ const features = [
             'https://raw.githubusercontent.com/0xNordian/0xNordian/main/assets/sw.jpeg',
         repoLink: 'https://github.com/0xNordian/sprint8',
         deployLink: 'https://sw-sprint8.vercel.app/',
-        techStack: ['React', 'Typescript'],
+        techStack: ['React', 'HTML', 'TailwindCSS', 'Typescript', 'Axios','Vite', 'Jest', 'React Router', 'Zustand'],
         description:
             'React app to consult the StarWars starships API. It has a search bar to filter the results and a pagination system to navigate through the results.',
         contentPosition: 'l',
@@ -234,14 +234,14 @@ const features = [
     {
         id: 3,
         callout: 'Have fun',
-        title: "Let's party",
+        title: "Doyt (Vue)",
         projectScreenShot:
-            'https://raw.githubusercontent.com/0xNordian/0xNordian/main/assets/sw.jpeg',
-        repoLink: 'https://github.com/0xNordian/sprint8',
-        deployLink: '',
-        techStack: ['Framer Motion'],
+            'https://raw.githubusercontent.com/0xNordian/0xNordian/main/assets/doyt2.png',
+        repoLink: 'https://github.com/0xNordian/you-do',
+        deployLink: 'https://doyt.netlify.app/',
+        techStack: ['Vue', 'HTML', 'CSS', 'JavaScript', 'Pinia', 'TailwindCSS', 'Vite'],
         description:
-            'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor iusto quaerat qui, illo incidunt suscipit fugiat distinctio officia earum eius quae officiis quis harum animi.',
+            'To-do app built with Vue, TailwindCSS and Pinia. It has CRUD operations, authentication and authorization.',
         contentPosition: 'r',
         Icon: FiPlay,
     },
