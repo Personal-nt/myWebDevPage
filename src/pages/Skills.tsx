@@ -210,8 +210,8 @@ const otherSkills = [
 
 const Skills = () => {
     return (
-        <div className="grid w-screen grid-cols-1 gap-24 bg-slate-200">
-                <div className="w-1/2 flex flex-col gap-4">
+        <div className="grid w-full grid-cols-1 gap-24 bg-slate-200">
+                <div className="w-full flex flex-col gap-4">
                     <h3>Frontend skills</h3>
                     <div className="flex flex-wrap gap-3">
                         {frontendSkills.map((skill, index) => (
@@ -231,7 +231,7 @@ const Skills = () => {
                         ))}
                     </div>
                 </div>
-                <div className="w-1/2 flex flex-col gap-4">
+                <div className="w-full flex flex-col gap-4">
                     <h3>Backend skills</h3>
                     <div className="flex flex-wrap gap-3">
                         {backendSkills.map((skill, index) => (
@@ -251,7 +251,7 @@ const Skills = () => {
                         ))}
                     </div>
                 </div>
-                <div className="w-1/2 flex flex-col gap-4">
+                <div className="w-full flex flex-col gap-4">
                     <h3>Other skills</h3>
                     <div className="flex flex-wrap gap-3">
                         {otherSkills.map((skill, index) => (
