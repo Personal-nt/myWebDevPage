@@ -21,10 +21,10 @@ export default function IsometricRoom() {
 
     return (
         <div className="w-[100%] h-[100%] scale-[100%] pointer-events-auto">
-            <Spline
+                <Spline
                 scene="https://prod.spline.design/KTiCfnJYZD0fGLhJ/scene.splinecode"
                 onMouseDown={handleMouseDown}
-            />
+                />
         </div>
     );
 }

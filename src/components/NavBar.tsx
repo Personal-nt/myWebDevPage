@@ -1,4 +1,5 @@
 import { toggleDarkMode } from '../utils/toggleDarkMode'
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
     return (
@@ -41,7 +42,10 @@ const NavBar = () => {
                             </ul>
                         </li> */}
                         <li>
-                            <a href="#skills">Skills</a>
+                            <Link to="skills">Skills</Link>
+                        </li>
+                        <li>
+                            <a href="#journey">Journey</a>
                         </li>
                         <li>
                             <a>About</a>
@@ -58,9 +62,10 @@ const NavBar = () => {
                     <li>
                         <a href="#projects">Projects</a>
                     </li>
+                        {/* 
                     <li>
                         <a href="#skills">Skills</a>
-                        {/* <details>
+                        <details>
                             <summary>Parent</summary>
                             <ul className="p-2">
                                 <li>
@@ -70,11 +75,15 @@ const NavBar = () => {
                                     <a>Submenu 2</a>
                                 </li>
                             </ul>
-                        </details> */}
+                        </details> 
                     </li>
+                        */}
                     <li>
-                        <a>About</a>
-                    </li>
+                            <Link to="skills">Skills</Link>
+                        </li>
+                        <li>
+                            <a href="#journey">Journey</a>
+                        </li>
                     <li>
                         <a>Contact</a>
                     </li>

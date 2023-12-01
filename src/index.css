@@ -110,3 +110,5 @@ small {
 .scroll-container::-webkit-scrollbar {
   display: none; 
 } 
+
+.slide-right{animation:slide-right 2.5s cubic-bezier(.25,.46,.45,.94) both}

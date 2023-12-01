@@ -73,7 +73,7 @@ const SlidingFeatureDisplay = ({ featureInView }) => {
                 transition={{
                     type: 'spring',
                     stiffness: 400,
-                    damping: 50,
+                    damping: 80,
                 }}
                 className="h-fit w-[50%] rounded-xl p-8"
             >
