@@ -1,6 +1,14 @@
 import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { timelineData } from '../utils/timelineData'
+
+type TimelineDataProps = {
+    id: string
+    date: string
+    title: string
+    description: string
+}
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -26,7 +34,7 @@ const Timeline = () => {
                             start: 'clamp(bottom bottom)',
                             end: 'clamp(bottom top)',
                             scrub: true,
-                            markers: true,
+                            // markers: true,
                         },
                     },
                 )
@@ -37,59 +45,45 @@ const Timeline = () => {
     return (
         <ul
             ref={timelineRef}
-            className="timeline timeline-vertical timeline-snap-icon max-md:timeline-compact"
+            className="timeline timeline-vertical timeline-snap-icon mt-2 max-md:timeline-compact"
         >
-            <li>
-                <div className="timeline-middle"> ... </div>
-                <div className="timeline-start mb-10 md:text-end">
-                    <time className="font-mono italic">Nov 2022</time>
-                    <div className="text-lg font-black">
-                        Beginning of Development Journey
-                    </div>
-                    Started learning frontend development skills including HTML,
-                    CSS, JavaScript, and frameworks like Vue and React.
-                </div>
-                <hr />
-            </li>
-            <li>
-                <div className="timeline-middle"> ... </div>
-                <div className="timeline-end mb-10">
-                    <time className="font-mono italic">
-                        Jan 2023 - Feb 2023
-                    </time>
-                    <div className="text-lg font-black">
-                        Backend Development Course
-                    </div>
-                    Completed a course in Backend Development at IronHack,
-                    acquiring skills in Java and Spring Boot.
-                </div>
-                <hr />
-            </li>
-            <li>
-                <div className="timeline-middle"> ... </div>
-                <div className="timeline-start mb-10 md:text-end">
-                    <time className="font-mono italic">
-                        May 2023 - Nov 2023
-                    </time>
-                    <div className="text-lg font-black">
-                        React Course at IT Academy
-                    </div>
-                    Advanced knowledge in React, building on existing frontend
-                    development skills.
-                </div>
-                <hr />
-            </li>
-            <li>
-                <div className="timeline-middle"> ... </div>
-                <div className="timeline-end mb-10">
-                    <time className="font-mono italic">2023</time>
-                    <div className="text-lg font-black">
-                        Founder of Deverso Labs
-                    </div>
-                    Founded Deverso Labs, focusing on developing web3
-                    applications and solutions.
-                </div>
-            </li>
+            {timelineData.map(
+                (
+                    { id, date, title, description }: TimelineDataProps,
+                    index,
+                ) => (
+                    <li key={id}>
+                        <div className="timeline-middle z-10">
+                            {/* <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                className="h-5 w-5"
+                            >
+                                <path
+                                    fillRule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                    clipRule="evenodd"
+                                />
+                            </svg> */}
+                            🔘
+                        </div>
+                        {/* <div className="timeline-middle"> ... </div> */}
+                        <div
+                            className={`${
+                                index % 2 === 0
+                                    ? 'timeline-start mb-10 md:text-end'
+                                    : 'timeline-end mb-10'
+                            }`}
+                        >
+                            <time className="font-mono italic">{date}</time>
+                            <div className="text-lg font-black">{title}</div>
+                            {description}
+                        </div>
+                        <hr className="bg-slate-500/40"/>
+                    </li>
+                ),
+            )}
         </ul>
     )
 }

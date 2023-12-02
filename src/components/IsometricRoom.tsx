@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Spline from '@splinetool/react-spline';
+import { SplineEvent } from '@splinetool/runtime';
 
 export default function IsometricRoom() {
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -12,7 +13,8 @@ export default function IsometricRoom() {
         }
     }, [isDarkMode]);
 
-    const handleMouseDown = (e) => {
+    const handleMouseDown = (e: SplineEvent) => {
+        console.log('e', e);
         if (e.target.name === 'lamp') {
             console.log('Lamp clicked!');
             setIsDarkMode(prevMode => !prevMode);;

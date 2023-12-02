@@ -1,43 +1,6 @@
-import { useRef, useState, useEffect } from 'react'
-import { gsap } from 'gsap'
-import { Flip } from 'gsap/Flip'
 import IsometricRoom from './IsometricRoom'
 
-gsap.registerPlugin(Flip)
-
 export const Hero = () => {
-    const [isNordian, setIsNordian] = useState(false)
-    const imageRef = useRef(null)
-
-    useEffect(() => {
-        if (imageRef.current) {
-            const flipAnimation = gsap.timeline()
-            flipAnimation.to(imageRef.current, {
-                duration: 0.5,
-                rotationY: 90,
-                ease: 'power1.inOut',
-            })
-            flipAnimation.to(imageRef.current, {
-                duration: 0.5,
-                rotationY: 0,
-                ease: 'power1.inOut',
-            })
-
-            if (isNordian) {
-                flipAnimation.play()
-            } else {
-                flipAnimation.reverse()
-            }
-        }
-    }, [isNordian])
-
-    const handleIfToggled = (mouseEvent: string) => {
-        if (mouseEvent === 'enter') {
-            setIsNordian(false)
-        } else if (mouseEvent === 'out') {
-            setIsNordian(false)
-        }
-    }
     return (
         <div className="flex h-full w-full justify-center bg-pink-400/0">
             <div className="flex h-[100%] w-full">

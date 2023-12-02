@@ -1,9 +1,8 @@
 import { Hero } from '../components/Hero'
-import Skills from '../pages/Skills'
 import { Link } from 'react-router-dom'
 import Timeline from '../components/Timeline'
 
-import Projects from '../components/componentCss/Projects'
+import Projects from '../components/Projects'
 
 const Home = () => {
     return (
@@ -30,8 +29,8 @@ const Home = () => {
 
             <div className="relative top-[-350px] flex w-screen flex-col items-center justify-start bg-slate-200 dark:bg-[#001412]">
                 <div className="z-50 flex h-[100px] w-screen justify-center bg-slate-200 dark:bg-[#001412]">
-                    <h1 id="projects" className="w-1/2 border-0 border-slate-600">
-                        <Link to="journey">Journey</Link>
+                    <h1 id="journey" className="w-1/2 border-0 border-slate-600">
+                        Journey
                     </h1>
                 </div>
                 <div className="w-1/2 border-0 border-slate-600 mb-12">
