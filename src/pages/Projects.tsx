@@ -7,7 +7,7 @@ const Projects = () => {
         <div className="mb-24 mt-24 flex h-screen w-screen flex-col items-center justify-start border-0 border-red-400 bg-slate-900/0">
             <div className="flex h-fit w-1/2 flex-col justify-center gap-12 bg-slate-200 dark:bg-[#001412]">
                 {projArr.map(
-                    ({ id, title, description, projectScreenShot }) => (
+                    ({ id, title, description, projectScreenShot, techStack }) => (
                         <div
                             key={id}
                             className="flex items-center justify-center gap-6"
@@ -22,13 +22,16 @@ const Projects = () => {
                                     <img
                                         src={projectScreenShot}
                                         alt={title}
-                                        className="h-[300px] w-[500px] rounded-b-xl object-cover shadow-xl"
+                                        className="h-[300px] w-[500px] rounded-b-xl object-cover shadow-xl "
                                     />
                                 </div>
                             </div>
-                            <div className="flex w-[500px] flex-col items-center justify-center">
+                            <div className="flex w-[500px] flex-col items-start justify-center gap-4">
                                 <h1 className="text-3xl font-bold">{title}</h1>
-                                <p className="text-xl">{description}</p>
+                                <p className="text-lg">{description}</p>
+                                <ul>
+                                    <li>{techStack}</li>
+                                </ul>
                             </div>
                         </div>
                     ),

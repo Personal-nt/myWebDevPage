@@ -1,9 +1,10 @@
 import { toggleDarkMode } from '../utils/toggleDarkMode'
 import { Link } from 'react-router-dom'
+import DarkModeSwitcher from './DarkModeSwitcher'
 
 const NavBar = () => {
     return (
-        <div className="navbar bg-base-100 sticky top-0 z-[999]">
+        <div className="navbar sticky top-0 z-[999] bg-base-100">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div
@@ -55,27 +56,31 @@ const NavBar = () => {
                         </li>
                     </ul>
                 </div>
-                <Link to="/" className="btn btn-ghost text-xl">NT</Link>
+                <Link to="/" className="btn btn-ghost text-xl">
+                    NT
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">                        
+                <ul className="menu menu-horizontal px-1">
                     <li>
                         <details>
-                            <summary className=''><Link to="projects" >Projects</Link></summary>
-                            <ul className="p-2 dark:bg-slate-200 bg-[#001412] dark:text-slate-800/60 text-slate-200">
+                            <summary className="">
+                                <Link to="projects">Projects</Link>
+                            </summary>
+                            <ul className="bg-[#001412] p-2 text-slate-200 dark:bg-slate-200 dark:text-slate-800/60">
                                 <li className="w-[115px] ">
                                     <a href="#projects">Top Projects</a>
                                 </li>
                             </ul>
-                        </details> 
+                        </details>
                     </li>
-                       
+
                     <li>
-                            <Link to="skills">Skills</Link>
-                        </li>
-                        <li>
-                            <a href="#journey">Journey</a>
-                        </li>
+                        <Link to="skills">Skills</Link>
+                    </li>
+                    <li>
+                        <a href="#journey">Journey</a>
+                    </li>
                     <li>
                         <a>Contact</a>
                     </li>
@@ -83,12 +88,7 @@ const NavBar = () => {
             </div>
 
             <div className="navbar-end pr-4">
-                <input
-                    type="checkbox"
-                    className="toggle dark:border-[#00D6C1] dark:bg-[#00D6C1]"
-                    onClick={() => toggleDarkMode()}
-                />
-                {/* <a className="btn">Button</a> */}
+                <DarkModeSwitcher />
             </div>
         </div>
     )
