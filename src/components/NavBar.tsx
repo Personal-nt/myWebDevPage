@@ -55,29 +55,21 @@ const NavBar = () => {
                         </li>
                     </ul>
                 </div>
-                {/* <a className="btn btn-ghost text-xl">daisyUI</a> */}
+                <Link to="/" className="btn btn-ghost text-xl">NT</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal px-1">                        
                     <li>
-                        <a href="#projects">Projects</a>
-                    </li>
-                        {/* 
-                    <li>
-                        <a href="#skills">Skills</a>
                         <details>
-                            <summary>Parent</summary>
-                            <ul className="p-2">
-                                <li>
-                                    <a>Submenu 1</a>
-                                </li>
-                                <li>
-                                    <a>Submenu 2</a>
+                            <summary className=''><Link to="projects" >Projects</Link></summary>
+                            <ul className="p-2 dark:bg-slate-200 bg-[#001412] dark:text-slate-800/60 text-slate-200">
+                                <li className="w-[115px] ">
+                                    <a href="#projects">Top Projects</a>
                                 </li>
                             </ul>
                         </details> 
                     </li>
-                        */}
+                       
                     <li>
                             <Link to="skills">Skills</Link>
                         </li>

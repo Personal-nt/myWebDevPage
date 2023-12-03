@@ -8,8 +8,8 @@ export const timelineData = [
     {
         id: crypto.randomUUID(),
         date: '2016',
-        title: 'Blending Business Insight with Technical Innovation: My Development Odyssey from Sales to Scripting Success',
-        description: 'My journey in tech took a significant leap forward. I developed an automated tool for the Marketing Department, designed to streamline their budgeting process. This tool, built using Google Script – a language closely akin to JavaScript – enabled the creation of customized campaign budgets driven by precise marketing metrics. The implementation of this tool marked a key milestone in my development path. It not only facilitated more effective and data-driven budget planning for marketing campaigns but also reinforced my commitment to leveraging technology for practical, impactful solutions in business.',
+        title: 'Blending Business Insight with Technical Innovation',
+        description: 'I developed an automated tool for the Marketing Department, designed to streamline our department budgeting process. This tool, built using Google Script – a language closely akin to JavaScript – enabled the creation of customized campaign budgets driven by precise marketing metrics. The implementation of this tool marked a key milestone in my development path. It not only facilitated more effective and data-driven budget planning for marketing campaigns but also reinforced my commitment to leveraging technology for practical, impactful solutions in business.',
     },
     {
         id: crypto.randomUUID(),

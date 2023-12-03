@@ -30,13 +30,21 @@ type ContentProps = {
     isMouseOver: boolean,
 }
 
-const Projects = () => {
+const TopProjects = () => {
     return (
         <div className="">
             <SwapColumnFeatures />
         </div>
     )
 }
+
+const firstThree = features.slice(0, 3);
+
+// Get the last element
+const lastOne = features[features.length - 1];
+
+// Combine them into a new array
+const combinedArray = [...firstThree, lastOne];
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -63,7 +71,7 @@ const SwapColumnFeatures = () => {
             <div className="-mt-[100vh] hidden md:block" />
             <div className="scroll-container">
                 <div className="align-items-start flex flex-col justify-start">
-                    {features.map((feature, index) => (
+                    {combinedArray.map((feature, index) => (
                         <div key={index} className="snap-element">
                             <Content
                                 key={feature.id}
@@ -216,5 +224,5 @@ const ExampleFeature = ({ featureInView }: FeatureProps) => {
     )
 }
 
-export default Projects
+export default TopProjects
 

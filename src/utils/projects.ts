@@ -73,6 +73,44 @@ export const features = [
     {
         id: 4,
         callout: 'Have fun',
+        title: 'TEST',
+        projectScreenShot:
+            'https://www.reactjsindia.com/blog/wp-content/uploads/2021/05/Everything-to-know-about-ReactJs-Web-App-Development.jpg',
+        repoLink: 'https://github.com/0xNordian/you-do',
+        deployLink: 'https://doyt.netlify.app/',
+        techStack: [
+            'Vue',
+            'HTML',
+            'CSS',
+            'JavaScript',
+        ],
+        description:
+            'TEST',
+        contentPosition: 'l',
+        Icon: FiPlay,
+    },
+    {
+        id: 4,
+        callout: 'Have fun',
+        title: 'TEST',
+        projectScreenShot:
+            'https://www.reactjsindia.com/blog/wp-content/uploads/2021/05/Everything-to-know-about-ReactJs-Web-App-Development.jpg',
+        repoLink: 'https://github.com/0xNordian/you-do',
+        deployLink: 'https://doyt.netlify.app/',
+        techStack: [
+            'Vue',
+            'HTML',
+            'CSS',
+            'JavaScript',
+        ],
+        description:
+            'TEST',
+        contentPosition: 'l',
+        Icon: FiPlay,
+    },
+    {
+        id: 9999,
+        callout: 'Have fun',
         title: 'More projects',
         projectScreenShot:
             'https://raw.githubusercontent.com/0xNordian/0xNordian/main/assets/sw.jpeg',
