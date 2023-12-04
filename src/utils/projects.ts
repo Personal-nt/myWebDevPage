@@ -16,6 +16,7 @@ export type Technology =
     | 'Vue'
     | 'JavaScript'
     | 'Pinia'
+    | 'Angular'
 
 type Project = {
     id: string
@@ -43,7 +44,7 @@ export const features: Project[] = [
         repoLink: '',
         deployLink: 'https://deverso.io',
         techStack: [
-            'Next.js',
+            'Angular',
             'HTML',
             'CSS',
             'TailwindCSS',

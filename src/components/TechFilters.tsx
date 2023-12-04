@@ -6,22 +6,23 @@ type TechFiltersProps = {
 };
 
 const technologies: Technology[] = [
+    'React',
+    'Vue',
+    'Angular',
     'Next.js',
     'HTML',
     'CSS',
-    'TailwindCSS',
+    'JavaScript',
     'TypeScript',
+    'TailwindCSS',
     'PostgreSQL',
     'Supabase',
     'Framer Motion',
-    'React',
     'Axios',
     'Vite',
     'Jest',
     'React Router',
     'Zustand',
-    'Vue',
-    'JavaScript',
     'Pinia',
 ]
 
