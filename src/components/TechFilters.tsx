@@ -29,7 +29,7 @@ const TechFilters: React.FC<TechFiltersProps> = ({ selectedTechs, onCheckboxChan
     return (
         <div className="flex flex-wrap gap-4">
         {technologies.map((tech, index) => (
-            <div key={index}>
+            <div key={index} className="flex gap-1 text-lg">
                 <input
                     type="checkbox"
                     id={tech}
@@ -38,7 +38,7 @@ const TechFilters: React.FC<TechFiltersProps> = ({ selectedTechs, onCheckboxChan
                     checked={selectedTechs.includes(tech)}
                     onChange={() => onCheckboxChange(tech)}
                 />
-                <label htmlFor={tech}>{tech}</label>
+                <label htmlFor={tech} className="">{tech}</label>
             </div>
         ))}
     </div>

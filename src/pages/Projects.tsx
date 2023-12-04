@@ -26,14 +26,20 @@ const Projects = () => {
         })
     }
 
+    const clearFilters = () => {
+        setSelectedTechs([])
+    }
+
     return (
         // <div className="mb-24 mt-24 flex h-screen w-screen flex-col items-center justify-start border-0 border-red-400 bg-slate-900/0">
         //     <div className="flex h-fit w-1/2 flex-col justify-center gap-12 bg-slate-200 dark:bg-[#001412]">
-        <div className="mb-24 mt-24 flex h-screen w-screen flex-col items-center justify-center bg-slate-900/0">
-            <FilterAccordion
+<div className="flex flex-col">
+        <FilterAccordion
                 selectedTechs={selectedTechs}
                 onCheckboxChange={handleCheckboxChange}
+                clearFilters={clearFilters}
             />
+        <div className="flex h-screen w-screen flex-col items-center justify-start bg-slate-900/0">
             <div className="grid h-fit w-3/4 grid-cols-2 gap-12 border-0 border-blue-600 bg-slate-200 dark:bg-[#001412]">
                 {filteredProjects.map(
                     ({
@@ -108,9 +114,10 @@ const Projects = () => {
                         </div>
                     ),
                 )}
-                FilterAccordion
             </div>
         </div>
+</div>
+
     )
 }
 
