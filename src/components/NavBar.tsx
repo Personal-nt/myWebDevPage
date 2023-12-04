@@ -1,6 +1,6 @@
-import { toggleDarkMode } from '../utils/toggleDarkMode'
 import { Link } from 'react-router-dom'
 import DarkModeSwitcher from './DarkModeSwitcher'
+import { HashLink } from 'react-router-hash-link'
 
 const NavBar = () => {
     return (
@@ -46,7 +46,7 @@ const NavBar = () => {
                             <Link to="skills">Skills</Link>
                         </li>
                         <li>
-                            <a href="#journey">Journey</a>
+                            <HashLink to="/#journey">Journey</HashLink>
                         </li>
                         <li>
                             <a>About</a>
@@ -63,23 +63,23 @@ const NavBar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li>
-                        <details>
-                            <summary className="">
-                                <Link to="projects">Projects</Link>
-                            </summary>
-                            <ul className="bg-[#001412] p-2 text-slate-200 dark:bg-slate-200 dark:text-slate-800/60">
+                        {/* <details> */}
+                        {/* <summary className=""> */}
+                        <Link to="projects">Projects</Link>
+                        {/* </summary> */}
+                        {/* <ul className="bg-[#001412] p-2 text-slate-200 dark:bg-slate-200 dark:text-slate-800/60">
                                 <li className="w-[115px] ">
-                                    <a href="#projects">Top Projects</a>
+                                    <Link to="/#topProjects">Top Projects</Link>
                                 </li>
-                            </ul>
-                        </details>
+                            </ul> */}
+                        {/* </details> */}
                     </li>
 
                     <li>
                         <Link to="skills">Skills</Link>
                     </li>
                     <li>
-                        <a href="#journey">Journey</a>
+                        <HashLink to="/#journey">Journey</HashLink>
                     </li>
                     <li>
                         <a>Contact</a>

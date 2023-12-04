@@ -18,10 +18,10 @@ const Home = () => {
             <div className="flex w-screen flex-col items-center justify-start bg-slate-200 dark:bg-[#001412]">
                 <div className="z-50 flex h-[100px] w-screen justify-center bg-slate-200 dark:bg-[#001412]">
                     <h1
-                        id="projects"
+                        id="topProjects"
                         className="w-1/2 border-0 border-slate-600"
                     >
-                        <Link to="projects">Top Projects</Link>
+                        Top Projects
                     </h1>
                 </div>
                 <div className="w-1/2">

@@ -1,10 +1,44 @@
 import { FiEye, FiPlay, FiSearch } from 'react-icons/fi'
 
-export const features = [
+export type Technology =
+    | 'Next.js'
+    | 'HTML'
+    | 'CSS'
+    | 'TailwindCSS'
+    | 'TypeScript'
+    | 'PostgreSQL'
+    | 'Supabase'
+    | 'Framer Motion'
+    | 'React'
+    | 'Axios'
+    | 'Vite'
+    | 'Jest'
+    | 'React Router'
+    | 'Zustand'
+    | 'Vue'
+    | 'JavaScript'
+    | 'Pinia'
+
+type Project = {
+    id: number
+    callout: string
+    title: string
+    urlTitle: string
+    projectScreenShot: string
+    repoLink: string
+    deployLink: string
+    techStack: Technology[]
+    description: string
+    contentPosition: 'r' | 'l'
+    Icon: typeof FiEye | typeof FiPlay | typeof FiSearch // Specify the icon types correctly
+}
+
+export const features: Project[] = [
     {
         id: 1,
         callout: 'Find people',
         title: 'Anomalie Web App (Next.js)',
+        urlTitle: 'anomalie-app',
         projectScreenShot:
             'https://raw.githubusercontent.com/0xNordian/0xNordian/main/assets/anomalie-app.png',
         repoLink: 'https://github.com/0xNordian/anomalie-app-supabase',
@@ -28,6 +62,7 @@ export const features = [
         id: 2,
         callout: 'Get noticed',
         title: 'StarWars Starships (React)',
+        urlTitle: 'starWars-starships',
         projectScreenShot:
             'https://raw.githubusercontent.com/0xNordian/0xNordian/main/assets/sw.jpeg',
         repoLink: 'https://github.com/0xNordian/sprint8',
@@ -36,7 +71,7 @@ export const features = [
             'React',
             'HTML',
             'TailwindCSS',
-            'Typescript',
+            'TypeScript',
             'Axios',
             'Vite',
             'Jest',
@@ -52,6 +87,7 @@ export const features = [
         id: 3,
         callout: 'Have fun',
         title: 'Doyt (Vue)',
+        urlTitle: 'doyt-app',
         projectScreenShot:
             'https://raw.githubusercontent.com/0xNordian/0xNordian/main/assets/doyt2.png',
         repoLink: 'https://github.com/0xNordian/you-do',
@@ -74,37 +110,27 @@ export const features = [
         id: 4,
         callout: 'Have fun',
         title: 'TEST',
+        urlTitle: 'test-app-1',
         projectScreenShot:
             'https://www.reactjsindia.com/blog/wp-content/uploads/2021/05/Everything-to-know-about-ReactJs-Web-App-Development.jpg',
         repoLink: 'https://github.com/0xNordian/you-do',
         deployLink: 'https://doyt.netlify.app/',
-        techStack: [
-            'Vue',
-            'HTML',
-            'CSS',
-            'JavaScript',
-        ],
-        description:
-            'TEST',
+        techStack: ['Vue', 'HTML', 'CSS', 'JavaScript'],
+        description: 'TEST',
         contentPosition: 'l',
         Icon: FiPlay,
     },
     {
-        id: 4,
+        id: 5,
         callout: 'Have fun',
         title: 'TEST',
+        urlTitle: 'test-app-2',
         projectScreenShot:
             'https://www.reactjsindia.com/blog/wp-content/uploads/2021/05/Everything-to-know-about-ReactJs-Web-App-Development.jpg',
         repoLink: 'https://github.com/0xNordian/you-do',
         deployLink: 'https://doyt.netlify.app/',
-        techStack: [
-            'Vue',
-            'HTML',
-            'CSS',
-            'JavaScript',
-        ],
-        description:
-            'TEST',
+        techStack: ['Vue', 'HTML', 'CSS', 'JavaScript'],
+        description: 'TEST',
         contentPosition: 'l',
         Icon: FiPlay,
     },
@@ -112,6 +138,7 @@ export const features = [
         id: 9999,
         callout: 'Have fun',
         title: 'More projects',
+        urlTitle: '',
         projectScreenShot:
             'https://raw.githubusercontent.com/0xNordian/0xNordian/main/assets/sw.jpeg',
         repoLink: 'https://github.com/0xNordian/sprint8',

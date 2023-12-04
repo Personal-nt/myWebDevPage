@@ -6,11 +6,13 @@ import { features } from '../utils/projects'
 
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import { Link } from 'react-router-dom'
 
 type Feature = {
     id: number,
     callout: string,
     title: string,
+    urlTitle: string,
     projectScreenShot: string,
     repoLink: string,
     deployLink: string,
@@ -218,6 +220,12 @@ const ExampleFeature = ({ featureInView }: FeatureProps) => {
                     >
                         <ButtonIcon icon={'deploy'} txt="App" />
                     </a>
+                    <Link to={`/projects/${featureInView.urlTitle}`} key={featureInView.id} >
+                                        <ButtonIcon
+                                            icon={'project'}
+                                            txt="Project page"
+                                        />
+                                    </Link>
                 </div>
             </div>
         </div>
