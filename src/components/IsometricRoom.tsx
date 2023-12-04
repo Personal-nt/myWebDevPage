@@ -1,6 +1,8 @@
-import { useState, useEffect } from "react";
-import Spline from '@splinetool/react-spline';
+import React, { Suspense, useState, useEffect } from "react";
+// import Spline from '@splinetool/react-spline';
 import { SplineEvent } from '@splinetool/runtime';
+
+const Spline = React.lazy(() => import("@splinetool/react-spline"));
 
 export default function IsometricRoom() {
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -23,10 +25,13 @@ export default function IsometricRoom() {
 
     return (
         <div className="w-[100%] h-[100%] scale-[100%] pointer-events-auto">
+            <Suspense fallback={<div>Loading...</div>}>
+
                 <Spline
                 scene="https://prod.spline.design/KTiCfnJYZD0fGLhJ/scene.splinecode"
                 onMouseDown={handleMouseDown}
                 />
+                </Suspense>
         </div>
     );
 }
