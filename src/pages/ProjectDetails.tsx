@@ -1,5 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { features } from '../utils/projects'
+import PhoneMockup from '../components/PhoneMockup'
+import BrowserMockup from '../components/BrowserMockup'
 
 const ProjectDetails = () => {
     const { urlTitle } = useParams()
@@ -18,21 +20,21 @@ const ProjectDetails = () => {
         repoLink,
         deployLink,
     } = project
-    // Render your project details using 'project'
     return (
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-4 py-8 w-screen">
             <h1 className="text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">
                 {title}
             </h1>
             <p className="mt-4 text-gray-600 dark:text-gray-300">
                 {description}
             </p>
-            <div className="mt-6">
-                <img
-                    src={projectScreenShot}
-                    alt={title}
-                    className="mx-auto w-full rounded shadow-lg md:w-1/2 lg:w-1/3"
-                />
+            <div className="flex justify-center">
+                <div className="mt-6 md:hidden">
+                    <PhoneMockup url={deployLink} />
+                </div>
+                <div className="mt-6 hidden md:flex">
+                    <BrowserMockup url={deployLink} />
+                </div>
             </div>
             <ul className="mt-4 flex flex-wrap gap-2">
                 {techStack.map((tech, index) => (

@@ -9,27 +9,28 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 import { Link } from 'react-router-dom'
 
 type Feature = {
-    id: number,
-    callout: string,
-    title: string,
-    urlTitle: string,
-    projectScreenShot: string,
-    repoLink: string,
-    deployLink: string,
-    techStack: string[],
-    description: string,
-    contentPosition: string,
-    Icon: string,
+    id: number
+    type: 'public' | 'private'
+    callout: string
+    title: string
+    urlTitle: string
+    projectScreenShot: string
+    repoLink: string
+    deployLink: string
+    techStack: string[]
+    description: string
+    contentPosition: string
+    Icon: string
 }
 
 type FeatureProps = {
-    featureInView: Feature,
+    featureInView: Feature
 }
 
 type ContentProps = {
-    setFeatureInView: (feature: Feature) => void,
-    featureInView: Feature,
-    isMouseOver: boolean,
+    setFeatureInView: (feature: Feature) => void
+    featureInView: Feature
+    isMouseOver: boolean
 }
 
 const TopProjects = () => {
@@ -40,13 +41,13 @@ const TopProjects = () => {
     )
 }
 
-const firstThree = features.slice(0, 3);
+const firstThree = features.slice(0, 3)
 
 // Get the last element
-const lastOne = features[features.length - 1];
+const lastOne = features[features.length - 1]
 
 // Combine them into a new array
-const combinedArray = [...firstThree, lastOne];
+const combinedArray = [...firstThree, lastOne]
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -118,7 +119,11 @@ const SlidingFeatureDisplay = ({ featureInView }: FeatureProps) => {
     )
 }
 
-const Content = ({ setFeatureInView, featureInView, isMouseOver }: ContentProps) => {
+const Content = ({
+    setFeatureInView,
+    featureInView,
+    isMouseOver,
+}: ContentProps) => {
     const ref = useRef(null)
     const isInView = useInView(ref, {
         margin: '-300px',
@@ -152,7 +157,7 @@ const Content = ({ setFeatureInView, featureInView, isMouseOver }: ContentProps)
                     transition={{ duration: 0.5, ease: 'easeInOut' }}
                 >
                     <div className="relative h-fit w-full rounded-xl bg-slate-800 shadow-xl dark:bg-slate-200">
-                        <div className="flex w-full gap-1.5 rounded-t-xl bg-slate-900 p-3 dark:bg-slate-400">
+                        <div className="flex w-full gap-1.5 rounded-t-xl bg-slate-900 p-3 dark:bg-slate-200">
                             <div className="h-3 w-3 rounded-full bg-red-500" />
                             <div className="h-3 w-3 rounded-full bg-yellow-500" />
                             <div className="h-3 w-3 rounded-full bg-green-500" />
@@ -184,19 +189,19 @@ const Content = ({ setFeatureInView, featureInView, isMouseOver }: ContentProps)
 const ExampleFeature = ({ featureInView }: FeatureProps) => {
     return (
         <div className="relative h-full w-full rounded-xl bg-slate-800 shadow-xl dark:bg-slate-200">
-            <div className="flex w-full gap-1.5 rounded-t-xl bg-slate-900 p-3 dark:bg-slate-400">
+            <div className="flex w-full gap-1.5 rounded-t-xl bg-slate-900 p-3 dark:bg-slate-300">
                 <div className="h-3 w-3 rounded-full bg-red-500" />
                 <div className="h-3 w-3 rounded-full bg-yellow-500" />
                 <div className="h-3 w-3 rounded-full bg-green-500" />
             </div>
-            <div className="flex flex-col gap-4 p-6">
+            <div className="flex flex-col gap-4 p-6 text-slate-300 dark:text-slate-500">
                 <h3 className="text-3xl">{featureInView.title}</h3>
                 <div className="flex flex-col gap-6 font-mono text-sm text-slate-200">
-                    <div>
-                        <span className="text-green-300">~</span> Project
-                        description:{' '}
+                    <div className="text-slate-300 dark:text-slate-400">
+                        <span className="text-green-300 dark:text-slate-500">~ </span> 
+                        Project description:
                     </div>
-                    <span className="inline-block rounded px-1 font-semibold">
+                    <span className="inline-block rounded px-1 font-semibold text-slate-400 dark:text-slate-400">
                         {featureInView.description}{' '}
                     </span>{' '}
                 </div>
@@ -205,32 +210,48 @@ const ExampleFeature = ({ featureInView }: FeatureProps) => {
                         <Badge key={tech} txt={tech} />
                     ))}
                 </div>
-                <div className="pointer-events-auto flex gap-4">
-                    <a
-                        target="_blank"
-                        href={featureInView.repoLink}
-                        className="text-xs text-slate-200 hover:text-slate-300"
-                    >
-                        <ButtonIcon icon={'repo'} txt="View Repo" />
-                    </a>
-                    <a
-                        target="_blank"
-                        href={featureInView.deployLink}
-                        className="text-xs text-slate-200 hover:text-slate-300"
-                    >
-                        <ButtonIcon icon={'deploy'} txt="App" />
-                    </a>
-                    <Link to={`/projects/${featureInView.urlTitle}`} key={featureInView.id} >
-                                        <ButtonIcon
-                                            icon={'project'}
-                                            txt="Project page"
-                                        />
-                                    </Link>
-                </div>
+                <div className="pointer-events-auto flex gap-4 only-txt-reverse">
+                                        {featureInView.type === 'public' ? (
+                                            <a
+                                                target="_blank"
+                                                href={featureInView.repoLink}
+                                                className="text-xs"
+                                            >
+                                                <ButtonIcon
+                                                    icon="repo"
+                                                    txt="View Repo"
+                                                />
+                                            </a>
+                                        ) : (
+                                            <ButtonIcon
+                                                icon="privateRepo"
+                                                txt="Private Repo"
+                                            />
+                                        )}
+
+                                        <a
+                                            target="_blank"
+                                            href={featureInView.deployLink}
+                                            className="text-xs "
+                                        >
+                                            <ButtonIcon
+                                                icon={'deploy'}
+                                                txt="App"
+                                            />
+                                        </a>
+                                        <Link
+                                            to={`/projects/${featureInView.urlTitle}`}
+                                            key={featureInView.id}
+                                        >
+                                            <ButtonIcon
+                                                icon={'project'}
+                                                txt="Project page"
+                                            />
+                                        </Link>
+                                    </div>
             </div>
         </div>
     )
 }
 
 export default TopProjects
-

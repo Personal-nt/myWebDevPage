@@ -38,6 +38,10 @@ type QuestionProps = {
 const Question = ({ title, children, defaultOpen = false }: QuestionProps) => {
     const [open, setOpen] = useState(defaultOpen);
 
+    const textColorClass = open
+        ? "text-slate-200 dark:text-red-400"
+        : "text-slate-600 dark:text-red-400";
+
     return (
         <motion.div
             animate={open ? 'open' : 'closed'}
@@ -45,7 +49,7 @@ const Question = ({ title, children, defaultOpen = false }: QuestionProps) => {
         >
             <button
                 onClick={() => setOpen((prev) => !prev)}
-                className="flex flex-wrap w-full items-center justify-between gap-4 py-6"
+                className={`flex flex-wrap w-full items-center justify-between gap-4 py-6 ${textColorClass}`}
             >
                 <motion.span
                     variants={{
@@ -53,18 +57,18 @@ const Question = ({ title, children, defaultOpen = false }: QuestionProps) => {
                             color: 'rgba(3, 6, 23, 0)',
                         },
                         closed: {
-                            color: 'rgba(3, 6, 23, 1)',
+                            color: 'rgba(23, 6, 23, 1)',
                         },
                     }}
-                    className="bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-left text-lg font-medium"
+                    className="bg-gradient-to-r  bg-clip-text text-left text-lg font-medium"
                 >
-                    <div className="flex gap-2 justify-center items-center">{`${title}`}{<IoFilter />}</div>
+                    <div className="flex gap-2 justify-center items-center only-txt">{`${title}`}{<IoFilter />}</div>
                 </motion.span>
                 <motion.span
                     variants={{
                         open: {
                             rotate: '180deg',
-                            color: 'rgb(124 58 237)',
+                            color: 'rgb(24 58 237)',
                         },
                         closed: {
                             rotate: '0deg',
@@ -72,7 +76,7 @@ const Question = ({ title, children, defaultOpen = false }: QuestionProps) => {
                         },
                     }}
                 >
-                    <FiChevronDown className="text-2xl" />
+                    <FiChevronDown className="text-2xl only-txt" />
                 </motion.span>
             </button>
             <motion.div

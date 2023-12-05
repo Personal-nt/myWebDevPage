@@ -45,7 +45,7 @@ const ButtonIcon = ({ icon, txt }: ButtonIconProps) => {
     const IconComponent = ICON_MAP[icon];
 
     return (
-        <button className="btn flex-nowrap">
+        <button className="w-fit bg-slate-400/50 justify-center items-center gap-2 p-2 rounded-lg flex flex-nowrap text-[12px]">
             <IconComponent />
             {txt}
         </button>

@@ -1,4 +1,5 @@
 import IsometricRoom from './IsometricRoom'
+import { Link } from 'react-router-dom'
 
 export const Hero = () => {
     return (
@@ -18,11 +19,11 @@ export const Hero = () => {
                             <br />
                         </h5>
                         <button className="border-1 btn btn-outline mt-4 w-1/3 border-teal-400 bg-teal-400 text-[#081421c5] dark:bg-[#081421c5] dark:text-teal-400 hover:dark:bg-teal-400 hover:dark:text-[#081421c5]">
-                            Let's build!
+                            <Link to="contact">Let's build!</Link>
                         </button>
                     </div>
                 </div>
-                <div className="relative -top-[0px] left-[50px] flex h-[750px] w-1/2 items-center justify-center border-0 border-black bg-emerald-600/0">
+                <div className="relative -top-[0px] left-[50px] flex h-[750px] w-1/2 items-center justify-center bg-emerald-600/0 border border-slate-300/0">
                     <IsometricRoom />
                 </div>
             </div>

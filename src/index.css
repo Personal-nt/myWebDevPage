@@ -9,6 +9,23 @@
 
   --color-primary-opacity: rgba(91, 33, 182, 0.4); /* Adjust the opacity value (0.4) as needed */
   --color-secondary-opacity: rgba(16, 185, 129, 0.4);
+
+  --text-color: #081421c5;
+  --text-color-dark: #d1d5db; /* Assuming slate-300 is close to d1d5db */
+  --bg-color: #e5e7eb; /* Assuming slate-200 is close to e5e7eb */
+  --bg-color-dark: #001412;
+}
+
+@layer components {
+  .custom-text-bg {
+    @apply text-textColor dark:text-textColorDark bg-bgColor dark:bg-bgColorDark;
+  }
+  .only-txt{
+    @apply text-textColor dark:text-textColorDark;
+  }
+  .only-txt-reverse{
+    @apply text-textColorDark dark:text-textColor;
+  }
 }
 
 body {
@@ -112,3 +129,21 @@ small {
 } 
 
 .slide-right{animation:slide-right 2.5s cubic-bezier(.25,.46,.45,.94) both}
+
+/* Ensure the container has defined bounds */
+.image-container {
+  height: 300px; /* Adjust the height as needed */
+  width: 100%;
+  position: relative; /* Position relative for the absolute positioned child */
+  overflow: hidden; /* Hide overflow to prevent scrollbars */
+  border-radius: 8px; /* Adjust the border-radius as needed */
+}
+
+/* Set the image to cover the space */
+.image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* Cover the container, may crop the image */
+  object-position: top; /* Center the image within the container */
+  border-radius: 8px; /* Match the border-radius of the container */
+}

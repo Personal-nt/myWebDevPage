@@ -13,8 +13,8 @@ const Projects = () => {
         selectedTechs.length === 0
             ? projArr
             : projArr.filter((proj) =>
-                  selectedTechs.some((tech) => proj.techStack.includes(tech)),
-              )
+                selectedTechs.some((tech) => proj.techStack.includes(tech)),
+            )
 
     const handleCheckboxChange = (tech: Technology) => {
         setSelectedTechs((prev) => {
@@ -55,19 +55,19 @@ const Projects = () => {
                         }) => (
                             <div
                                 key={id}
-                                className="flex h-[300px] w-[800px] items-center justify-center gap-6 rounded-xl border-2 border-slate-400/20"
+                                className="custom-text-bg flex h-[300px] w-[800px] items-center justify-center gap-6 rounded-xl border-2 border-slate-400/20"
                             >
                                 <div className="relative h-full w-1/2 rounded-xl bg-slate-800 shadow-xl dark:bg-slate-200">
-                                    <div className="flex w-full gap-1.5 rounded-t-xl bg-slate-900 p-3 dark:bg-slate-400">
+                                    <div className="flex gap-1.5 rounded-t-xl bg-slate-900 p-3 dark:bg-slate-300">
                                         <div className="h-3 w-3 rounded-full bg-red-500" />
                                         <div className="h-3 w-3 rounded-full bg-yellow-500" />
                                         <div className="h-3 w-3 rounded-full bg-green-500" />
                                     </div>
-                                    <div className="flex flex-col gap-4 p-0">
+                                    <div className="flex flex-col gap-0 p-0">
                                         <img
                                             src={projectScreenShot}
                                             alt={title}
-                                            className="rounded-b-xl object-cover shadow-xl "
+                                            className="h-[260px] w-full rounded-b-xl object-cover object-center shadow-xl"
                                         />
                                     </div>
                                 </div>
@@ -77,7 +77,7 @@ const Projects = () => {
                                     <h1 className="text-2xl font-bold">
                                         {title}
                                     </h1>
-                                    <p className="text-md max-h-[100px] overflow-y-auto">
+                                    <p className="max-h-[100px] text-sm ">
                                         {description}
                                     </p>{' '}
                                     {/* Added overflow handling */}
@@ -88,12 +88,12 @@ const Projects = () => {
                                             </li>
                                         ))}
                                     </ul>
-                                    <div className="flex gap-4">
+                                    <div className="pointer-events-auto flex gap-4 only-txt">
                                         {type === 'public' ? (
                                             <a
                                                 target="_blank"
                                                 href={repoLink}
-                                                className="text-xs text-slate-200 hover:text-slate-300"
+                                                className="text-xs"
                                             >
                                                 <ButtonIcon
                                                     icon="repo"
@@ -110,7 +110,7 @@ const Projects = () => {
                                         <a
                                             target="_blank"
                                             href={deployLink}
-                                            className="text-xs text-slate-200 hover:text-slate-300"
+                                            className="text-xs"
                                         >
                                             <ButtonIcon
                                                 icon={'deploy'}

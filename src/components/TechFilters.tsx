@@ -39,7 +39,7 @@ const TechFilters: React.FC<TechFiltersProps> = ({ selectedTechs, onCheckboxChan
                     checked={selectedTechs.includes(tech)}
                     onChange={() => onCheckboxChange(tech)}
                 />
-                <label htmlFor={tech} className="">{tech}</label>
+                <label htmlFor={tech} className="only-txt">{tech}</label>
             </div>
         ))}
     </div>
