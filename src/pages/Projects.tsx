@@ -39,8 +39,8 @@ const Projects = () => {
                 onCheckboxChange={handleCheckboxChange}
                 clearFilters={clearFilters}
             />
-            <div className="flex h-screen w-screen flex-col items-center justify-start bg-slate-900/0">
-                <div className="grid h-fit w-3/4 grid-cols-2 gap-12 border-0 border-blue-600 bg-slate-200 dark:bg-[#001412]">
+            <div className="flex mb-12 w-screen flex-col items-center justify-start bg-slate-900/0">
+                <div className="grid w-3/4 grid-cols-2 gap-12 border-0 border-blue-600 bg-slate-200 dark:bg-[#001412]">
                     {filteredProjects.map(
                         ({
                             id,

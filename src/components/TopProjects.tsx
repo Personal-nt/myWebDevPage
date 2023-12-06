@@ -7,29 +7,15 @@ import { features } from '../utils/projects'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import { Link } from 'react-router-dom'
-
-type Feature = {
-    id: number
-    type: 'public' | 'private'
-    callout: string
-    title: string
-    urlTitle: string
-    projectScreenShot: string
-    repoLink: string
-    deployLink: string
-    techStack: string[]
-    description: string
-    contentPosition: string
-    Icon: string
-}
+import { Project } from '../utils/projects'
 
 type FeatureProps = {
-    featureInView: Feature
+    featureInView: Project
 }
 
 type ContentProps = {
-    setFeatureInView: (feature: Feature) => void
-    featureInView: Feature
+    setFeatureInView: (feature: Project) => void
+    featureInView: Project
     isMouseOver: boolean
 }
 
@@ -194,14 +180,16 @@ const ExampleFeature = ({ featureInView }: FeatureProps) => {
                 <div className="h-3 w-3 rounded-full bg-yellow-500" />
                 <div className="h-3 w-3 rounded-full bg-green-500" />
             </div>
-            <div className="flex flex-col gap-4 p-6 text-slate-300 dark:text-slate-500">
+            <div className="flex flex-col gap-6 p-6 text-slate-300 dark:text-slate-500">
                 <h3 className="text-3xl">{featureInView.title}</h3>
-                <div className="flex flex-col gap-6 font-mono text-sm text-slate-200">
-                    <div className="text-slate-300 dark:text-slate-400">
-                        <span className="text-green-300 dark:text-slate-500">~ </span> 
+                <div className="flex flex-col gap-2 font-mono text-sm text-slate-200">
+                    <div className="only-txt-reverse">
+                        <span className="text-green-300 dark:text-slate-500">
+                            ~{' '}
+                        </span>
                         Project description:
                     </div>
-                    <span className="inline-block rounded px-1 font-semibold text-slate-400 dark:text-slate-400">
+                    <span className="only-txt-reverse inline-block rounded px-1 font-semibold">
                         {featureInView.description}{' '}
                     </span>{' '}
                 </div>
@@ -210,45 +198,45 @@ const ExampleFeature = ({ featureInView }: FeatureProps) => {
                         <Badge key={tech} txt={tech} />
                     ))}
                 </div>
-                <div className="pointer-events-auto flex gap-4 only-txt-reverse">
-                                        {featureInView.type === 'public' ? (
-                                            <a
-                                                target="_blank"
-                                                href={featureInView.repoLink}
-                                                className="text-xs"
-                                            >
-                                                <ButtonIcon
-                                                    icon="repo"
-                                                    txt="View Repo"
-                                                />
-                                            </a>
-                                        ) : (
-                                            <ButtonIcon
-                                                icon="privateRepo"
-                                                txt="Private Repo"
-                                            />
-                                        )}
-
-                                        <a
-                                            target="_blank"
-                                            href={featureInView.deployLink}
-                                            className="text-xs "
-                                        >
-                                            <ButtonIcon
-                                                icon={'deploy'}
-                                                txt="App"
-                                            />
-                                        </a>
-                                        <Link
-                                            to={`/projects/${featureInView.urlTitle}`}
-                                            key={featureInView.id}
-                                        >
-                                            <ButtonIcon
-                                                icon={'project'}
-                                                txt="Project page"
-                                            />
-                                        </Link>
-                                    </div>
+                <div className="only-txt-reverse pointer-events-auto flex gap-4">
+                    {featureInView.type === 'moreProjects' ? (
+                        <Link to="projects">
+                            <ButtonIcon icon="repo" txt="More projects" />
+                        </Link>
+                    ) : featureInView.type === 'public' ? (
+                        <a
+                            target="_blank"
+                            href={featureInView.repoLink}
+                            className="text-xs"
+                        >
+                            <ButtonIcon icon="repo" txt="View Repo" />
+                        </a>
+                    ) : (
+                        <ButtonIcon icon="privateRepo" txt="Private Repo" />
+                    )}
+                    
+                    {featureInView.type === 'public' ||
+                    featureInView.type === 'private' ? (
+                        <>
+                            <a
+                                target="_blank"
+                                href={featureInView.deployLink}
+                                className="text-xs "
+                            >
+                                <ButtonIcon icon={'deploy'} txt="App" />
+                            </a>
+                            <Link
+                                to={`/projects/${featureInView.urlTitle}`}
+                                key={featureInView.id}
+                            >
+                                <ButtonIcon
+                                    icon={'project'}
+                                    txt="Project page"
+                                />
+                            </Link>
+                        </>
+                    ) : null}
+                </div>
             </div>
         </div>
     )

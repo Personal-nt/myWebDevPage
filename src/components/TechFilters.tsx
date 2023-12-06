@@ -24,6 +24,10 @@ const technologies: Technology[] = [
     'React Router',
     'Zustand',
     'Pinia',
+    'REST API',
+    'i18n',
+    'Redux',
+    'Chart.js'
 ]
 
 const TechFilters: React.FC<TechFiltersProps> = ({ selectedTechs, onCheckboxChange }) => {
@@ -47,20 +51,3 @@ const TechFilters: React.FC<TechFiltersProps> = ({ selectedTechs, onCheckboxChan
 }
 
 export default TechFilters
-
-// type TechFiltersProps = {
-//     tech: string
-// }
-
-// const TechFilters = ({ tech }: TechFiltersProps) => {
-//     return (
-//         <div className="form-control">
-//             <label className="label cursor-pointer">
-//                 <span className="label-text">{tech}</span>
-//                 <input type="checkbox" className="checkbox" />
-//             </label>
-//         </div>
-//     )
-// }
-
-// export default TechFilters

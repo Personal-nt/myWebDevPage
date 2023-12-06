@@ -14,26 +14,28 @@ const ProjectDetails = () => {
 
     const {
         title,
+        projectDetailDescription,
         description,
         techStack,
-        projectScreenShot,
         repoLink,
         deployLink,
     } = project
     return (
-        <div className="container mx-auto px-4 py-8 w-screen">
+        <div className="container px-4 py-8 w-screen">
             <h1 className="text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">
                 {title}
             </h1>
             <p className="mt-4 text-gray-600 dark:text-gray-300">
-                {description}
+                {projectDetailDescription}
             </p>
             <div className="flex justify-center">
-                <div className="mt-6 md:hidden">
+                <div className="mt-6 lg:hidden">
                     <PhoneMockup url={deployLink} />
                 </div>
-                <div className="mt-6 hidden md:flex">
+                <div className="mt-6 hidden lg:flex">
+                    <div className="">
                     <BrowserMockup url={deployLink} />
+                    </div>
                 </div>
             </div>
             <ul className="mt-4 flex flex-wrap gap-2">
