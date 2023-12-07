@@ -246,9 +246,9 @@ export const features: Project[] = [
                 'Real-time task updates and synchronization using Supabase.',
             ],
             frontendFramework: 'Vue.js',
-            stateManagement: "Vue's reactive system",
+            stateManagement: "Pinia",
             routing: 'Vue Router',
-            apiIntegration: ['Supabase for backend API interactions'],
+            apiIntegration: ['Supabase'],
             uiUx: 'Tailwind CSS for styling and responsive design',
             database:
                 'Supabase for data storage, retrieval, and real-time updates',
@@ -300,18 +300,47 @@ export const features: Project[] = [
         projectDetailDescription:
             'Dive into the universe of Rick and Morty with this interactive web application. Built using a stack of cutting-edge technologies and libraries such as React, Next UI, Framer Motion, React Router, Tailwind CSS, TypeScript, and Vite, this project is a testament to modern web development practices. It leverages the Rick and Morty API to fetch and display character details, locations, and episodes from the beloved series.',
         technicalDescription: {
-            title: '',
-            objective: '',
-            keyFunctionalities: [''],
-            frontendFramework: '',
-            stateManagement: '',
-            routing: '',
-            apiIntegration: [''],
-            uiUx: '',
-            database: '',
-            authentication: '',
-            crudOperations: '',
-            keyComponents: [],
+            title: 'Jump2Digital Hackathon Admissions Project',
+            objective: 'A web application to consult the Rick & Morty API to display the characters, locations and episodes of the TV serie.',
+            keyFunctionalities: [
+            'Fetch and display a list of characters, locations and episodes using the Rick & Morty API.',
+            'Implement pagination to manage and navigate through large datasets.',
+            'Search feature to filter characters by name',
+            'Creative CSS designs'],
+            frontendFramework: 'React',
+            stateManagement: 'none',
+            routing: 'React Router',
+            apiIntegration: ['Fetch API'],
+            uiUx: 'Responsive design with interactive elements for an engaging user experience',
+            database: 'None',
+            authentication: 'None',
+            crudOperations: 'None',
+            keyComponents: [
+                {
+                    name: 'Home.tsx',
+                    description:
+                        'The landing page with an overview of the project.',
+                        link: 'https://github.com/0xNordian/rickyandmorty-j2d-hackaton/blob/main/src/pages/Home.tsx',
+                },
+                {
+                    name: 'Characters.tsx',
+                    description:
+                        'Component for listing characters. The component use pagination and it has a search capabilty to let the user type the name of a character and filter the displayed list.',
+                    link: 'https://github.com/0xNordian/rickyandmorty-j2d-hackaton/blob/main/src/pages/Characters.tsx',
+                },
+                {
+                    name: 'Episodes.tsx',
+                    description:
+                        'The landing page with an overview of the project.',
+                        link: 'https://github.com/0xNordian/rickyandmorty-j2d-hackaton/blob/main/src/pages/Episodes.tsx',
+                },
+                {
+                    name: 'Locations.tsx',
+                    description:
+                        'The landing page with an overview of the project.',
+                        link: 'https://github.com/0xNordian/rickyandmorty-j2d-hackaton/blob/main/src/pages/Locations.tsx',
+                },
+            ],
             testingFrameworks: [''],
             codeQualityTools: [''],
             conclusion: '',

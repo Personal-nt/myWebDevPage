@@ -10,7 +10,7 @@ export type ProjectDetailsProps = {
     database: string;
     authentication: string;
     crudOperations: string;
-    keyComponents: { name: string; description: string; }[];
+    keyComponents: { name: string; description: string; link: string }[];
     testingFrameworks: string[];
     codeQualityTools: string[];
     conclusion: string;
@@ -50,7 +50,7 @@ const TemplateProjectDetails = ({
                 </ul>
             </div>
 
-            <div className="divider"></div>
+            <div className="divider m-0 bg-[#081421c5] h-[.5px]"></div>
 
             {/* Technical Implementation */}
             <h3>Technical Implementation</h3>
@@ -78,7 +78,7 @@ const TemplateProjectDetails = ({
                 <h4>Key Components:</h4>
                 <ul>
                     {keyComponents.map((component, index) => (
-                        <li key={index}><strong>{component.name}:</strong> {component.description}</li>
+                        <li key={index}><strong className="underline hover:text-secondary"><a href={component.link} target="_blank">{component.name}</a>:</strong> {component.description}</li>
                     ))}
                 </ul>
             </div>
