@@ -19,7 +19,6 @@ const ProjectDetails = () => {
         title,
         projectDetailDescription,
         technicalDescription,
-
         techStack,
         repoLink,
         deployLink,
@@ -39,7 +38,7 @@ const ProjectDetails = () => {
                     </div>
                     <div className="mt-6 hidden lg:flex">
                         <div className="">
-                            <BrowserMockup url={deployLink} />
+                            <BrowserMockup url={deployLink} technicalDescription={technicalDescription}/>
                         </div>
                     </div>
                     <ul className="mt-4 flex flex-wrap gap-2">

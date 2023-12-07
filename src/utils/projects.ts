@@ -55,12 +55,14 @@ export const features: Project[] = [
         id: crypto.randomUUID(),
         type: 'private',
         category: 'social network',
-        projectDetailDescription: 'Find people',
+        projectDetailDescription: `Deverso.io is a decentralized social media platform built ontop of the Deso protocol. Designed with a user experience and interface reminiscent of the renowned X (formerly known as Twitter), it offers an intuitive and familiar environment for users. At its core, Deverso.io boasts robust features including comprehensive authentication capabilities, full-fledged CRUD (Create, Read, Update, Delete) operations, advanced monetization mechanisms, and integrated NFT (Non-Fungible Token) functionalities.
+        
+        As the pioneering endeavor of Deverso Labs, this platform not only stands as a testament to our innovative spirit but also serves as a dynamic testing ground for our upcoming products. Deverso.io is more than just a social media site; its a hub of future-forward technologies converging to redefine the digital social experience, leveraging blockchain to ensure security, authenticity, and user empowerment. This project is a cornerstone in our mission to revolutionize the landscape of social media, making it more decentralized, user-centric, and financially rewarding for content creators and users alike.`,
         technicalDescription: {
-            title: '',
+            title: 'Deverso.io',
             objective: '',
             keyFunctionalities: [''],
-            frontendFramework: '',
+            frontendFramework: 'Angular',
             stateManagement: '',
             routing: '',
             apiIntegration: [''],
@@ -72,6 +74,8 @@ export const features: Project[] = [
             testingFrameworks: [''],
             codeQualityTools: [''],
             conclusion: '',
+            projScreenshotAlt: true,
+            AppAltScreenShot: '/images/deverso-io-alt.png'
         },
         title: 'Deverso.io (Angular)',
         urlTitle: 'deverso.io',
@@ -177,30 +181,37 @@ export const features: Project[] = [
                     name: 'Home.tsx',
                     description:
                         'The landing page with an overview of the project.',
+                        link: 'https://github.com/0xNordian/sprint8/blob/main/src/pages/Home.tsx'
                 },
                 {
                     name: 'SignIn.tsx',
                     description: 'User authentication interface.',
+                    link: 'https://github.com/0xNordian/sprint8/blob/main/src/pages/SignIn.tsx'
                 },
                 {
                     name: 'Starships.tsx',
                     description: 'Component for listing starships.',
+                    link: 'https://github.com/0xNordian/sprint8/blob/main/src/pages/Starships.tsx'
                 },
                 {
                     name: 'StarshipDetails.tsx',
                     description: 'Component for displaying starship details.',
+                    link: 'https://github.com/0xNordian/sprint8/blob/main/src/pages/StarshipDetails.tsx'
                 },
                 {
                     name: 'NotFoundPage.tsx',
                     description: 'A custom 404 page for unhandled routes.',
+                    link: 'https://github.com/0xNordian/sprint8/blob/main/src/pages/NotFoundPage.tsx'
                 },
                 {
                     name: 'useAuthStore.ts',
                     description: 'Custom hook for managing authentication.',
+                    link: 'https://github.com/0xNordian/sprint8/blob/main/src/stores/useAuthStore.ts'
                 },
                 {
                     name: 'useStarshipStore.ts',
                     description: 'Custom hook for managing starship data.',
+                    link: 'https://github.com/0xNordian/sprint8/blob/main/src/stores/useStarshipStore.ts'
                 },
             ],
             testingFrameworks: ['Vitest', 'Jest for robust unit testing'],
@@ -259,15 +270,30 @@ export const features: Project[] = [
                 {
                     name: 'App.vue',
                     description: 'The main application component.',
+                    link: 'https://github.com/0xNordian/doyt/blob/main/src/App.vue'
                 },
                 {
                     name: 'CreateTask.vue',
                     description: 'Component for creating new tasks.',
+                    link: 'https://github.com/0xNordian/doyt/blob/main/src/components/CreateTask.vue'
                 },
                 {
                     name: 'TaskCart.vue',
                     description:
                         'Component for displaying and managing individual tasks.',
+                        link: 'https://github.com/0xNordian/doyt/blob/main/src/components/TaskCart.vue'
+                },
+                {
+                    name: 'task.js (Pinia store)',
+                    description:
+                        'Pinia store to fetch tasks from supabase',
+                        link: 'https://github.com/0xNordian/doyt/blob/main/src/stores/task.js'
+                },
+                {
+                    name: 'user.js (Pinia store)',
+                    description:
+                        'Pinia store to fetch users from supabase',
+                        link: 'https://github.com/0xNordian/doyt/blob/main/src/stores/user.js'
                 },
             ],
             testingFrameworks: ['Jest'],

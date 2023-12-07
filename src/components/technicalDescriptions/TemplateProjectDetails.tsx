@@ -14,6 +14,8 @@ export type ProjectDetailsProps = {
     testingFrameworks: string[];
     codeQualityTools: string[];
     conclusion: string;
+    projScreenshotAlt?: boolean;
+    AppAltScreenShot?: string;
 }
 
 const TemplateProjectDetails = ({ 
