@@ -1,7 +1,9 @@
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { features } from '../utils/projects'
 import PhoneMockup from '../components/PhoneMockup'
 import BrowserMockup from '../components/BrowserMockup'
+import ButtonIcon from '../components/ButtonIcon'
+import TemplateProjectDetails from '../components/technicalDescriptions/TemplateProjectDetails'
 
 const ProjectDetails = () => {
     const { urlTitle } = useParams()
@@ -13,58 +15,69 @@ const ProjectDetails = () => {
     }
 
     const {
+        type,
         title,
         projectDetailDescription,
-        description,
+        technicalDescription,
+
         techStack,
         repoLink,
         deployLink,
     } = project
     return (
-        <div className="container px-4 py-8 w-screen">
-            <h1 className="text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">
+        <div className="container w-screen px-4 py-8">
+            <h1 className="text-2xl font-bold only-txt md:text-4xl">
                 {title}
             </h1>
-            <p className="mt-4 text-gray-600 dark:text-gray-300">
+            <p className="mt-4 only-txt">
                 {projectDetailDescription}
             </p>
-            <div className="flex justify-center">
-                <div className="mt-6 lg:hidden">
-                    <PhoneMockup url={deployLink} />
-                </div>
-                <div className="mt-6 hidden lg:flex">
-                    <div className="">
-                    <BrowserMockup url={deployLink} />
+            <div className="flex w-full gap-12">
+                <div className="flex flex-col justify-start items-center">
+                    <div className="mt-6 lg:hidden">
+                        <PhoneMockup url={deployLink} />
                     </div>
+                    <div className="mt-6 hidden lg:flex">
+                        <div className="">
+                            <BrowserMockup url={deployLink} />
+                        </div>
+                    </div>
+                    <ul className="mt-4 flex flex-wrap gap-2">
+                        {techStack.map((tech, index) => (
+                            <li
+                                key={index}
+                                className="rounded-full bg-blue-500 px-3 py-1 text-sm text-white"
+                            >
+                                {tech}
+                            </li>
+                        ))}
+                    </ul>
+                    <div className="mt-6 flex flex-col justify-center gap-4 md:flex-row only-txt">
+                    {type === 'moreProjects' ? (
+                        <Link to="projects">
+                            <ButtonIcon icon="repo" txt="More projects" />
+                        </Link>
+                    ) : type === 'public' ? (
+                        <a
+                            target="_blank"
+                            href={repoLink}
+                            className="text-xs"
+                        >
+                            <ButtonIcon icon="repo" txt="View Repo" />
+                        </a>
+                    ) : (
+                        <ButtonIcon icon="privateRepo" txt="Private Repo" />
+                    )}
+                    <a
+                                target="_blank"
+                                href={deployLink}
+                                className="text-xs "
+                                >
+                                <ButtonIcon icon={'deploy'} txt="App" />
+                            </a>
+                                </div>
                 </div>
-            </div>
-            <ul className="mt-4 flex flex-wrap gap-2">
-                {techStack.map((tech, index) => (
-                    <li
-                        key={index}
-                        className="rounded-full bg-blue-500 px-3 py-1 text-sm text-white"
-                    >
-                        {tech}
-                    </li>
-                ))}
-            </ul>
-            <div className="mt-6 flex flex-col justify-center gap-4 md:flex-row">
-                <a
-                    href={repoLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded bg-green-500 px-4 py-2 text-center text-white hover:bg-green-600"
-                >
-                    View Repo
-                </a>
-                <a
-                    href={deployLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded bg-blue-500 px-4 py-2 text-center text-white hover:bg-blue-600"
-                >
-                    Visit Project
-                </a>
+                <div className="mt-6"><TemplateProjectDetails {...technicalDescription} /></div>
             </div>
         </div>
     )

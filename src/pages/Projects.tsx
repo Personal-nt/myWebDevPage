@@ -40,7 +40,7 @@ const Projects = () => {
                 clearFilters={clearFilters}
             />
             <div className="flex mb-12 w-screen flex-col items-center justify-start bg-slate-900/0">
-                <div className="grid w-3/4 grid-cols-2 gap-12 border-0 border-blue-600 bg-slate-200 dark:bg-[#001412]">
+                <div className="grid w-3/4 grid-cols-1 2xl:grid-cols-2 gap-12 border-0 border-blue-600 bg-slate-200 dark:bg-[#001412]">
                     {filteredProjects.map(
                         ({
                             id,
@@ -55,9 +55,9 @@ const Projects = () => {
                         }) => (
                             <div
                                 key={id}
-                                className="custom-text-bg flex h-[300px] w-[800px] items-center justify-center gap-6 rounded-xl border-2 border-slate-400/20"
+                                className="bg-[#D2D6DD] shadow-lg custom-text-bg flex h-[300px] w-[800px] items-center justify-center gap-6 rounded-xl border-2 border-slate-400/20"
                             >
-                                <div className="relative h-full w-1/2 rounded-xl bg-slate-800 shadow-xl dark:bg-slate-200">
+                                <div className="relative h-full w-1/2 rounded-xl bg-slate-800 dark:bg-slate-200">
                                     <div className="flex gap-1.5 rounded-t-xl bg-slate-900 p-3 dark:bg-slate-300">
                                         <div className="h-3 w-3 rounded-full bg-red-500" />
                                         <div className="h-3 w-3 rounded-full bg-yellow-500" />
@@ -71,7 +71,7 @@ const Projects = () => {
                                         />
                                     </div>
                                 </div>
-                                <div className="flex w-1/2 flex-col justify-between gap-4 p-4 ">
+                                <div className="flex w-1/2 flex-col justify-between gap-4 p-4">
                                     {' '}
                                     {/* Adjusted classes here */}
                                     <h1 className="text-2xl font-bold">

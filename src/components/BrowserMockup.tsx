@@ -5,7 +5,7 @@ type BrowserMockupProps = {
 const BrowserMockup = ({ url }: BrowserMockupProps) => {
     return (
         <div className="">
-            <div className="mockup-browser border bg-base-300 w-[1440px]">
+            <div className="mockup-browser border bg-base-300 w-[750px]">
                 <div className="mockup-browser-toolbar ">
                     <div className="input">{url}</div>
                 </div>

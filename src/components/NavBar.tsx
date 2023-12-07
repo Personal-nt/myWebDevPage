@@ -4,7 +4,7 @@ import { HashLink } from 'react-router-hash-link'
 
 const NavBar = () => {
     return (
-        <div className="navbar sticky top-0 z-[999] bg-base-100">
+        <div className="navbar sticky top-0 z-[999] bg-base-100 px-2">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div
