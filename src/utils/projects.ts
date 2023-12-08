@@ -135,7 +135,7 @@ export const features: Project[] = [
         },
         title: 'Anomalie Web App',
         urlTitle: 'anomalie-app',
-        projectScreenShot: '/images/anomalie-app.png',
+        projectScreenShot: '/images/anomalie-app.jpeg',
         repoLink: 'https://github.com/0xNordian/anomalie-app-supabase',
         deployLink: 'https://anomalie.vercel.app/',
         techStack: [
@@ -417,7 +417,7 @@ export const features: Project[] = [
         },
         title: 'Cercle Web',
         urlTitle: 'cercle-app',
-        projectScreenShot: '/images/circl3.png',
+        projectScreenShot: '/images/circl3.jpeg',
         repoLink:
             'https://github.com/0xNordian/IronHack-MidTerm-Rpoject-Circle',
         deployLink: 'https://circl3.netlify.app/',
