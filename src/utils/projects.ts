@@ -55,29 +55,32 @@ export const features: Project[] = [
         id: crypto.randomUUID(),
         type: 'private',
         category: 'social network',
-        projectDetailDescription: `Deverso.io is a decentralized social media platform built ontop of the Deso protocol. Designed with a user experience and interface reminiscent of the renowned X (formerly known as Twitter), it offers an intuitive and familiar environment for users. At its core, Deverso.io boasts robust features including comprehensive authentication capabilities, full-fledged CRUD (Create, Read, Update, Delete) operations, advanced monetization mechanisms, and integrated NFT (Non-Fungible Token) functionalities.
-        
-        As the pioneering endeavor of Deverso Labs, this platform not only stands as a testament to our innovative spirit but also serves as a dynamic testing ground for our upcoming products. Deverso.io is more than just a social media site; its a hub of future-forward technologies converging to redefine the digital social experience, leveraging blockchain to ensure security, authenticity, and user empowerment. This project is a cornerstone in our mission to revolutionize the landscape of social media, making it more decentralized, user-centric, and financially rewarding for content creators and users alike.`,
+        projectDetailDescription: `Deverso.io, a decentralized social media platform, leverages the Deso protocol to offer a user-friendly experience akin to Twitter. It features comprehensive authentication, CRUD operations, monetization, and NFT functionalities. As Deverso Labs' first project, it serves as a testbed for future innovations, focusing on security, authenticity, and empowering users in a decentralized, user-centric social media landscape.`,
         technicalDescription: {
             title: 'Deverso.io',
-            objective: '',
-            keyFunctionalities: [''],
+            objective: 'Built a testing enviroment to develop the future of decentralized social media solutions for the spanish-speaking community.',
+            keyFunctionalities: ['Auth using the Deso login capabilities','CRUD operations using the backend of the Deso Blockchain','Monetization features such as creator coins and sociel tipping','NFT CRUD capabilities'],
             frontendFramework: 'Angular',
-            stateManagement: '',
-            routing: '',
-            apiIntegration: [''],
-            uiUx: '',
-            database: '',
-            authentication: '',
-            crudOperations: '',
-            keyComponents: [],
-            testingFrameworks: [''],
-            codeQualityTools: [''],
-            conclusion: '',
+            stateManagement: 'None',
+            routing: '@angular/router: 11.2.12',
+            apiIntegration: ['Fetch API for calls to Deso`s API'],
+            uiUx: 'Fully responsive design with interactive elements for an engaging user experience',
+            database: 'Deso Blockchain',
+            authentication: 'Identity Layer Deso Blockchain',
+            crudOperations: 'CRUD on Deso Blockchain',
+            keyComponents: [{
+                name: 'Private project 🔐',
+                description:
+                    'This is a private project and component details cannot be shared.',
+                    link: ''
+            },],
+            testingFrameworks: ['Jest', 'Jasmine'],
+            codeQualityTools: ['ESLint', 'Prettier'],
+            conclusion: 'This project marks a significant milestone in my journey as a founder, product manager, and developer. Leading the development of Deverso.io, Ive collaborated with various professionals, managing and directing their efforts to bring this vision to life. This venture not only stands as the flagship project of my company but has also been a profound learning experience. Over the last three years, it has provided me with invaluable insights into the intricacies of technical development and project leadership, shaping my skills and expertise in the realm of digital innovation.',
             projScreenshotAlt: true,
             AppAltScreenShot: '/images/deverso-io-alt.png'
         },
-        title: 'Deverso.io (Angular)',
+        title: 'Deverso.io',
         urlTitle: 'deverso.io',
         projectScreenShot: '/images/deverso-io.jpeg',
         repoLink: '',
@@ -100,7 +103,7 @@ export const features: Project[] = [
         id: crypto.randomUUID(),
         type: 'public',
         category: 'social network',
-        projectDetailDescription: 'Find people',
+        projectDetailDescription: '',
         technicalDescription: {
             title: 'Anomalie App',
             objective:
@@ -130,7 +133,7 @@ export const features: Project[] = [
             conclusion:
                 'This project showcases a comprehensive implementation of modern web development practices, combining Next.js, Supabase, and state-of-the-art libraries to create a robust, scalable, and engaging web application.',
         },
-        title: 'Anomalie Web App (Next.js)',
+        title: 'Anomalie Web App',
         urlTitle: 'anomalie-app',
         projectScreenShot: '/images/anomalie-app.png',
         repoLink: 'https://github.com/0xNordian/anomalie-app-supabase',
@@ -173,9 +176,9 @@ export const features: Project[] = [
                 'Axios for API calls to starwars-visualguide.com',
             ],
             uiUx: 'Responsive design with interactive elements for an engaging user experience',
-            database: '', // No specific database mentioned in the provided data
-            authentication: '', // No specific authentication method mentioned in the provided data
-            crudOperations: '', // No specific CRUD operations mentioned in the provided data
+            database: 'None', // No specific database mentioned in the provided data
+            authentication: 'None', // No specific authentication method mentioned in the provided data
+            crudOperations: 'Read Only', // No specific CRUD operations mentioned in the provided data
             keyComponents: [
                 {
                     name: 'Home.tsx',
@@ -222,7 +225,7 @@ export const features: Project[] = [
             conclusion:
                 'This project was a deep dive into the technicalities of front-end development, particularly in the context of API consumption and data presentation. The Star Wars Starship Explorer stands as a testament to my growing capabilities in web development, showcasing both technical proficiency and a creative approach to problem-solving.',
         },
-        title: 'StarWars Starships (React)',
+        title: 'StarWars Starships',
         urlTitle: 'starWars-starships',
         projectScreenShot: '/images/sw.jpg',
         repoLink: 'https://github.com/0xNordian/sprint8',
@@ -246,7 +249,7 @@ export const features: Project[] = [
         id: crypto.randomUUID(),
         type: 'public',
         category: 'productivity',
-        projectDetailDescription: 'Have fun',
+        projectDetailDescription: '',
         technicalDescription: {
             title: 'Task Management System',
             objective:
@@ -301,7 +304,7 @@ export const features: Project[] = [
             conclusion:
                 'This project demonstrates the integration of Vue.js with Supabase to build a real-time task management system, focusing on a smooth user experience and efficient data handling.',
         },
-        title: 'Doyt (Vue)',
+        title: 'Doyt',
         urlTitle: 'doyt-app',
         projectScreenShot: '/images/doyt2.png',
         repoLink: 'https://github.com/0xNordian/doyt',
@@ -371,7 +374,7 @@ export const features: Project[] = [
             codeQualityTools: [''],
             conclusion: '',
         },
-        title: 'Jump2Digital Hackathon (React)',
+        title: 'Jump2Digital Hackathon',
         urlTitle: 'wubba-app',
         projectScreenShot: '/images/rickandmorty.png',
         repoLink: 'https://github.com/0xNordian/rickyandmorty-j2d-hackaton',
@@ -394,7 +397,7 @@ export const features: Project[] = [
         id: crypto.randomUUID(),
         type: 'public',
         category: 'product/service',
-        projectDetailDescription: 'Have fun',
+        projectDetailDescription: '',
         technicalDescription: {
             title: '',
             objective: '',
@@ -412,7 +415,7 @@ export const features: Project[] = [
             codeQualityTools: [''],
             conclusion: '',
         },
-        title: 'Cercle Web (Vanilla JS)',
+        title: 'Cercle Web',
         urlTitle: 'cercle-app',
         projectScreenShot: '/images/circl3.png',
         repoLink:
@@ -427,7 +430,7 @@ export const features: Project[] = [
         id: crypto.randomUUID(),
         type: 'public',
         category: 'gallery',
-        projectDetailDescription: 'Have fun',
+        projectDetailDescription: 'The class information is not existing in the API, so I created an algorythm to categorize the classes after fetching the API with axios. I cretes on CSS the rainbow effect on the background.',
         technicalDescription: {
             title: '',
             objective: '',
@@ -445,7 +448,7 @@ export const features: Project[] = [
             codeQualityTools: [''],
             conclusion: '',
         },
-        title: 'CloutPunk Rare (Vue)',
+        title: 'CloutPunk Rare',
         urlTitle: 'cloutpunk-app',
         projectScreenShot: '/images/cloutpunk.jpeg',
         repoLink: 'https://github.com/0xNordian/CloutPunkRare',
@@ -462,14 +465,14 @@ export const features: Project[] = [
             'Pinia',
         ],
         description:
-            'NFT gallery built with Vue, TailwindCSS and Pinia. The class information is not existing in the API, so I created an algorythm to categorize the classes after fetching the API with axios. I cretes on CSS the rainbow effect on the background.',
+            'An NFT gallery built using Vue, TailwindCSS, and Pinia, which enables users to filter by my NFT class, despite this information not being directly available in the backend.',
         contentPosition: 'r',
     },
     {
         id: crypto.randomUUID(),
         type: 'public',
         category: 'e-commerce',
-        projectDetailDescription: 'Have fun',
+        projectDetailDescription: '',
         technicalDescription: {
             title: '',
             objective: '',
@@ -487,7 +490,7 @@ export const features: Project[] = [
             codeQualityTools: [''],
             conclusion: '',
         },
-        title: 'Kings League Shop (Vanilla JS)',
+        title: 'Kings League Shop',
         urlTitle: 'kings-shop-app',
         projectScreenShot: '/images/kingsShop.jpeg',
         repoLink: 'https://github.com/0xNordian/Sprint-3/tree/main',
@@ -501,7 +504,7 @@ export const features: Project[] = [
         id: crypto.randomUUID(),
         type: 'public',
         category: 'web app',
-        projectDetailDescription: 'Have fun',
+        projectDetailDescription: '',
         technicalDescription: {
             title: '',
             objective: '',
@@ -519,7 +522,7 @@ export const features: Project[] = [
             codeQualityTools: [''],
             conclusion: '',
         },
-        title: 'Inprocode (React)',
+        title: 'Inprocode',
         urlTitle: 'inprocode-app',
         projectScreenShot: '/images/inprocode.jpeg',
         repoLink: 'https://github.com/0xNordian/sprint8.2',
@@ -542,7 +545,7 @@ export const features: Project[] = [
         id: crypto.randomUUID(),
         type: 'public',
         category: 'landing page',
-        projectDetailDescription: 'Have fun',
+        projectDetailDescription: '',
         technicalDescription: {
             title: '',
             objective: '',
@@ -560,7 +563,7 @@ export const features: Project[] = [
             codeQualityTools: [''],
             conclusion: '',
         },
-        title: 'Acudits (TypeScript)',
+        title: 'Acudits',
         urlTitle: 'acudits-app',
         projectScreenShot: '/images/acudits.jpeg',
         repoLink: 'https://github.com/0xNordian/sprint-5.1',
@@ -573,7 +576,7 @@ export const features: Project[] = [
         id: crypto.randomUUID(),
         type: 'moreProjects',
         category: 'other',
-        projectDetailDescription: 'Have fun',
+        projectDetailDescription: '',
         technicalDescription: {
             title: '',
             objective: '',

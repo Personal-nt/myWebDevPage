@@ -20,6 +20,9 @@
   .custom-text-bg {
     @apply text-textColor dark:text-textColorDark bg-bgColor dark:bg-bgColorDark;
   }
+  .custom-text-bg-reverse {
+    @apply text-textColorDark dark:text-textColor bg-bgColorDark dark:bg-bgColor;
+  }
   .only-txt{
     @apply text-textColor dark:text-textColorDark;
   }

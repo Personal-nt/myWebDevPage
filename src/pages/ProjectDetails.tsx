@@ -4,6 +4,7 @@ import PhoneMockup from '../components/PhoneMockup'
 import BrowserMockup from '../components/BrowserMockup'
 import ButtonIcon from '../components/ButtonIcon'
 import TemplateProjectDetails from '../components/technicalDescriptions/TemplateProjectDetails'
+import Badge from '../components/Badge'
 
 const ProjectDetails = () => {
     const { urlTitle } = useParams()
@@ -16,6 +17,7 @@ const ProjectDetails = () => {
 
     const {
         type,
+        category,
         title,
         projectDetailDescription,
         technicalDescription,
@@ -28,13 +30,14 @@ const ProjectDetails = () => {
             <h1 className="text-2xl font-bold only-txt md:text-4xl">
                 {title}
             </h1>
+            {<Badge txt={category} />}
             <p className="mt-4 only-txt">
                 {projectDetailDescription}
             </p>
             <div className="flex w-full gap-12">
                 <div className="flex flex-col justify-start items-center">
                     <div className="mt-6 lg:hidden">
-                        <PhoneMockup url={deployLink} />
+                        <PhoneMockup url={deployLink} technicalDescription={technicalDescription}/>
                     </div>
                     <div className="mt-6 hidden lg:flex">
                         <div className="">

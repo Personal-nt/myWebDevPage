@@ -13,8 +13,8 @@ const Projects = () => {
         selectedTechs.length === 0
             ? projArr
             : projArr.filter((proj) =>
-                selectedTechs.some((tech) => proj.techStack.includes(tech)),
-            )
+                  selectedTechs.some((tech) => proj.techStack.includes(tech)),
+              )
 
     const handleCheckboxChange = (tech: Technology) => {
         setSelectedTechs((prev) => {
@@ -39,12 +39,13 @@ const Projects = () => {
                 onCheckboxChange={handleCheckboxChange}
                 clearFilters={clearFilters}
             />
-            <div className="flex mb-12 w-screen flex-col items-center justify-start bg-slate-900/0">
-                <div className="grid w-3/4 grid-cols-1 2xl:grid-cols-2 gap-12 border-0 border-blue-600 bg-slate-200 dark:bg-[#001412]">
+            <div className="mb-12 flex w-screen flex-col items-center justify-start bg-slate-900/0">
+                <div className="grid w-3/4 grid-cols-1 gap-12 border-0 border-blue-600 bg-slate-200 dark:bg-[#001412] 2xl:grid-cols-2">
                     {filteredProjects.map(
                         ({
                             id,
                             type,
+                            category,
                             title,
                             description,
                             projectScreenShot,
@@ -55,7 +56,7 @@ const Projects = () => {
                         }) => (
                             <div
                                 key={id}
-                                className="bg-[#D2D6DD] shadow-lg custom-text-bg flex h-[300px] w-[800px] items-center justify-center gap-6 rounded-xl border-2 border-slate-400/20"
+                                className="custom-text-bg flex h-[300px] w-[800px] items-center justify-center gap-6 rounded-xl border-2 border-slate-400/20 bg-[#D2D6DD] shadow-lg"
                             >
                                 <div className="relative h-full w-1/2 rounded-xl bg-slate-800 dark:bg-slate-200">
                                     <div className="flex gap-1.5 rounded-t-xl bg-slate-900 p-3 dark:bg-slate-300">
@@ -74,9 +75,14 @@ const Projects = () => {
                                 <div className="flex w-1/2 flex-col justify-between gap-4 p-4">
                                     {' '}
                                     {/* Adjusted classes here */}
-                                    <h1 className="text-2xl font-bold">
-                                        {title}
-                                    </h1>
+                                    <div className="flex flex-col justify-center gap-1">
+                                        <h1 className="text-xl font-bold">
+                                            {title}
+                                        </h1>
+                                        <span className="w-fit">
+                                            <Badge txt={category} />
+                                        </span>
+                                    </div>
                                     <p className="max-h-[100px] text-sm ">
                                         {description}
                                     </p>{' '}
@@ -84,11 +90,16 @@ const Projects = () => {
                                     <ul className="flex flex-wrap gap-2">
                                         {techStack.map((tech, index) => (
                                             <li key={`${id}-${index}`}>
-                                                {<Badge txt={tech} />}
+                                                {
+                                                    <Badge
+                                                        txt={tech}
+                                                        type="tech"
+                                                    />
+                                                }
                                             </li>
                                         ))}
                                     </ul>
-                                    <div className="pointer-events-auto flex gap-4 only-txt">
+                                    <div className="only-txt pointer-events-auto flex gap-4">
                                         {type === 'public' ? (
                                             <a
                                                 target="_blank"

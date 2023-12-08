@@ -1,6 +1,6 @@
 import { ProjectDetailsProps } from '../components/technicalDescriptions/TemplateProjectDetails'
 
-type BrowserMockupProps = {
+type BrowserMockupProps = { 
     url: string
     technicalDescription: ProjectDetailsProps
 }
@@ -10,7 +10,7 @@ const BrowserMockup = ({ url, technicalDescription }: BrowserMockupProps) => {
         <div className="">
             <div className="mockup-browser border bg-base-300 w-[750px]">
                 <div className="mockup-browser-toolbar ">
-                    <div className="input">{url}</div>
+                    <div className="input"><a href={url} target="_blank">{url}</a></div>
                 </div>
                 <div className="bg-base-200 px-0 py-0">
                 {
