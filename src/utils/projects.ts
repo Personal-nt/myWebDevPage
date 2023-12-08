@@ -306,7 +306,7 @@ export const features: Project[] = [
         },
         title: 'Doyt',
         urlTitle: 'doyt-app',
-        projectScreenShot: '/images/doyt2.png',
+        projectScreenShot: '/images/doyt2.jpg',
         repoLink: 'https://github.com/0xNordian/doyt',
         deployLink: 'https://doyt.netlify.app/',
         techStack: [
