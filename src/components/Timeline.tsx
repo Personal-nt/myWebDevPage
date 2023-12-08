@@ -102,7 +102,7 @@ const Timeline = () => {
                                 {description.length > 300 && (
                                     <button
                                         onClick={() => toggleExpand(id)}
-                                        className="text-blue-500 hover:text-blue-600"
+                                        className="text-secondary hover:text-secondary"
                                     >
                                         {isExpanded ? 'Read less' : 'Read more'}
                                     </button>

@@ -1,5 +1,4 @@
 import { Hero } from '../components/Hero'
-import { Link } from 'react-router-dom'
 import Timeline from '../components/Timeline'
 
 import TopProjects from '../components/TopProjects'

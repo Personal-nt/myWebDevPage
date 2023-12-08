@@ -21,7 +21,7 @@ export default function IsometricRoom() {
         console.log('splineObject', splineObject);
     }, [splineObject])
 
-    const handleSceneLoad = (e) => {
+    const handleSceneLoad = (e: any) => {
         setSplineObject(e);
         if(e.disposed === false){
             setIsLoading(false);
