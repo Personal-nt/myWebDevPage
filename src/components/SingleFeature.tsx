@@ -2,7 +2,6 @@ import { Link } from "react-router-dom"
 import Badge from "./Badge"
 import ButtonIcon from "./ButtonIcon"
 import { Project } from '../utils/projects'
-import { features } from '../utils/projects'
 
 type FeatureProps = {
     featureInView: Project
