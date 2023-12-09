@@ -59,11 +59,10 @@ const TerminalContact = () => {
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
             }}
-            className="flex h-screen items-center justify-center custom-text-bg px-4 py-12"
+            className="custom-text-bg flex h-screen w-screen items-center justify-center px-4 py-12"
         >
             <div className="absolute">
-
-            <HaxCle />
+                <HaxCle />
             </div>
             {errorMessage && <p className="text-red-300">{errorMessage}</p>}
             <div
@@ -100,22 +99,22 @@ const TerminalHeader = () => {
 }
 
 const TerminalBody = ({ containerRef, inputRef }: TerminalBodyProps) => {
-    const [focused, setFocused] = useState(false);
-    const [text, setText] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');
-    const [questions, setQuestions] = useState(QUESTIONS);
+    const [focused, setFocused] = useState(false)
+    const [text, setText] = useState('')
+    const [errorMessage, setErrorMessage] = useState('')
+    const [questions, setQuestions] = useState(QUESTIONS)
 
-    const curQuestion = questions.find((q) => !q.complete);
-    
+    const curQuestion = questions.find((q) => !q.complete)
+
     const handleSubmitLine = (value: string) => {
         if (curQuestion) {
             if (curQuestion.key === 'email' && !isValidEmail(value)) {
-                setErrorMessage('Error: Please enter a valid email.');
-                return; // Stop further processing
+                setErrorMessage('Error: Please enter a valid email.')
+                return // Stop further processing
             } else {
-                setErrorMessage(''); // Clear any previous error messages
+                setErrorMessage('') // Clear any previous error messages
             }
-    
+
             setQuestions((prevQuestions) =>
                 prevQuestions.map((q) => {
                     if (q.key === curQuestion.key) {
@@ -123,13 +122,13 @@ const TerminalBody = ({ containerRef, inputRef }: TerminalBodyProps) => {
                             ...q,
                             complete: true,
                             value,
-                        };
+                        }
                     }
-                    return q;
+                    return q
                 }),
-            );
+            )
         }
-    };
+    }
 
     return (
         <div className="p-2 text-lg text-slate-100">
@@ -152,9 +151,8 @@ const TerminalBody = ({ containerRef, inputRef }: TerminalBodyProps) => {
                 <Summary questions={questions} setQuestions={setQuestions} />
             )}
         </div>
-    );
-};
-
+    )
+}
 
 const InitialText = () => {
     return (

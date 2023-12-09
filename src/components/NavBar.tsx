@@ -29,7 +29,7 @@ const NavBar = () => {
                     </div>
                     <ul className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow">
                         <li>
-                            <a href="">Projects</a>
+                            <Link to="projects">Projects</Link>
                         </li>
                         {/* <li>
                             <a>Parent</a>
@@ -52,7 +52,7 @@ const NavBar = () => {
                             <a>About</a>
                         </li>
                         <li>
-                        <Link to="contact">Contact</Link>
+                            <Link to="contact">Contact</Link>
                         </li>
                     </ul>
                 </div>
@@ -82,7 +82,7 @@ const NavBar = () => {
                         <HashLink to="/#journey">Journey</HashLink>
                     </li>
                     <li>
-                    <Link to="contact">Contact</Link>
+                        <Link to="contact">Contact</Link>
                     </li>
                 </ul>
             </div>

@@ -40,7 +40,7 @@ const Projects = () => {
                 clearFilters={clearFilters}
             />
             <div className="mb-12 flex w-screen flex-col items-center justify-start bg-slate-900/0">
-                <div className="grid w-3/4 grid-cols-1 gap-12 border-0 border-blue-600 bg-slate-200 dark:bg-[#001412] 2xl:grid-cols-2">
+                <div className="grid w-11/12 grid-cols-1 gap-12 border-0 border-blue-600 bg-slate-200 dark:bg-[#001412] md:w-3/4 2xl:grid-cols-2 place-items-center">
                     {filteredProjects.map(
                         ({
                             id,
@@ -56,9 +56,9 @@ const Projects = () => {
                         }) => (
                             <div
                                 key={id}
-                                className="custom-text-bg flex h-[300px] w-[800px] items-center justify-center gap-6 rounded-xl border-2 border-slate-400/20 bg-[#D2D6DD] shadow-lg"
+                                className="custom-text-bg flex flex-col items-center justify-center gap-0 rounded-xl border-2 border-slate-400/20 bg-[#D2D6DD] shadow-lg md:h-fit md:w-[600px] lg:h-[300px] lg:w-[800px] lg:flex-row lg:gap-6"
                             >
-                                <div className="relative h-full w-1/2 rounded-xl bg-slate-800 dark:bg-slate-200">
+                                <div className="relative h-full w-full rounded-xl bg-slate-800 dark:bg-slate-200 lg:w-1/2">
                                     <div className="flex gap-1.5 rounded-t-xl bg-slate-900 p-3 dark:bg-slate-300">
                                         <div className="h-3 w-3 rounded-full bg-red-500" />
                                         <div className="h-3 w-3 rounded-full bg-yellow-500" />
@@ -72,7 +72,7 @@ const Projects = () => {
                                         />
                                     </div>
                                 </div>
-                                <div className="flex w-1/2 flex-col justify-between gap-4 p-4">
+                                <div className="flex w-full flex-col justify-between gap-4 p-4 lg:w-1/2">
                                     {' '}
                                     {/* Adjusted classes here */}
                                     <div className="flex flex-col justify-center gap-1">
@@ -83,7 +83,7 @@ const Projects = () => {
                                             <Badge txt={category} />
                                         </span>
                                     </div>
-                                    <p className="max-h-[100px] text-sm ">
+                                    <p className="max-h-fit text-sm md:max-h-[100px] ">
                                         {description}
                                     </p>{' '}
                                     {/* Added overflow handling */}
@@ -99,7 +99,7 @@ const Projects = () => {
                                             </li>
                                         ))}
                                     </ul>
-                                    <div className="only-txt pointer-events-auto flex gap-4">
+                                    <div className="only-txt pointer-events-auto flex flex-wrap gap-4">
                                         {type === 'public' ? (
                                             <a
                                                 target="_blank"
