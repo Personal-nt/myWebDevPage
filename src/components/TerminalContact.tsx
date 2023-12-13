@@ -11,7 +11,7 @@ import {
     useRef,
     useState,
 } from 'react'
-import HaxCle from './SplineHaxCle'
+import HaxCle from './HaxCle'
 
 const isValidEmail = (email: string) => {
     const regex =
@@ -59,9 +59,9 @@ const TerminalContact = () => {
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
             }}
-            className="custom-text-bg flex h-screen w-screen items-center justify-center px-4 py-12"
+            className="custom-text-bg flex h-screen w-screen items-center justify-center px-4 py-12 bg-teal-300/0"
         >
-            <div className="absolute">
+            <div className="absolute pointer-events-none">
                 <HaxCle />
             </div>
             {errorMessage && <p className="text-red-300">{errorMessage}</p>}

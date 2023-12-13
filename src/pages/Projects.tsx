@@ -4,6 +4,7 @@ import ButtonIcon from '../components/ButtonIcon'
 import { Link } from 'react-router-dom'
 import FilterAccordion from '../components/FilterAccordion'
 import { useState } from 'react'
+import Footer from '../components/Footer'
 
 const Projects = () => {
     const [selectedTechs, setSelectedTechs] = useState<Technology[]>([])
@@ -144,6 +145,7 @@ const Projects = () => {
                     )}
                 </div>
             </div>
+                <Footer />
         </div>
     )
 }

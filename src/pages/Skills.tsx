@@ -1,3 +1,5 @@
+import Footer from "../components/Footer"
+
 // const Skills = () => {
 const frontendSkills = [
     {
@@ -274,6 +276,7 @@ const Skills = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

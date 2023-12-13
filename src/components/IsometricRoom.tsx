@@ -44,7 +44,7 @@ export default function IsometricRoom() {
                 <Spline
                     scene="https://prod.spline.design/KTiCfnJYZD0fGLhJ/scene.splinecode"
                     onMouseDown={handleMouseDown}
-                    onLoad={handleSceneLoad} // Assuming the Spline component has an onLoad event
+                    onLoad={handleSceneLoad} 
                 />
             </Suspense>
         </div>

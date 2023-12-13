@@ -54,7 +54,7 @@ const SwapColumnFeatures = () => {
         <section
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            className="scr relative mx-auto -mt-[50px] md:-mt-[250px] h-screen w-full max-w-6xl bg-slate-600/0"
+            className="scr relative mx-auto -mt-[50px] h-screen w-full max-w-6xl bg-slate-600/0 md:-mt-[0px] lg:-mt-[100px] xl:-mt-[250px]"
         >
             <SlidingFeatureDisplay featureInView={featureInView} />
             {/* Offsets the height of SlidingFeatureDisplay so that it renders on top of Content to start */}
@@ -87,7 +87,7 @@ const SlidingFeatureDisplay = ({ featureInView }: FeatureProps) => {
                         ? 'flex-end'
                         : 'flex-start',
             }}
-            className="pointer-events-none sticky top-0 z-10 hidden h-screen w-full items-center justify-center md:flex"
+            className="ERASE pointer-events-none sticky top-0 z-10 hidden h-screen w-full items-center justify-center md:flex"
         >
             <motion.div
                 layout
@@ -96,7 +96,7 @@ const SlidingFeatureDisplay = ({ featureInView }: FeatureProps) => {
                     stiffness: 400,
                     damping: 80,
                 }}
-                className="h-fit w-[50%] rounded-xl p-8"
+                className="hidden h-fit w-[50%] rounded-xl p-8 md:w-[100%] lg:flex lg:w-[50%] xl:w-1/2"
             >
                 {' '}
                 {/* Left side project details */}
@@ -125,7 +125,7 @@ const Content = ({
     return (
         <section
             ref={ref}
-            className="relative z-0 flex h-fit justify-center bg-pink-400/0 md:px-8 md:h-screen"
+            className="relative z-0 flex h-fit justify-center bg-pink-400/0 md:h-screen md:px-8"
             style={{
                 justifyContent:
                     featureInView.contentPosition === 'l'
@@ -135,10 +135,10 @@ const Content = ({
         >
             {' '}
             {/* Projects total section */}
-            <div className="grid h-full w-full place-content-center px-4 py-12 md:w-[50%] md:px-8 md:py-8">
+            <div className="grid h-full w-full place-content-center px-4 py-12 md:w-[80%] md:px-8 md:py-8 lg:w-[50%] xl:w-[50%]">
                 {' '}
                 {/* Right side projects */}
-                <div className="hidden md:flex">
+                <div className="hidden lg:flex">
                     <motion.div
                         initial={{ opacity: 0, y: 25 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -169,7 +169,7 @@ const Content = ({
                     initial={{ opacity: 0, y: 25 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, ease: 'easeInOut' }}
-                    className="mt-8 block md:hidden"
+                    className="mt-8 block lg:hidden"
                 >
                     <ExampleFeature featureInView={featureInView} />
                 </motion.div>
@@ -181,10 +181,10 @@ const Content = ({
 const ExampleFeature = ({ featureInView }: FeatureProps) => {
     return (
         <div className="relative h-full w-full rounded-xl bg-slate-800 shadow-xl dark:bg-slate-200">
-            <div>
+            <div className="lg:hidden">
                 <SingleFeature featureInView={featureInView} />
             </div>
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
                 <div className="flex w-full gap-1.5 rounded-t-xl bg-slate-900 p-3 dark:bg-slate-300">
                     <div className="h-3 w-3 rounded-full bg-red-500" />
                     <div className="h-3 w-3 rounded-full bg-yellow-500" />

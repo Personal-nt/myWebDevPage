@@ -1,6 +1,13 @@
-import TerminalContact from '../components/ContactForm'
-const ContactMe = () => {
-    return <div className="w-screen h-screen"><TerminalContact /></div>;
-};
+import TerminalContact from '../components/TerminalContact'
+import Footer from '../components/Footer'
 
-export default ContactMe;
+const ContactMe = () => {
+    return (
+        <div className="h-screen w-screen">
+            <TerminalContact />
+            <Footer />
+        </div>
+    )
+}
+
+export default ContactMe

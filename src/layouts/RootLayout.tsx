@@ -5,7 +5,7 @@ const RootLayout = () => {
     return (
         <>
         <NavBar />
-        <div className="flex justify-center w-screen bg-slate-200 dark:bg-[#001412]"> {/*dark:bg-[#001412] */}
+        <div className="flex flex-col justify-center w-screen bg-slate-200 dark:bg-[#001412]"> {/*dark:bg-[#001412] */}
             <Outlet />
         </div>
         </>

@@ -14,6 +14,9 @@
   --text-color-dark: #d1d5db; /* Assuming slate-300 is close to d1d5db */
   --bg-color: #e5e7eb; /* Assuming slate-200 is close to e5e7eb */
   --bg-color-dark: #001412;
+
+  --base-font-size: 2.9rem; /* Define the base font size */
+  --golden-ratio: 1.618; /* Define the golden ratio */
 }
 
 @layer components {
@@ -38,41 +41,38 @@ body {
 }
 
 body::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Opera */
+  display: none; 
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* Header 1 */
 h1 {
-  font-size: 2.986rem;
+  font-size: var(--base-font-size); 
 }
 
-/* Header 2 */
 h2 {
-  font-size: 2.488rem;
+  font-size: calc(var(--base-font-size) / var(--golden-ratio)); 
 }
 
-/* Header 3 */
 h3 {
-  font-size: 2.074rem;
+  font-size: calc(var(--base-font-size) / var(--golden-ratio) / var(--golden-ratio) ); 
 }
 
 /* Header 4 */
 h4 {
-  font-size: 1.728rem;
+  font-size: calc(var(--base-font-size) / var(--golden-ratio) / var(--golden-ratio) / var(--golden-ratio)); 
 }
 
 /* Header 5 */
 h5 {
-  font-size: 1.44rem;
+  font-size: calc(var(--base-font-size) / var(--golden-ratio) / var(--golden-ratio) / var(--golden-ratio) / var(--golden-ratio))
 }
 
 /* Header 6 */
 h6 {
-  font-size: 1.2rem;
+  font-size: calc(var(--base-font-size) / var(--golden-ratio) / var(--golden-ratio) / var(--golden-ratio) / var(--golden-ratio) / var(--golden-ratio))
 }
 
 /* Paragraph */

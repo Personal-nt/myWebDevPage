@@ -15,7 +15,7 @@ const BrowserMockup = ({ url, technicalDescription }: BrowserMockupProps) => {
                 <div className="bg-base-200 px-0 py-0">
                 {
                         shouldDisplayImage
-                        ? (<img src="/images/deverso-io-alt.png" alt="Alt Description" />)
+                        ? (<img src="/images/deverso-io-alt.jpeg" alt="Alt Description" />)
                         : (<iframe src={url} width="100%" height="700" title="Browser Mockup"></iframe>)
                     }
                 </div>
