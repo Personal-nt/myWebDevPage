@@ -24,7 +24,7 @@ const Home = () => {
                         Top Projects
                     </h2>
                 </div>
-                <div className="h-full bg-pink-300 lg:w-full xl:w-1/2">
+                <div className="h-full bg-pink-300(0) lg:w-full xl:w-1/2">
                     <div className="relative z-0 border-0 border-slate-600 md:-top-[80px] lg:-top-[140px] xl:-top-[80px]">
                         <TopProjects />
                     </div>
