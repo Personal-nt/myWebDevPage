@@ -1,23 +1,27 @@
 import { Link } from 'react-router-dom'
 import DarkModeSwitcher from './DarkModeSwitcher'
 import { HashLink } from 'react-router-hash-link'
-import { useState } from 'react'
+import { useState } from 'react';
 
 const NavBar = () => {
-    const [isOpen, setIsOpen] = useState(false)
+    const [dropdownOpen, setDropdownOpen] = useState(true);
 
     const toggleDropdown = () => {
-        setIsOpen(!isOpen)
-    }
+        setDropdownOpen(!dropdownOpen);
+        setTimeout(() => {
+            setDropdownOpen(true);
+        }, 100);
+    };
 
     return (
         <div className="navbar sticky top-0 z-[999] bg-base-100 px-2">
             <div className="navbar-start">
-                <div className="dropdown">
+                <div className="dropdown ">
                     <div
                         tabIndex={0}
                         role="button"
                         className="btn btn-ghost lg:hidden"
+                        id="dropdown-content"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +40,7 @@ const NavBar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className={`${isOpen ? "block" : "hidden"} menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow`}
+                        className={`${dropdownOpen ? 'block' : 'hidden'} menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow`}
                     >
                         <li onClick={toggleDropdown}>
                             {/* <a href="/projects">TEST</a> */}
@@ -53,16 +57,16 @@ const NavBar = () => {
                                 </li>
                             </ul>
                         </li> */}
-                        <li>
+                        <li onClick={toggleDropdown}>
                             <Link to="skills">Skills</Link>
-                        </li>
-                        <li>
+                        </li >
+                        <li onClick={toggleDropdown}>
                             <HashLink to="/#journey">Journey</HashLink>
                         </li>
-                        <li>
+                        <li onClick={toggleDropdown}>
                             <a>About</a>
                         </li>
-                        <li>
+                        <li onClick={toggleDropdown}>
                             <Link to="contact">Contact</Link>
                         </li>
                     </ul>
