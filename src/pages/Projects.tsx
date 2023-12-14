@@ -69,7 +69,7 @@ const Projects = () => {
                                         <img
                                             src={projectScreenShot}
                                             alt={title}
-                                            className="h-[260px] w-full rounded-b-xl object-cover object-center shadow-xl"
+                                            className="h-[260px] w-full rounded-b-none lg:rounded-b-xl object-cover object-center shadow-xl"
                                         />
                                     </div>
                                 </div>

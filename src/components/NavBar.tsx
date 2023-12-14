@@ -14,7 +14,7 @@ const NavBar = () => {
     };
 
     return (
-        <div className="navbar sticky top-0 z-[999] bg-base-100 px-2">
+        <div className="navbar sticky top-0 z-[999] custom-text-bg px-2">
             <div className="navbar-start">
                 <div className="dropdown ">
                     <div
@@ -40,7 +40,7 @@ const NavBar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className={`${dropdownOpen ? 'block' : 'hidden'} menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow`}
+                        className={`${dropdownOpen ? 'block' : 'hidden'} menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow text-white dark:textColorDark`}
                     >
                         <li onClick={toggleDropdown}>
                             {/* <a href="/projects">TEST</a> */}

@@ -10,6 +10,7 @@ import Skills from './pages/Skills'
 import ContactMe from './pages/ContactMe'
 import Home from './pages/Home'
 import ProjectDetails from './pages/ProjectDetails'
+import Journey from './pages/Journey'
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
             <Route path="/projects/:urlTitle" element={<ProjectDetails />} />
             <Route path="skills" element={<Skills />} />
             <Route path="contact" element={<ContactMe />} />
+            <Route path="journey" element={<Journey />} />
         </Route>,
     ),
 )

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export const Hero = () => {
     return (
-        <div className="flex h-full w-full justify-center bg-pink-400/0">
+        <div className="flex h-full xl:h-[650px] w-full justify-center bg-pink-400/0">
             <div className="flex h-[100%] w-full flex-col items-center justify-center xl:flex-row">
                 <div className="flex w-full flex-col items-center justify-center border-0 border-black bg-pink-500/0 xl:w-1/2">
                     <div className="mt-6 flex w-4/5 flex-col gap-1 bg-teal-400/0 text-center xl:mt-0 xl:w-full xl:gap-2 xl:text-left">

@@ -54,7 +54,7 @@ const SwapColumnFeatures = () => {
         <section
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            className="scr relative mx-auto -mt-[50px] h-screen w-full max-w-6xl bg-slate-600/0 md:-mt-[0px] lg:-mt-[100px] xl:-mt-[250px]"
+            className="scr relative mx-auto -mt-[50px] h-screen w-full max-w-6xl bg-slate-600/0 md:-mt-[0px] lg:-mt-[100px] xl:-mt-[200px] 2xl:-mt-[250px]"
         >
             <SlidingFeatureDisplay featureInView={featureInView} />
             {/* Offsets the height of SlidingFeatureDisplay so that it renders on top of Content to start */}
