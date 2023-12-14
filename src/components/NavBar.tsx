@@ -1,8 +1,15 @@
 import { Link } from 'react-router-dom'
 import DarkModeSwitcher from './DarkModeSwitcher'
 import { HashLink } from 'react-router-hash-link'
+import { useState } from 'react'
 
 const NavBar = () => {
+    const [isOpen, setIsOpen] = useState(false)
+
+    const toggleDropdown = () => {
+        setIsOpen(!isOpen)
+    }
+
     return (
         <div className="navbar sticky top-0 z-[999] bg-base-100 px-2">
             <div className="navbar-start">
@@ -27,9 +34,12 @@ const NavBar = () => {
                             />
                         </svg>
                     </div>
-                    <ul tabIndex={0} className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow">
-                        <li>
-                            <a href="/projects">TEST</a>
+                    <ul
+                        tabIndex={0}
+                        className={`${isOpen ? "block" : "hidden"} menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow`}
+                    >
+                        <li onClick={toggleDropdown}>
+                            {/* <a href="/projects">TEST</a> */}
                             <Link to="projects">Projects</Link>
                         </li>
                         {/* <li>
