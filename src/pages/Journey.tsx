@@ -1,11 +1,13 @@
+import { SquareGrid } from '../components/SquareGrid'
 import Timeline from '../components/Timeline'
 
 const Journey = () => {
     return (
-        <div className="h-[2000px] w-full">
-            <div className="flex h-full w-1/2 justify-center">
-                <Timeline />
-            </div>
+        <div className="flex flex-col h-screen w-full">
+                    <SquareGrid />
+                    <div id="journey" className="mt-12 px-[500px]">
+                    <Timeline />
+                    </div>
         </div>
     )
 }

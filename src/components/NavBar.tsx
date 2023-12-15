@@ -61,7 +61,7 @@ const NavBar = () => {
                             <Link to="skills">Skills</Link>
                         </li >
                         <li onClick={toggleDropdown}>
-                            <HashLink to="/#journey">Journey</HashLink>
+                            <HashLink to="/journey">Journey</HashLink>
                         </li>
                         <li onClick={toggleDropdown}>
                             <a>About</a>
@@ -94,7 +94,7 @@ const NavBar = () => {
                         <Link to="skills">Skills</Link>
                     </li>
                     <li>
-                        <HashLink to="/#journey">Journey</HashLink>
+                        <HashLink to="/journey">Journey</HashLink>
                     </li>
                     <li>
                         <Link to="contact">Contact</Link>

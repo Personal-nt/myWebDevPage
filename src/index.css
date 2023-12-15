@@ -5,17 +5,17 @@
 /* In your global.css or similar file */
 :root {
   --color-primary: #5B21B6;
-  --color-secondary: #10B981;
+  --color-secondary: rgb(15, 184, 127);
 
   --color-primary-opacity: rgba(91, 33, 182, 0.4); /* Adjust the opacity value (0.4) as needed */
   --color-secondary-opacity: rgba(16, 185, 129, 0.4);
 
   --text-color: #081421c5;
   --text-color-dark: #d1d5db; /* Assuming slate-300 is close to d1d5db */
-  --bg-color: #e5e7eb; /* Assuming slate-200 is close to e5e7eb */
+  --bg-color: #E2E8F0; /* Assuming slate-200 is close to e5e7eb */
   --bg-color-dark: #001412;
 
-  --base-font-size: 2.9rem; /* Define the base font size */
+  --base-font-size: 4.9rem; /* Define the base font size */
   --golden-ratio: 1.618; /* Define the golden ratio */
 }
 
@@ -149,4 +149,13 @@ small {
   object-fit: cover; /* Cover the container, may crop the image */
   object-position: top; /* Center the image within the container */
   border-radius: 8px; /* Match the border-radius of the container */
+}
+
+.scroll-container-home {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+#hero, #topProjects, #skillsummary {
+  scroll-snap-align: start;
 }

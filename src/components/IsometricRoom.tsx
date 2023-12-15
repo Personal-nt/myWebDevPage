@@ -38,7 +38,7 @@ export default function IsometricRoom() {
     return (
         <div className="pointer-events-auto relative h-[100%] w-[100%] scale-[100%]">
             {isLoading && (
-                <div className="absolute inset-0 flex items-center justify-center text-4xl">
+                <div className="absolute inset-0 top-[20px] flex items-center justify-center text-4xl">
                     <img
                         src="/images/isometricRoomLoading-mobile.png"
                         alt=""
