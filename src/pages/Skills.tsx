@@ -1,7 +1,7 @@
 import Footer from "../components/Footer"
 
 // const Skills = () => {
-const frontendSkills = [
+export const frontendSkills = [
     {
         title: 'HTML5',
         src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
@@ -69,7 +69,7 @@ const frontendSkills = [
     },
 ]
 
-const backendSkills = [
+export const backendSkills = [
     {
         title: 'Java',
         src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
@@ -97,7 +97,7 @@ const backendSkills = [
     },
 ]
 
-const otherSkills = [
+export const otherSkills = [
     {
         title: 'Git',
         src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',

@@ -12,7 +12,7 @@
 
   --text-color: #081421c5;
   --text-color-dark: #d1d5db; /* Assuming slate-300 is close to d1d5db */
-  --bg-color: #E2E8F0; /* Assuming slate-200 is close to e5e7eb */
+  --bg-color: hwb(214 88% 6%); /* Assuming slate-200 is close to e5e7eb */
   --bg-color-dark: #001412;
 
   --base-font-size: 4.9rem; /* Define the base font size */
@@ -119,6 +119,10 @@ small {
     scroll-snap-align: start;
 }
 
+.scroll-container::-webkit-scrollbar {
+  display: none; 
+} 
+
 /* .scroll-container {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
@@ -127,9 +131,6 @@ small {
 }
 */
 
-.scroll-container::-webkit-scrollbar {
-  display: none; 
-} 
 
 .slide-right{animation:slide-right 2.5s cubic-bezier(.25,.46,.45,.94) both}
 
@@ -156,6 +157,14 @@ small {
   overflow-y: scroll;
 }
 
-#hero, #topProjects, #skillsummary {
+#hero, #topProjects, #githubCal, #skillsummary {
   scroll-snap-align: start;
+}
+
+.github-card {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgb(39, 39, 39);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
 }

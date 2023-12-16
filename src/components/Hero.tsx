@@ -1,19 +1,18 @@
 import { useState } from 'react'
 import IsometricRoom from './IsometricRoom'
-import { Link } from 'react-router-dom'
+import CtaButton from './CtaButton'
 
 export const Hero = () => {
-    //md:text-5xl xl:text-7xl 2xl:text-8xl <---- h1
-    const [isMouseOver, setIsMouseOver] = useState(false);
-    const [screenSize, setScreenSize] = useState({
+
+    const [screenSize] = useState({
         width: window.innerWidth,
         height: window.innerHeight,
     })
 
     console.log(screenSize.width, screenSize.height)
 
-    const handleMouseEnter = () => setIsMouseOver(true);
-    const handleMouseLeave = () => setIsMouseOver(false);
+    // const handleMouseEnter = () => setIsMouseOver(true);
+    // const handleMouseLeave = () => setIsMouseOver(false);
     return (
         <div className="custom-text-bg flex h-full w-full justify-center xl:h-screen ">
             <div className="flex h-[100%] w-full flex-col items-center justify-center xl:h-[80%] xl:flex-row 2xl:h-[80%] bg-pink-300/0">
@@ -42,11 +41,12 @@ export const Hero = () => {
                             )
                         }
                         <div className="flex h-full w-full items-center justify-center xl:justify-start">
-                            <button className="border-1 btn btn-outline mt-4 w-1/2 border-teal-400 bg-teal-400 text-[#081421c5] dark:bg-[#081421c5] dark:text-teal-400 hover:dark:bg-teal-400 hover:dark:text-[#081421c5] md:w-1/3 lg:w-1/4 xl:w-1/3 2xl:w-1/2">
+                            {/* <button className="border-1 btn btn-outline mt-4 w-1/2 border-teal-400 bg-teal-400 text-[#081421c5] dark:bg-[#081421c5] dark:text-teal-400 hover:dark:bg-teal-400 hover:dark:text-[#081421c5] md:w-1/3 lg:w-1/4 xl:w-1/3 2xl:w-1/2">
                                 <Link to="contact" className="md:w-1/2">
                                     Let's build!
                                 </Link>
-                            </button>
+                            </button> */}
+                                <CtaButton link="contact" txt="Let's build!" />
                         </div>
                     </div>
                 </div>

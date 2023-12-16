@@ -1,43 +1,41 @@
-import { useEffect, useState } from 'react'
-import { useAnimate } from 'framer-motion'
+import { useEffect, useState, MouseEvent } from 'react';
+import { useAnimate } from 'framer-motion';
 
 export const SquareGrid = () => {
-    const [scope, animate] = useAnimate()
+    const [scope, animate] = useAnimate();
 
-    const [size, setSize] = useState({ columns: 0, rows: 0 })
+    const [size, setSize] = useState({ columns: 0, rows: 0 });
 
     useEffect(() => {
-        generateGridCount()
-        window.addEventListener('resize', generateGridCount)
+        generateGridCount();
+        window.addEventListener('resize', generateGridCount);
 
-        return () => window.removeEventListener('resize', generateGridCount)
-    }, [])
+        return () => window.removeEventListener('resize', generateGridCount);
+    }, []);
 
     const generateGridCount = () => {
-        const columns = Math.floor(document.body.clientWidth / 75)
-        const rows = Math.floor(document.body.clientHeight / 75)
+        const columns = Math.floor(document.body.clientWidth / 75);
+        const rows = Math.floor(document.body.clientHeight / 75);
 
         setSize({
             columns,
             rows,
-        })
-    }
+        });
+    };
 
-    const handleMouseLeave = (e) => {
-        // @ts-ignore
-        const id = `#${e.target.id}`
-        animate(id, { background: 'rgba(129, 140, 248, 0)' }, { duration: 1.5 })
-    }
+    const handleMouseLeave = (e: MouseEvent<HTMLDivElement>) => {
+        const id = `#${e.currentTarget.id}`;
+        animate(id, { background: 'rgba(129, 140, 248, 0)' }, { duration: 1.5 });
+    };
 
-    const handleMouseEnter = (e) => {
-        // @ts-ignore
-        const id = `#${e.target.id}`
+    const handleMouseEnter = (e: MouseEvent<HTMLDivElement>) => {
+        const id = `#${e.currentTarget.id}`;
         animate(
             id,
             { background: 'rgba(15, 184, 127, 1)' },
             { duration: 0.15 },
-        )
-    }
+        );
+    };
 
     return (
         <div className="bg-neutral-950">
