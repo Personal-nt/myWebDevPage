@@ -8,7 +8,7 @@ import GithubCal from '../components/GithubCal'
 
 const Home = () => {
     return (
-        <div className="scroll-container-home h-screen w-screen custom-text-bg">
+        <div className="scroll-container-home custom-text-bg h-screen w-screen">
             {/* <GithubCal /> */}
             <div
                 id="hero"
@@ -26,7 +26,7 @@ const Home = () => {
                 <div className="z-50 flex h-[100px] w-screen justify-center border-0 border-slate-600 bg-slate-200 dark:bg-[#001412]">
                     <h2
                         id="topProjects"
-                        className="flex w-full justify-center text-center md:text-left lg:justify-start xl:w-1/2"
+                        className="flex w-full justify-center text-center md:text-left lg:justify-start xl:w-[75%] 2xl:w-1/2"
                     >
                         Top Projects
                     </h2>
@@ -42,41 +42,48 @@ const Home = () => {
                 <div className="z-50 flex h-[100px] w-screen justify-center bg-slate-200 pt-24 dark:bg-[#001412]">
                     <h2
                         id="skillsummary"
-                        className="w-1/2 border-0 border-slate-600"
+                        className="flex w-full justify-center text-center md:text-left lg:justify-start xl:w-[75%] 2xl:w-1/2"
                     >
                         Skills Summary
                     </h2>
                 </div>
                 <div
                     id="timeline"
-                    className="mb-12 w-1/2 border-0 border-slate-600 pt-24"
+                    className="mb-12 border-0 border-slate-600 pt-24 lg:w-full xl:w-4/5 2xl:w-1/2"
                 >
                     <SkillSummary />
                 </div>
                 <div className="flex w-full flex-col items-center">
-                    <div className="z-50 flex h-[100px] w-screen justify-center bg-slate-200 pt-24 dark:bg-[#001412]">
+                    <div className="z-50 flex h-[100px] w-screen justify-center pt-24 dark:bg-[#001412]">
                         <h2
                             id="githubCal"
-                            className="w-1/2 border-0 border-slate-600"
+                            className="flex w-full justify-center text-center md:text-left lg:justify-start xl:w-[75%] 2xl:w-1/2"
                         >
                             How committed am I?
                         </h2>
                     </div>
                     <div
                         id="timeline"
-                        className="mb-12 flex flex-col w-1/2 justify-center border-0 border-slate-600 bg-pink-300/0 pt-24"
+                        className="mb-12 flex w-full flex-col items-center justify-center border-0 border-slate-600 bg-pink-300/0 pt-24"
                     >
                         <a
                             href="https://github.com/0xNordian"
                             target="_blank"
-                            className="github-card w-full p-6 text-textColorDark"
+                            className="github-card w-[50%] p-6 text-textColorDark xl:w-[80%] 2xl:w-1/2"
                         >
                             <GithubCal />
                         </a>
-                        <small>Place the mouse over the tiles to see the commits count per day</small>
+                        <div className="flex w-[50%] justify-start xl:w-[80%] 2xl:w-1/2">
+                            <small>
+                                Place the mouse over the tiles to see the
+                                commits count per day
+                            </small>
+                        </div>
                     </div>
                 </div>
-                <Footer />
+                <div className="">
+                    <Footer />
+                </div>
             </div>
         </div>
     )

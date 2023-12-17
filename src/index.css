@@ -12,12 +12,16 @@
 
   --text-color: #081421c5;
   --text-color-dark: #d1d5db; /* Assuming slate-300 is close to d1d5db */
-  --bg-color: hwb(214 88% 6%); /* Assuming slate-200 is close to e5e7eb */
+  --bg-color: rgb(224, 231, 240); /* Assuming slate-200 is close to e5e7eb */
   --bg-color-dark: #001412;
 
   --base-font-size: 4.9rem; /* Define the base font size */
   --golden-ratio: 1.618; /* Define the golden ratio */
 }
+
+/* *{
+  outline: 1px orange solid;
+} */
 
 @layer components {
   .custom-text-bg {
@@ -157,7 +161,7 @@ small {
   overflow-y: scroll;
 }
 
-#hero, #topProjects, #githubCal, #skillsummary {
+#hero, #topProjects, #skillsummary, #githubCal, #footer{
   scroll-snap-align: start;
 }
 

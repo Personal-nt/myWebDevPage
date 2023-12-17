@@ -54,7 +54,8 @@ const SwapColumnFeatures = () => {
         <section
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            className="scr relative mx-auto -mt-[50px] h-screen w-full max-w-6xl bg-slate-600/0 md:-mt-[0px] lg:-mt-[100px] xl:-mt-[200px] 2xl:-mt-[250px]"
+            // className="scr relative mx-auto -mt-[50px] h-screen w-full max-w-6xl bg-slate-600/0 md:-mt-[0px] lg:-mt-[100px] xl:-mt-[250px] 2xl:-mt-[250px]"
+            className="-mt-[0px] h-full w-full md:-mt-[0px] lg:-mt-[100px] xl:-mt-[200px] 2xl:-mt-[0px]"
         >
             <SlidingFeatureDisplay featureInView={featureInView} />
             {/* Offsets the height of SlidingFeatureDisplay so that it renders on top of Content to start */}
@@ -87,7 +88,7 @@ const SlidingFeatureDisplay = ({ featureInView }: FeatureProps) => {
                         ? 'flex-end'
                         : 'flex-start',
             }}
-            className="ERASE pointer-events-none sticky top-0 z-10 hidden h-screen w-full items-center justify-center md:flex"
+            className="pointer-events-none sticky top-0 z-10 hidden h-screen w-full items-center justify-center md:flex"
         >
             <motion.div
                 layout
@@ -125,7 +126,8 @@ const Content = ({
     return (
         <section
             ref={ref}
-            className="relative z-0 flex h-fit justify-center bg-pink-400/0 md:h-screen md:px-8"
+            // className="relative z-0 flex h-fit justify-center bg-pink-400/0 md:h-screen md:px-8"
+            className="relative z-0 flex h-fit justify-center bg-pink-400/0 md:h-screen md:px-0"
             style={{
                 justifyContent:
                     featureInView.contentPosition === 'l'
@@ -135,7 +137,8 @@ const Content = ({
         >
             {' '}
             {/* Projects total section */}
-            <div className="grid h-full w-full place-content-center px-4 py-12 md:w-[80%] md:px-8 md:py-8 lg:w-[50%] xl:w-[50%]">
+            {/* <div className="grid h-full w-full place-content-center px-4 py-12 md:w-[80%] md:px-8 md:py-8 lg:w-[50%] xl:w-[50%]"> */}
+            <div className="bg-pink-300/0 grid h-full w-full place-content-center px-4 py-12 md:w-[80%] md:px-8 md:py-8 lg:w-[50%] xl:w-[50%]">
                 {' '}
                 {/* Right side projects */}
                 <div className="hidden lg:flex">

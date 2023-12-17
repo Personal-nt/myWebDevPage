@@ -14,7 +14,7 @@ const NavBar = () => {
     };
 
     return (
-        <div className="navbar sticky top-0 z-[999] custom-text-bg px-2">
+        <div className="navbar sticky top-0 z-[999] custom-text-bg px-2 h-[50px]">
             <div className="navbar-start">
                 <div className="dropdown ">
                     <div
