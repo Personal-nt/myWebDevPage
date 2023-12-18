@@ -8,21 +8,26 @@ const Home2 = () => {
     return (
         <div className="scroll-container-home custom-text-bg flex h-screen w-screen flex-col items-center">
             <div className="w-full xl:w-4/5 2xl:w-[65%] ">
-                <section id="hero" className="-mt-[0px] h-screen ">
-                    <div className="z-60 flex justify-center ">
-                        <div className="custom-text-bg z-50 w-full">
+                <section id="hero" className="h-screen lg:-mt-[75px] xl:-mt-[0px] 2xl:-mt-[70px]">
+                    <div className="z-60">
+                        <div className="custom-text-bg z-50 flex w-full items-center justify-center">
                             <Hero />
                         </div>
                     </div>
                 </section>
 
                 <section className="custom-text-bg h-screen">
-                    <div id="topProjects" className="relative top-[0px] z-50">
-                        <h2 className="custom-text-bg relative top-[100px] py-4">
+                    <div
+                        id="topProjects"
+                        className="relative z-50 2xl:top-[0px]"
+                    >
+                        <h2 className="custom-text-bg flex items-end 2xl:h-[200px] lg:pl-6 xl:pl-0">
                             Top Projects
                         </h2>
                     </div>
-                    <TopProjects />
+                    <div className="relative xl:top-[100px] 2xl:top-[-200px]">
+                        <TopProjects />
+                    </div>
                 </section>
 
                 <section
@@ -30,11 +35,13 @@ const Home2 = () => {
                     className="custom-text-bg z-60 relative h-screen"
                 >
                     <div className="relative top-[0px]">
-                        <h2 className="custom-text-bg relative top-[70px]">
+                        <h2 className="custom-text-bg relative top-[70px] lg:pl-6 xl:pl-0">
                             Skills Summary
                         </h2>
                     </div>
-                    <SkillSummary />
+                    <div className="relative lg:top-[60px] xl:top-[50px] 2xl:top-[0px]">
+                        <SkillSummary />
+                    </div>
                 </section>
 
                 <section
@@ -42,19 +49,19 @@ const Home2 = () => {
                     className="custom-text-bg z-60 relative h-screen"
                 >
                     <div className="relative top-[0px]">
-                        <h2 className="custom-text-bg relative top-[150px] py-4">
+                        <h2 className="custom-text-bg relative xl:top-[50px] 2xl:top-[150px] py-4 lg:pl-6 xl:pl-0">
                             How committed am I?
                         </h2>
                     </div>
                     <div className="k flex h-full w-full flex-col items-center justify-center">
-                        <div className="github-card w-[50%] p-6 text-textColorDark xl:w-[80%] 2xl:w-[77%]">
+                        <div className="github-card relative w-[50%] p-6 text-textColorDark lg:top-[-150px] lg:w-[75%] xl:w-[80%] xl:top-[-100px] 2xl:w-[77%]">
                             <GithubCal />
-                        <div className="flex w-[50%] justify-start xl:w-[80%] 2xl:w-full mt-4">
-                            <small>
-                                Place the mouse over the tiles to see the
-                                commits count per day
-                            </small>
-                        </div>
+                            <div className="mt-4 flex w-[50%] justify-start xl:w-[80%] 2xl:w-full">
+                                <small>
+                                    Place the mouse over the tiles to see the
+                                    commits count per day
+                                </small>
+                            </div>
                         </div>
                     </div>
                 </section>

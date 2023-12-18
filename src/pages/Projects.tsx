@@ -41,7 +41,7 @@ const Projects = () => {
                 clearFilters={clearFilters}
             />
             <div className="mb-12 flex w-screen flex-col items-center justify-start bg-slate-900/0">
-                <div className="grid w-11/12 grid-cols-1 gap-12 border-0 border-blue-600 bg-slate-200 dark:bg-[#001412] md:w-3/4 2xl:grid-cols-2 place-items-center">
+                <div className="grid w-11/12 grid-cols-1 gap-12 border-0 border-blue-600 custom-text-bg md:w-3/4 2xl:grid-cols-2 place-items-center">
                     {filteredProjects.map(
                         ({
                             id,

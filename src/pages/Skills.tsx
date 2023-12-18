@@ -212,9 +212,9 @@ export const otherSkills = [
 
 const Skills = () => {
     return (
-        <div className="flex flex-col justify-center items-center h-screen w-full gap-24 bg-slate-200 dark:bg-[#001412]">
-            <div className="flex flex-col gap-6 w-1/2">
-                <h1>My Skills</h1>
+        <div className="flex flex-col justify-center items-center h-fit w-full gap-24 bg-slate-200 dark:bg-[#001412]">
+            <div className="flex flex-col gap-6 w-1/2 mt-10">
+                {/* <h1>My Skills</h1> */}
                 <div className="flex w-full flex-col gap-4">
                     <h3>Frontend skills</h3>
                     <div className="flex flex-wrap justify-center gap-3">

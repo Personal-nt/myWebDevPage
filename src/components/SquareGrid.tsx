@@ -38,7 +38,7 @@ export const SquareGrid = () => {
     };
 
     return (
-        <div className="bg-neutral-950">
+        <div className="custom-text-bg">
             <div
                 ref={scope}
                 className="grid h-screen w-full grid-cols-[repeat(auto-fit,_minmax(75px,_1fr))] grid-rows-[repeat(auto-fit,_minmax(75px,_1fr))]"
@@ -49,12 +49,12 @@ export const SquareGrid = () => {
                         id={`square-${i}`}
                         onMouseLeave={handleMouseLeave}
                         onMouseEnter={handleMouseEnter}
-                        className="h-full w-full border-[1px] border-neutral-900"
+                        className="h-full w-full border-[1px] border-slate-300 dark:border-slate-800"
                     />
                 ))}
             </div>
             <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center p-8">
-                <h1 className="text-center text-7xl font-black uppercase text-white sm:text-8xl md:text-9xl">
+                <h1 className="text-center text-7xl font-black uppercase only-txt sm:text-8xl md:text-9xl">
                     This is my journey
                 </h1>
                 <p className="mb-6 mt-4 max-w-3xl text-center text-lg font-light text-neutral-500 md:text-xl">

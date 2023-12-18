@@ -42,7 +42,7 @@ export default function IsometricRoom() {
                     <img
                         src="/images/isometricRoomLoading-mobile.png"
                         alt=""
-                        className="md:w-[405px] xl:w-full"
+                        className="md:w-[405px] lg:w-[650px] xl:w-full"
                     />
                 </div>
             )}

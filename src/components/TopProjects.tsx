@@ -23,7 +23,7 @@ type ContentProps = {
 const TopProjects = () => {
     return (
         <div className="">
-            <SwapColumnFeatures />
+            <SwapColumnFeatures /> 
         </div>
     )
 }
@@ -55,7 +55,7 @@ const SwapColumnFeatures = () => {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             // className="scr relative mx-auto -mt-[50px] h-screen w-full max-w-6xl bg-slate-600/0 md:-mt-[0px] lg:-mt-[100px] xl:-mt-[250px] 2xl:-mt-[250px]"
-            className="-mt-[0px] h-full w-full md:-mt-[0px] lg:-mt-[100px] xl:-mt-[200px] 2xl:-mt-[0px]"
+            className="-mt-[0px] h-full w-full lg:max-w-7xl xl:max-w-full md:-mt-[0px] lg:-mt-[120px] xl:-mt-[200px] 2xl:-mt-[0px]"
         >
             <SlidingFeatureDisplay featureInView={featureInView} />
             {/* Offsets the height of SlidingFeatureDisplay so that it renders on top of Content to start */}
