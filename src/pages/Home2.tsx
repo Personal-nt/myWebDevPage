@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import Footer from '../components/Footer'
 import GithubCal from '../components/GithubCal'
 import { Hero } from '../components/Hero'
@@ -5,8 +6,26 @@ import SkillSummary from '../components/SkillSummary'
 import TopProjects from '../components/TopProjects'
 
 const Home2 = () => {
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 425);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 425);
+        };
+
+        // Set up the event listener
+        window.addEventListener('resize', handleResize);
+
+        // Clean up the event listener
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
-        <div className="scroll-container-home custom-text-bg flex h-screen w-screen flex-col items-center">
+        <>
+        {/* <div className="scroll-container-home custom-text-bg flex h-screen w-screen flex-col items-center"> */}
+        <div className={`${isMobile ? "" : "scroll-container-home"} custom-text-bg flex h-screen w-screen flex-col items-center`}>
             <div className="w-full xl:w-4/5 2xl:w-[65%] ">
                 <section id="hero" className="h-screen lg:-mt-[75px] xl:-mt-[0px] 2xl:-mt-[70px]">
                     <div className="z-60">
@@ -54,7 +73,7 @@ const Home2 = () => {
                         </h2>
                     </div>
                     <div className="k flex h-full w-full flex-col items-center justify-center">
-                        <div className="github-card relative w-[50%] p-6 text-textColorDark lg:top-[-150px] lg:w-[75%] xl:w-[80%] xl:top-[-100px] 2xl:w-[77%]">
+                        <div className="github-card relative w-full p-6 text-textColorDark lg:top-[-150px] lg:w-[95%] xl:w-[95%] xl:top-[-100px] 2xl:w-[77%]">
                             <GithubCal />
                             <div className="mt-4 flex w-[50%] justify-start xl:w-[80%] 2xl:w-full">
                                 <small>
@@ -70,6 +89,8 @@ const Home2 = () => {
                 <Footer />
             </section>
         </div>
+        </>
+
     )
 }
 

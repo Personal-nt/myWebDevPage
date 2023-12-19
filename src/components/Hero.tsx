@@ -18,7 +18,7 @@ export const Hero = () => {
                 <div className="flex lg:h-screen 2xl:h-full w-full items-center justify-center border border-slate-600/0 bg-pink-500/0 xl:w-1/2 xl:bg-teal-400/0">
                     <div className="mt-6 flex w-4/5 flex-col bg-teal-400/0 text-center xl:mt-0 xl:w-full lg:text-left xl:text-left">
                         {screenSize.width <= 425 ? (
-                            <h1 className="only-txt mt-4 text-[3rem] font-medium md:mt-12">
+                            <h1 className="only-txt mt-4 text-[2.5rem] font-medium md:mt-12">
                                 Néstor Torres
                             </h1>
                         ) : (
@@ -26,7 +26,7 @@ export const Hero = () => {
                                 Néstor Torres
                             </h1>
                         )}
-                        {screenSize.width < 425 ? (
+                        {screenSize.width <= 425 ? (
                             <h3 className="only-txt w-full text-[1.14rem]">
                                 Programming is to have the power to create.
                             </h3>
@@ -41,7 +41,9 @@ export const Hero = () => {
                                     Let's build!
                                 </Link>
                             </button> */}
+                            <div className="w-1/2">
                             <CtaButton link="contact" txt="Let's build!" />
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -26,61 +26,69 @@ const ProjectDetails = () => {
         deployLink,
     } = project
     return (
-        <div className="container w-screen px-4 py-8">
-            <h1 className="text-2xl font-bold only-txt md:text-4xl">
-                {title}
-            </h1>
+        <div className="w-screen px-4 py-8 flex flex-col justify-center items-center">
+            <div className="w-[60%]">
+
+            <h1 className="only-txt text-2xl font-bold md:text-4xl">{title}</h1>
             {<Badge txt={category} />}
-            <p className="mt-4 only-txt">
-                {projectDetailDescription}
-            </p>
-            <div className="flex w-full gap-12">
-                <div className="flex flex-col justify-start items-center">
+            <p className="only-txt mt-4">{projectDetailDescription}</p>
+            <div className="flex flex-col w-full gap-12">
+                <div className="flex flex-col items-center justify-start">
                     <div className="mt-6 lg:hidden">
-                        <PhoneMockup url={deployLink} technicalDescription={technicalDescription}/>
+                        <PhoneMockup
+                            url={deployLink}
+                            technicalDescription={technicalDescription}
+                        />
                     </div>
-                    <div className="mt-6 hidden lg:flex">
-                        <div className="">
-                            <BrowserMockup url={deployLink} technicalDescription={technicalDescription}/>
+                    <div className="mt-6 hidden lg:flex w-full">
+                        <div className="w-full">
+                            <BrowserMockup
+                                url={deployLink}
+                                technicalDescription={technicalDescription}
+                            />
                         </div>
                     </div>
                     <ul className="mt-4 flex flex-wrap gap-2">
                         {techStack.map((tech, index) => (
                             <li
                                 key={index}
-                                className="rounded-full bg-blue-500 px-3 py-1 text-sm text-white"
+                                // className="rounded-full bg-blue-500 px-3 py-1 text-sm text-white"
                             >
-                                {tech}
+                                <Badge txt={tech} />
                             </li>
                         ))}
                     </ul>
-                    <div className="mt-6 flex flex-col justify-center gap-4 md:flex-row only-txt">
-                    {type === 'moreProjects' ? (
-                        <Link to="projects">
-                            <ButtonIcon icon="repo" txt="More projects" />
-                        </Link>
-                    ) : type === 'public' ? (
+                    <div className="only-txt mt-6 flex flex-col justify-center gap-4 md:flex-row">
+                        {type === 'moreProjects' ? (
+                            <Link to="projects">
+                                <ButtonIcon icon="repo" txt="More projects" />
+                            </Link>
+                        ) : type === 'public' ? (
+                            <a
+                                target="_blank"
+                                href={repoLink}
+                                className="text-xs"
+                            >
+                                <ButtonIcon icon="repo" txt="View Repo" />
+                            </a>
+                        ) : (
+                            <ButtonIcon icon="privateRepo" txt="Private Repo" />
+                        )}
                         <a
                             target="_blank"
-                            href={repoLink}
-                            className="text-xs"
+                            href={deployLink}
+                            className="text-xs "
                         >
-                            <ButtonIcon icon="repo" txt="View Repo" />
+                            <ButtonIcon icon={'deploy'} txt="App" />
                         </a>
-                    ) : (
-                        <ButtonIcon icon="privateRepo" txt="Private Repo" />
-                    )}
-                    <a
-                                target="_blank"
-                                href={deployLink}
-                                className="text-xs "
-                                >
-                                <ButtonIcon icon={'deploy'} txt="App" />
-                            </a>
-                                </div>
+                    </div>
                 </div>
-                <div className="mt-6"><TemplateProjectDetails {...technicalDescription} /></div>
+                <div className="mt-6">
+                    <TemplateProjectDetails {...technicalDescription} />
+                </div>
             </div>
+            </div>
+
         </div>
     )
 }

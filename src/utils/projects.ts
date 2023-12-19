@@ -24,20 +24,22 @@ export type Technology =
     | 'Redux'
     | 'Chart.js'
 
+export type Categories = 
+    | 'social network'
+    | 'e-commerce'
+    | 'blog'
+    | 'portfolio'
+    | 'gallery'
+    | 'productivity'
+    | 'landing page'
+    | 'product/service'
+    | 'web app'
+    | 'other'
+
 export type Project = {
     id: string
     type: 'public' | 'private' | 'moreProjects'
-    category:
-        | 'social network'
-        | 'e-commerce'
-        | 'blog'
-        | 'portfolio'
-        | 'gallery'
-        | 'productivity'
-        | 'landing page'
-        | 'product/service'
-        | 'web app'
-        | 'other'
+    category: Categories
     projectDetailDescription: string
     technicalDescription: ProjectDetailsProps
     title: string

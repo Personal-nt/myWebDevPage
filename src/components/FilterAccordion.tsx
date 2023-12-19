@@ -1,26 +1,56 @@
-import React, { useState } from 'react';
-import { FiChevronDown } from 'react-icons/fi';
+// import React, { useState } from 'react';
+// import { FiChevronDown } from 'react-icons/fi';
+// import { motion } from 'framer-motion';
+// import TechFilters from './TechFilters'; // Import your TechFilters component
+// import { Technology } from '../utils/projects'; // Assuming this is the correct path
+// import { IoFilter } from "react-icons/io5";
+// import { MdOutlineFilterListOff } from "react-icons/md";
+// // Define props types for FilterAccordion
+// type FilterAccordionProps = {
+//     selectedFilters: Technology[];
+//     onCheckboxChange: (tech: Technology) => void;
+//     clearFilters: () => void;
+//     title: string;
+// };
+
+// const FilterAccordion = ({ selectedFilters, onCheckboxChange, clearFilters, title }: FilterAccordionProps) => {
+//     console.log(typeof selectedFilters)
+//     return (
+//         <div className="px-4 py-12">
+//             <div className="mx-auto max-w-3xl flex">
+//                 <Question title={title}>
+//                     <TechFilters 
+//                         selectedTechs={selectedFilters} 
+//                         onCheckboxChange={onCheckboxChange} 
+//                     />
+//                     <button onClick={clearFilters} className="w-full flex justify-end text-2xl pr-4"><MdOutlineFilterListOff /></button>
+//                 </Question>
+//             </div>
+//         </div>
+//     );
+// };
+
+import React, { useState, ReactElement } from 'react';
 import { motion } from 'framer-motion';
-import TechFilters from './TechFilters'; // Import your TechFilters component
-import { Technology } from '../utils/projects'; // Assuming this is the correct path
+import { FiChevronDown } from 'react-icons/fi';
 import { IoFilter } from "react-icons/io5";
 import { MdOutlineFilterListOff } from "react-icons/md";
+
 // Define props types for FilterAccordion
-type FilterAccordionProps = {
-    selectedTechs: Technology[];
-    onCheckboxChange: (tech: Technology) => void;
+type FilterAccordionProps<T> = {
+    selectedFilters: T[];
+    onCheckboxChange: (filter: T) => void;
     clearFilters: () => void;
+    title: string;
+    FilterComponent: ReactElement;
 };
 
-const FilterAccordion = ({ selectedTechs, onCheckboxChange, clearFilters }: FilterAccordionProps) => {
+const FilterAccordion = <T,>({ clearFilters, title, FilterComponent }: FilterAccordionProps<T>) => {
     return (
         <div className="px-4 py-12">
-            <div className="mx-auto max-w-3xl">
-                <Question title="Filter by Tech Stack">
-                    <TechFilters 
-                        selectedTechs={selectedTechs} 
-                        onCheckboxChange={onCheckboxChange} 
-                    />
+            <div className="mx-auto max-w-3xl flex">
+                <Question title={title}>
+                    {FilterComponent}
                     <button onClick={clearFilters} className="w-full flex justify-end text-2xl pr-4"><MdOutlineFilterListOff /></button>
                 </Question>
             </div>

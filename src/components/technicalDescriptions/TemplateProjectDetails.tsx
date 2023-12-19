@@ -47,7 +47,7 @@ const TemplateProjectDetails = ({
             {/* Key Functionalities */}
             <div>
                 <h3>Key Functionalities:</h3>
-                <ul className="list-disc">
+                <ul className="">
                     {keyFunctionalities.map((func, index) => <li key={index}>{func}</li>)}
                 </ul>
             </div>
@@ -78,7 +78,7 @@ const TemplateProjectDetails = ({
 
             <div>
                 <h4>Key Components:</h4>
-                <ul className="list-disc">
+                <ul className="">
                     {keyComponents.map((component, index) => (
                         <li key={index}><strong className="underline hover:text-secondary"><a href={component.link} target="_blank">{component.name}</a>:</strong> {component.description}</li>
                     ))}

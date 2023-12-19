@@ -7,8 +7,8 @@ type BrowserMockupProps = {
 const BrowserMockup = ({ url, technicalDescription }: BrowserMockupProps) => {
     const shouldDisplayImage = technicalDescription.projScreenshotAlt;
     return (
-        <div className="">
-            <div className="mockup-browser border bg-base-300 w-[750px]">
+        <div className="flex justify-center">
+            <div className="mockup-browser border bg-base-300 lg:w-full">
                 <div className="mockup-browser-toolbar ">
                     <div className="input"><a href={url} target="_blank">{url}</a></div>
                 </div>

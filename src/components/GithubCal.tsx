@@ -1,7 +1,34 @@
-import { cloneElement } from 'react'
+import { cloneElement, useState } from 'react'
 import GitHubCalendar from 'react-github-calendar'
 
+interface Activity {
+    date: string;
+    count: number;
+    level: 0 | 1 | 2 | 3 | 4;
+  }
+
 const GithubCal = () => {
+    const [innerWidth, setInnerWidth] = useState(window.innerWidth)
+
+    const selectLastHalfYear = (contributions: Activity[]): Activity[] => {
+        const currentYear = new Date().getFullYear();
+        const currentMonth = new Date().getMonth();
+        const shownMonths = 3;
+      
+        return contributions.filter(activity => {
+          const date = new Date(activity.date);
+          const monthOfDay = date.getMonth();
+      
+          return (
+            date.getFullYear() === currentYear &&
+            monthOfDay > currentMonth - shownMonths &&
+            monthOfDay <= currentMonth
+          );
+        });
+      };
+      
+
+
     return (
         <GitHubCalendar
             username="0xnordian"
@@ -11,10 +38,12 @@ const GithubCal = () => {
             showWeekdayLabels={true}
             style={{ width: '100%' }}
             blockRadius={3}
-            // transformData={(data: any) => {data.forEach((d: any) => {d.count = 0;}); return data;} }
+            transformData={innerWidth > 425 ? undefined : selectLastHalfYear}
             weekStart={1}
             maxLevel={10}
             blockSize={14}
+            hideTotalCount={innerWidth > 425 ? false : true}
+            hideColorLegend={innerWidth > 425 ? false : true}
             // theme={{
             //     light: ['#f0f0f0', '#c4edde', '#7ac7c4', '#f73859', '#384259'],
             //     dark: [
