@@ -12,12 +12,12 @@ type BounceCardProps = {
 export const BouncyCards = () => {
     return (
         // <section className="mx-auto max-w-7xl px-4 py-12 text-slate-800">
-        <section className="w-10/12 px-4 py-12 text-slate-800 lg:h-fit xl:h-full 2xl:h-fit">
-            <div className="mb-4 grid grid-cols-12 gap-4">
-                <BounceCard className="col-span-6 cursor-default shadow-lg md:col-span-4">
+        <section className="w-full lg:w-10/12 px-4 py-12 text-slate-800 lg:h-fit xl:h-full 2xl:h-fit">
+            <div className="mb-4 grid grid-cols-12 gap-4 w-full h-[400px] md:h-[200px] lg:h-fit">
+                <BounceCard className="col-span-12 cursor-default shadow-lg md:col-span-4">
                     <Link to="skills" className="cursor-pointer">
                         <CardTitle>Backend</CardTitle>
-                        <div className="absolute bottom-0 left-4 right-4 top-32 h-fit rounded-t-2xl bg-gradient-to-br from-slate-900 to-slate-600 p-4 transition-transform duration-[250ms] group-hover:rotate-[2deg] lg:translate-y-[-50px] xl:translate-y-[-15px] xl:group-hover:translate-y-[-35px] 2xl:translate-y-8 2xl:group-hover:translate-y-10">
+                        <div className="absolute bottom-0 left-4 right-4 top-32 h-[500px] lg:h-fit rounded-t-2xl bg-gradient-to-br from-slate-900 to-slate-600 p-4 transition-transform duration-[250ms] group-hover:rotate-[2deg] translate-y-[-25px] lg:translate-y-[-50px] xl:translate-y-[-15px] xl:group-hover:translate-y-[-35px] 2xl:translate-y-8 2xl:group-hover:translate-y-10">
                             <span className="grid grid-cols-3 place-items-center gap-3 text-center font-semibold text-indigo-50">
                                 {backendSkills.map((skill) => (
                                     <img
@@ -47,7 +47,7 @@ export const BouncyCards = () => {
                     </Link>
                 </BounceCard>
             </div>
-            <div className="grid grid-cols-12 gap-4">
+            <div className="grid grid-cols-12 gap-4 h-[400px] md:h-[200px] lg:h-fit">
                 <BounceCard className="col-span-12 cursor-default shadow-lg md:col-span-8">
                     <Link to="skills" className="cursor-pointer">
                         <CardTitle>Dev Ops</CardTitle>

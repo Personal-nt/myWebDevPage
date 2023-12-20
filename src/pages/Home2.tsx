@@ -27,7 +27,7 @@ const Home2 = () => {
         {/* <div className="scroll-container-home custom-text-bg flex h-screen w-screen flex-col items-center"> */}
         <div className={`${isMobile ? "" : "scroll-container-home"} custom-text-bg flex h-screen w-screen flex-col items-center`}>
             <div className="w-full xl:w-4/5 2xl:w-[65%] ">
-                <section id="hero" className="h-screen lg:-mt-[75px] xl:-mt-[0px] 2xl:-mt-[70px]">
+                <section id="hero" className="lg:h-screen lg:-mt-[75px] xl:-mt-[0px] 2xl:-mt-[70px]">
                     <div className="z-60">
                         <div className="custom-text-bg z-50 flex w-full items-center justify-center">
                             <Hero />
@@ -35,12 +35,12 @@ const Home2 = () => {
                     </div>
                 </section>
 
-                <section className="custom-text-bg h-screen">
+                <section className="custom-text-bg h-screen w-full">
                     <div
                         id="topProjects"
-                        className="relative z-50 2xl:top-[0px]"
+                        className="relative z-50 2xl:top-[0px] w-full"
                     >
-                        <h2 className="custom-text-bg flex items-end 2xl:h-[200px] lg:pl-6 xl:pl-0">
+                        <h2 className="custom-text-bg flex items-end 2xl:h-[200px] lg:pl-6 xl:pl-0 justify-center text-center">
                             Top Projects
                         </h2>
                     </div>
@@ -51,28 +51,28 @@ const Home2 = () => {
 
                 <section
                     id="skillsummary"
-                    className="custom-text-bg z-60 relative h-screen"
+                    className="custom-text-bg z-60 relative h-screen w-full"
                 >
-                    <div className="relative top-[0px]">
-                        <h2 className="custom-text-bg relative top-[70px] lg:pl-6 xl:pl-0">
+                    <div className="relative top-[0px] w-full">
+                        <h2 className="custom-text-bg relative top-[70px] lg:pl-6 xl:pl-0 flex justify-center text-center">
                             Skills Summary
                         </h2>
                     </div>
-                    <div className="relative lg:top-[60px] xl:top-[50px] 2xl:top-[0px]">
+                    <div className="relative top-[60px] lg:top-[60px] xl:top-[50px] 2xl:top-[0px]">
                         <SkillSummary />
                     </div>
                 </section>
 
                 <section
                     id="githubCal"
-                    className="custom-text-bg z-60 relative h-screen"
+                    className="custom-text-bg z-60 relative h-fit md:h-screen w-full"
                 >
-                    <div className="relative top-[0px]">
-                        <h2 className="custom-text-bg relative xl:top-[50px] 2xl:top-[150px] py-4 lg:pl-6 xl:pl-0">
+                    <div className="relative top-[0px] w-full">
+                        <h2 className="custom-text-bg relative xl:top-[50px] 2xl:top-[150px] py-4 lg:pl-6 xl:pl-0 flex justify-center text-center">
                             How committed am I?
                         </h2>
                     </div>
-                    <div className="k flex h-full w-full flex-col items-center justify-center">
+                    <div className="flex h-full w-full flex-col items-center justify-center py-10">
                         <div className="github-card relative w-full p-6 text-textColorDark lg:top-[-150px] lg:w-[95%] xl:w-[95%] xl:top-[-100px] 2xl:w-[77%]">
                             <GithubCal />
                             <div className="mt-4 flex w-[50%] justify-start xl:w-[80%] 2xl:w-full">

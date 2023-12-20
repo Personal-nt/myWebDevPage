@@ -9,7 +9,7 @@ type FeatureProps = {
 
 const SingleFeature = ({ featureInView }: FeatureProps) => {
     return (
-        <div className="relative h-full w-full rounded-xl bg-slate-800 shadow-xl dark:bg-slate-200">
+        <div className="h-full w-full rounded-xl bg-slate-800 shadow-xl dark:bg-slate-200">
             <div className="flex w-full gap-1.5 rounded-t-xl bg-slate-900 p-3 dark:bg-slate-300">
                 <div className="h-3 w-3 rounded-full bg-red-500" />
                 <div className="h-3 w-3 rounded-full bg-yellow-500" />
