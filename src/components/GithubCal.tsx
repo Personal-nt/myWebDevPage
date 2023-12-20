@@ -8,7 +8,7 @@ interface Activity {
   }
 
 const GithubCal = () => {
-    const [innerWidth, setInnerWidth] = useState(window.innerWidth)
+    const [innerWidth] = useState(window.innerWidth)
 
     const selectLastHalfYear = (contributions: Activity[]): Activity[] => {
         const currentYear = new Date().getFullYear();
