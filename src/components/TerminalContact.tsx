@@ -59,9 +59,9 @@ const TerminalContact = () => {
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
             }}
-            className="custom-text-bg flex h-screen w-screen items-center justify-center px-4 py-12 bg-teal-300/0"
+            className="custom-text-bg flex h-screen w-[70%] mx-auto items-center justify-center px-4 py-12 bg-teal-300/0"
         >
-            <div className="absolute pointer-events-none">
+            <div className="hidden md:flex absolute pointer-events-none">
                 <HaxCle />
             </div>
             {errorMessage && <p className="text-red-300">{errorMessage}</p>}

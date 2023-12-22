@@ -54,7 +54,7 @@ export const SquareGrid = () => {
                 ))}
             </div>
             <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center p-8">
-                <h1 className="text-center text-7xl font-black uppercase only-txt sm:text-8xl md:text-9xl">
+                <h1 className="text-center text-6xl font-black uppercase only-txt sm:text-8xl md:text-9xl">
                     This is my journey
                 </h1>
                 <p className="mb-6 mt-4 max-w-3xl text-center text-lg font-light text-neutral-500 md:text-xl">

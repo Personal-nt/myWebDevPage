@@ -4,20 +4,25 @@
 
 /* In your global.css or similar file */
 :root {
-  --color-primary: #5B21B6;
-  --color-secondary: rgb(15, 184, 127);
+    --color-primary: #5b21b6;
+    --color-secondary: rgb(15, 184, 127);
 
-  --color-primary-opacity: rgba(91, 33, 182, 0.4); /* Adjust the opacity value (0.4) as needed */
-  --color-secondary-opacity: rgba(16, 185, 129, 0.4);
+    --color-primary-opacity: rgba(
+        91,
+        33,
+        182,
+        0.4
+    ); /* Adjust the opacity value (0.4) as needed */
+    --color-secondary-opacity: rgba(16, 185, 129, 0.4);
 
-  --text-color: #081421c5;
-  --text-color-dark: #d1d5db; /* Assuming slate-300 is close to d1d5db */
-  --bg-color: rgb(224, 231, 240); /* Assuming slate-200 is close to e5e7eb */
-  --bg-color-dark: #001412;
-  /* --bg-color-dark: #00ffe5; */
+    --text-color: #081421c5;
+    --text-color-dark: #d1d5db; /* Assuming slate-300 is close to d1d5db */
+    --bg-color: rgb(224, 231, 240); /* Assuming slate-200 is close to e5e7eb */
+    --bg-color-dark: #001412;
+    /* --bg-color-dark: #00ffe5; */
 
-  --base-font-size: 4.9rem; /* Define the base font size */
-  --golden-ratio: 1.618; /* Define the golden ratio */
+    --base-font-size: 4.9rem; /* Define the base font size */
+    --golden-ratio: 1.618; /* Define the golden ratio */
 }
 
 /* *{
@@ -25,85 +30,95 @@
 } */
 
 @layer components {
-  .custom-text-bg {
-    @apply text-textColor dark:text-textColorDark bg-bgColor dark:bg-bgColorDark;
-  }
-  .custom-text-bg-reverse {
-    @apply text-textColorDark dark:text-textColor bg-bgColorDark dark:bg-bgColor;
-  }
-  .only-txt{
-    @apply text-textColor dark:text-textColorDark;
-  }
-  .only-txt-reverse{
-    @apply text-textColorDark dark:text-textColor;
-  }
+    .custom-text-bg {
+        @apply bg-bgColor text-textColor dark:bg-bgColorDark dark:text-textColorDark;
+    }
+    .custom-text-bg-reverse {
+        @apply bg-bgColorDark text-textColorDark dark:bg-bgColor dark:text-textColor;
+    }
+    .only-txt {
+        @apply text-textColor dark:text-textColorDark;
+    }
+    .only-txt-reverse {
+        @apply text-textColorDark dark:text-textColor;
+    }
 }
 
 body {
-  overflow-y: scroll; /* Keep the browser behavior of having the vertical scroll */
-  scrollbar-width: none; /* For Firefox */
-  box-sizing: border-box;
+    overflow-y: scroll; /* Keep the browser behavior of having the vertical scroll */
+    scrollbar-width: none; /* For Firefox */
+    box-sizing: border-box;
 }
 
 body::-webkit-scrollbar {
-  display: none; 
+    display: none;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 h1 {
-  font-size: var(--base-font-size); 
+    font-size: var(--base-font-size);
 }
 
 h2 {
-  font-size: calc(var(--base-font-size) / var(--golden-ratio)); 
+    font-size: calc(var(--base-font-size) / var(--golden-ratio));
 }
 
 h3 {
-  font-size: calc(var(--base-font-size) / var(--golden-ratio) / var(--golden-ratio) ); 
+    font-size: calc(
+        var(--base-font-size) / var(--golden-ratio) / var(--golden-ratio)
+    );
 }
 
 /* Header 4 */
 h4 {
-  font-size: calc(var(--base-font-size) / var(--golden-ratio) / var(--golden-ratio) / var(--golden-ratio)); 
+    font-size: calc(
+        var(--base-font-size) / var(--golden-ratio) / var(--golden-ratio) /
+            var(--golden-ratio)
+    );
 }
 
 /* Header 5 */
 h5 {
-  font-size: calc(var(--base-font-size) / var(--golden-ratio) / var(--golden-ratio) / var(--golden-ratio) / var(--golden-ratio))
+    font-size: calc(
+        var(--base-font-size) / var(--golden-ratio) / var(--golden-ratio) /
+            var(--golden-ratio) / var(--golden-ratio)
+    );
 }
 
 /* Header 6 */
 h6 {
-  font-size: calc(var(--base-font-size) / var(--golden-ratio) / var(--golden-ratio) / var(--golden-ratio) / var(--golden-ratio) / var(--golden-ratio))
+    font-size: calc(
+        var(--base-font-size) / var(--golden-ratio) / var(--golden-ratio) /
+            var(--golden-ratio) / var(--golden-ratio) / var(--golden-ratio)
+    );
 }
 
 /* Paragraph */
 p {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 /* Small Text */
 small {
-  font-size: 0.833rem;
+    font-size: 0.833rem;
 }
 
 /* Extra Small Text */
 /* If you meant to have a font size of 0.694rem for some elements, 
    you can add a specific class to those elements and apply this style */
 .small-text {
-  font-size: 0.694rem;
+    font-size: 0.694rem;
 }
 
-
 .card {
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(17, 25, 40, 0.25);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.25);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
 /* .stroke-text {
@@ -117,7 +132,7 @@ small {
 .scroll-container {
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
-    height: 100vh; 
+    height: 100vh;
 }
 
 .snap-element {
@@ -125,8 +140,8 @@ small {
 }
 
 .scroll-container::-webkit-scrollbar {
-  display: none; 
-} 
+    display: none;
+}
 
 /* .scroll-container {
   overflow-y: scroll;
@@ -136,40 +151,65 @@ small {
 }
 */
 
-
-.slide-right{animation:slide-right 2.5s cubic-bezier(.25,.46,.45,.94) both}
+.slide-right {
+    animation: slide-right 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
 
 /* Ensure the container has defined bounds */
 .image-container {
-  height: 300px; /* Adjust the height as needed */
-  width: 100%;
-  position: relative; /* Position relative for the absolute positioned child */
-  overflow: hidden; /* Hide overflow to prevent scrollbars */
-  border-radius: 8px; /* Adjust the border-radius as needed */
+    height: 300px; /* Adjust the height as needed */
+    width: 100%;
+    position: relative; /* Position relative for the absolute positioned child */
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+    border-radius: 8px; /* Adjust the border-radius as needed */
 }
 
 /* Set the image to cover the space */
 .image {
-  height: 100%;
-  width: 100%;
-  object-fit: cover; /* Cover the container, may crop the image */
-  object-position: top; /* Center the image within the container */
-  border-radius: 8px; /* Match the border-radius of the container */
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Cover the container, may crop the image */
+    object-position: top; /* Center the image within the container */
+    border-radius: 8px; /* Match the border-radius of the container */
 }
 
 .scroll-container-home {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
 }
 
-#hero, #topProjects, #skillsummary, #githubCal, #footer{
-  scroll-snap-align: start;
+#hero,
+#topProjects,
+#skillsummary,
+#githubCal,
+#footer {
+    scroll-snap-align: start;
 }
 
 .github-card {
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgb(39, 39, 39);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgb(39, 39, 39);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.scroll-watcher {
+    height: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: var(--color-secondary);
+    width: 100%;
+    scale: 0 1;
+    transform-origin: left;
+
+    animation: scroll-watcher linear;
+    animation-timeline: scroll();
+}
+
+@keyframes scroll-watcher {
+    to {
+        scale: 1 1;
+    }
 }

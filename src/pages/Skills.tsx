@@ -1,4 +1,4 @@
-import Footer from "../components/Footer"
+import Footer from '../components/Footer'
 
 // const Skills = () => {
 export const frontendSkills = [
@@ -196,32 +196,20 @@ export const otherSkills = [
     },
 ]
 
-//     const generateSkillImages = (skills) => {
-//         return skills.map((skill, index) => (
-//             <div key={index} className="text-center">
-//                 <img
-//                     title={skill.title}
-//                     src={skill.src}
-//                     height="40"
-//                     alt={skill.alt}
-//                 />
-//                 <p>{skill.title}</p>
-//             </div>
-//         ));
-//     };
-
 const Skills = () => {
     return (
-        <div className="flex flex-col justify-center items-center h-fit w-full gap-24 bg-slate-200 dark:bg-[#001412]">
-            <div className="flex flex-col gap-6 w-1/2 mt-10">
+        <div className="only-txt flex h-fit w-full flex-col items-center justify-center gap-24 bg-slate-200 dark:bg-[#001412] md:h-fit 2xl:h-screen">
+            <div className="mt-10 flex w-full flex-col gap-16 md:w-[80%] lg:flex-row">
                 {/* <h1>My Skills</h1> */}
-                <div className="flex w-full flex-col gap-4">
+                {/* <div className="flex w-full flex-col gap-4 text-center md:text-left"> */}
+                <div className="flex w-full flex-col gap-4 text-center md:text-center lg:text-left">
                     <h3>Frontend skills</h3>
-                    <div className="flex flex-wrap justify-center gap-3">
+                    {/* <div className="flex flex-wrap justify-center gap-3 md:justify-start"> */}
+                    <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5 w-full gap-4 place-items-center">
                         {frontendSkills.map((skill, index) => (
                             <div
                                 key={index}
-                                className="min-w-[100px] rounded-lg bg-gray-200 p-4 shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.1]"
+                                className="min-w-[110px] max-w-[110px] rounded-lg bg-slate-100 p-4 shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.1] dark:bg-slate-800"
                             >
                                 <img
                                     src={skill.src}
@@ -235,13 +223,13 @@ const Skills = () => {
                         ))}
                     </div>
                 </div>
-                <div className="flex w-full flex-col gap-4">
+                <div className="flex w-full flex-col gap-4 text-center md:text-left">
                     <h3>Backend skills</h3>
-                    <div className="flex flex-wrap justify-center gap-3">
+                    <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5 w-full gap-4 place-items-center">
                         {backendSkills.map((skill, index) => (
                             <div
                                 key={index}
-                                className="min-w-[100px] rounded-lg bg-gray-200 p-4 shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.1]"
+                                className="min-w-[110px] max-w-[110px] rounded-lg bg-slate-100 p-4 shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.1] dark:bg-slate-800"
                             >
                                 <img
                                     src={skill.src}
@@ -255,13 +243,13 @@ const Skills = () => {
                         ))}
                     </div>
                 </div>
-                <div className="flex w-full flex-col gap-4">
+                <div className="flex w-full flex-col gap-4 text-center md:text-left">
                     <h3>Other skills</h3>
-                    <div className="flex flex-wrap justify-center gap-3">
+                    <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5 w-full gap-4 place-items-center">
                         {otherSkills.map((skill, index) => (
                             <div
                                 key={index}
-                                className="min-w-[100px] rounded-lg bg-gray-200 p-4 shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.1]"
+                                className="min-w-[110px] max-w-[110px] rounded-lg bg-slate-100 p-4 shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.1] dark:bg-slate-800"
                             >
                                 <img
                                     src={skill.src}

@@ -59,7 +59,7 @@ const Timeline = () => {
     return (
         <ul
             ref={timelineRef}
-            className="timeline timeline-vertical timeline-snap-icon mt-2 max-md:timeline-compact"
+            className="timeline timeline-vertical timeline-snap-icon my-2 max-md:timeline-compact w-[80%] border-0 border-dotted border-lime-400 h-hit"
         >
             {timelineData.map(
                 (
@@ -71,7 +71,7 @@ const Timeline = () => {
                         ? description
                         : `${description.substring(0, 300)}...`
                     return (
-                        <li key={id}>
+                        <li key={id} className="">
                             <div className="timeline-middle z-10 rounded-full bg-slate-700/70">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -91,8 +91,8 @@ const Timeline = () => {
                                 className={`${
                                     index % 2 === 0
                                         ? 'timeline-start mb-10 md:text-end'
-                                        : 'timeline-end mb-10'
-                                }`}
+                                        : 'timeline-end mb-10 '
+                                }my-12 md:my-0 w-[70%] md:w-[80%]`}
                             >
                                 <time className="font-mono italic">{date}</time>
                                 <div className="text-lg font-black">

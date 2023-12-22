@@ -14,8 +14,10 @@ const NavBar = () => {
     };
 
     return (
-        <div className="navbar sticky top-0 z-[999] custom-text-bg bg-slate-300/100 px-2 h-[50px]">
-            <div className="navbar-start">
+        // <div className="navbar sticky top-0 z-[999] custom-text-bg px-2 h-[50px]">
+          <div className="navbar sticky top-0 z-[999] custom-text-bg bg-slate-200/70 dark:bg-slate-700/70 px-2 h-[50px] border border-[rgba(255,255,255,0.125)] backdrop-blur-[16px] backdrop-saturate-[180%]">
+            <div className="navbar-start ">
+            {/* <div className="scroll-watcher"></div> */}
                 <div className="dropdown ">
                     <div
                         tabIndex={0}
@@ -40,7 +42,7 @@ const NavBar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className={`${dropdownOpen ? 'block' : 'hidden'} menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow only-txt dark:textColorDark`}
+                        className={`${dropdownOpen ? 'block' : 'hidden'} menu custom-text-bg dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box p-2 shadow only-txt dark:textColorDark`}
                     >
                         <li onClick={toggleDropdown}>
                             {/* <a href="/projects">TEST</a> */}
@@ -76,7 +78,7 @@ const NavBar = () => {
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal px-1 text-lg">
                     <li>
                         {/* <details> */}
                         {/* <summary className=""> */}

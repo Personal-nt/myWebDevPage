@@ -92,6 +92,7 @@ const Projects = () => {
 />
             </div>
             <div className="mb-12 flex w-screen flex-col items-center justify-start bg-slate-900/0">
+
                 <div className="custom-text-bg grid w-11/12 grid-cols-1 place-items-center gap-12 border-0 border-blue-600 md:w-3/4 2xl:grid-cols-2">
                     {filteredCategories.map(
                         ({
@@ -107,7 +108,7 @@ const Projects = () => {
                             urlTitle,
                         }) => (
                             <div key={id}>
-                                <div className="flex gap-1.5 rounded-t-xl bg-slate-900 p-3 dark:bg-slate-300">
+                                <div className="flex gap-1.5 rounded-t-xl bg-slate-900 p-3 dark:bg-slate-800">
                                     <div className="h-3 w-3 rounded-full bg-red-500" />
                                     <div className="h-3 w-3 rounded-full bg-yellow-500" />
                                     <div className="h-3 w-3 rounded-full bg-green-500" />
