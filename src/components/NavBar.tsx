@@ -63,7 +63,7 @@ const NavBar = () => {
                             <Link to="skills">Skills</Link>
                         </li >
                         <li onClick={toggleDropdown}>
-                            <HashLink to="/journey">Journey</HashLink>
+                            <HashLink to="/journey">About me</HashLink>
                         </li>
                         <li onClick={toggleDropdown}>
                             <a>About</a>
@@ -74,7 +74,7 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <Link to="/" className="btn btn-ghost text-xl">
-                    NT
+                    <img src="/images/nt-logo.png" alt="logo" className="h-8 w-8" />
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -96,7 +96,7 @@ const NavBar = () => {
                         <Link to="skills">Skills</Link>
                     </li>
                     <li>
-                        <HashLink to="/journey">Journey</HashLink>
+                        <HashLink to="/journey">About me</HashLink>
                     </li>
                     <li>
                         <Link to="contact">Contact</Link>

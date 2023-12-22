@@ -139,17 +139,17 @@ export const otherSkills = [
         alt: 'jira logo',
     },
     {
-        title: 'Adobe Photoshop',
+        title: 'Photoshop',
         src: 'https://cdn.simpleicons.org/adobephotoshop/31A8FF',
         alt: 'adobephotoshop logo',
     },
     {
-        title: 'Adobe Illustrator',
+        title: 'Illustrator',
         src: 'https://cdn.simpleicons.org/adobeillustrator/FF9A00',
         alt: 'adobeillustrator logo',
     },
     {
-        title: 'Adobe After Effects',
+        title: 'After Effects',
         src: 'https://cdn.simpleicons.org/adobeaftereffects/9999FF',
         alt: 'aftereffects logo',
     },

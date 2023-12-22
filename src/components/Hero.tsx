@@ -15,25 +15,33 @@ export const Hero = () => {
     return (
         <div className="flex h-full w-full justify-center xl:h-screen ">
             <div className="flex h-[100%] w-full flex-col items-center justify-center bg-pink-300/0 lg:h-[100%] lg:flex-row xl:h-[80%] 2xl:h-[100%]">
-                <div className="flex lg:h-screen 2xl:h-full w-full items-center justify-center border border-slate-600/0 bg-pink-500/0 xl:w-1/2 xl:bg-teal-400/0">
-                    <div className="mt-6 flex w-4/5 flex-col bg-teal-400/0 text-center xl:mt-0 xl:w-full lg:text-left xl:text-left">
+                <div className="flex w-full items-center justify-center border border-slate-600/0 bg-pink-500/0 lg:h-screen xl:w-1/2 xl:bg-teal-400/0 2xl:h-full">
+                    <div className="mt-6 flex w-4/5 flex-col bg-teal-400/0 text-center lg:text-left xl:mt-0 xl:w-full xl:text-left gap-2">
                         {screenSize.width <= 425 ? (
                             <h1 className="only-txt mt-4 text-[2.5rem] font-medium md:mt-12">
                                 Néstor Torres
                             </h1>
                         ) : (
-                            <h1 className="only-txt mt-4 font-medium md:mt-12">
-                                Néstor Torres
-                            </h1>
+                            <>
+                                <h1 className="only-txt mt-4 font-medium md:mt-12 lg:text-[3.02rem] xl:text-[4.9rem]">
+                                    Néstor Torres
+                                </h1>
+                            </>
                         )}
                         {screenSize.width <= 425 ? (
-                            <h3 className="only-txt w-full text-[1.14rem]">
-                                Programming is to have the power to create.
-                            </h3>
+                            <>
+                                <h2 className="only-txt w-full text-[1.545rem]">
+                                    Programming is to have the power to create.
+                                </h2>
+                                <p className="text-[0.95rem]">Front-end developer with over 3 years of experience and strong business acumen</p>
+                            </>
                         ) : (
-                            <h3 className="only-txt w-full">
-                                Programming is to have the power to create.
-                            </h3>
+                            <>
+                                <h2 className="only-txt w-full text-[1.545rem]">
+                                    Programming is to have the power to create.
+                                </h2>
+                                <p className="text-[0.95rem]">Front-end developer with over 3 years of experience and strong business acumen</p>
+                            </>
                         )}
                         <div className="flex h-full w-full items-center justify-center lg:justify-start xl:justify-start">
                             {/* <button className="border-1 btn btn-outline mt-4 w-1/2 border-teal-400 bg-teal-400 text-[#081421c5] dark:bg-[#081421c5] dark:text-teal-400 hover:dark:bg-teal-400 hover:dark:text-[#081421c5] md:w-1/3 lg:w-1/4 xl:w-1/3 2xl:w-1/2">
@@ -42,7 +50,7 @@ export const Hero = () => {
                                 </Link>
                             </button> */}
                             <div className="w-1/2">
-                            <CtaButton link="contact" txt="Let's build!" />
+                                <CtaButton link="contact" txt="Let's build!" />
                             </div>
                         </div>
                     </div>

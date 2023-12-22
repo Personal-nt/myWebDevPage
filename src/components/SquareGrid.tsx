@@ -58,9 +58,8 @@ export const SquareGrid = () => {
                     This is my journey
                 </h1>
                 <p className="mb-6 mt-4 max-w-3xl text-center text-lg font-light text-neutral-500 md:text-xl">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Labore quisquam nemo excepturi officia necessitatibus
-                    veritatis enim ipsam! Laudantium, reiciendis officia!
+                Crafting Digital Experiences with a Marketer's Insight: My Journey from Sales Director to Front-End Developer.
+                    
                 </p>
                 <button className="pointer-events-auto bg-secondary px-4 py-2 text-xl font-bold uppercase text-neutral-950 mix-blend-difference">
                     <a href="#journey">Know my story</a>
