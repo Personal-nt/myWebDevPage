@@ -54,12 +54,12 @@ const Timeline = () => {
                 )
             })
         }
-    }, []) 
+    }, [])
 
     return (
         <ul
             ref={timelineRef}
-            className="timeline timeline-vertical timeline-snap-icon my-2 max-md:timeline-compact w-[80%] border-0 border-dotted border-lime-400 h-hit"
+            className="h-hit timeline timeline-vertical timeline-snap-icon my-2 w-[80%] border-0 border-dotted border-lime-400 max-md:timeline-compact mb-20"
         >
             {timelineData.map(
                 (
@@ -92,7 +92,7 @@ const Timeline = () => {
                                     index % 2 === 0
                                         ? 'timeline-start mb-10 md:text-end'
                                         : 'timeline-end mb-10 '
-                                }my-12 md:my-0 w-[70%] md:w-[80%]`}
+                                }my-12 w-[70%] md:my-0 md:w-[80%]`}
                             >
                                 <time className="font-mono italic">{date}</time>
                                 <div className="text-lg font-black">
