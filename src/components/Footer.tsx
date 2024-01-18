@@ -4,7 +4,7 @@ import { IoLogoGithub } from "react-icons/io";
 const Footer = () => {
     const currentYear = new Date().getFullYear()
     return (
-        <footer className="footer footer-center gap-3 custom-text-bg p-10 text-base-content w-screen z-100 pointer-events-auto">
+        <footer className="bg-purple-400/0 footer footer-center gap-3 custom-text-bg p-10 text-base-content w-screen z-100 pointer-events-auto">
             <nav>
                 <div id="x" className="grid grid-flow-col gap-4 ">
                     <a href="https://twitter.com/0xNordian" target="_blank">
