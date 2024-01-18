@@ -12,15 +12,16 @@ type BounceCardProps = {
 export const BouncyCards = () => {
     return (
         // <section className="mx-auto max-w-7xl px-4 py-12 text-slate-800">
-        <section className="w-full lg:w-10/12 px-4 py-12 text-slate-800 lg:h-fit xl:h-full 2xl:h-fit">
-            <div className="mb-4 grid grid-cols-12 gap-4 w-full h-[400px] md:h-[200px] lg:h-fit">
+        <section className="w-full px-4 py-12 text-slate-800 lg:h-fit lg:w-10/12 xl:h-full 2xl:h-fit">
+            <div className="mb-4 grid h-[400px] w-full grid-cols-12 gap-4 md:h-[200px] lg:h-fit">
                 <BounceCard className="col-span-12 cursor-default shadow-lg md:col-span-4">
                     <Link to="skills" className="cursor-pointer">
                         <CardTitle>Backend</CardTitle>
-                        <div className="absolute bottom-0 left-4 right-4 top-32 h-[500px] lg:h-fit rounded-t-2xl bg-gradient-to-br from-slate-900 to-slate-600 p-4 transition-transform duration-[250ms] group-hover:rotate-[2deg] translate-y-[-25px] lg:translate-y-[-50px] xl:translate-y-[-15px] xl:group-hover:translate-y-[-35px] 2xl:translate-y-8 2xl:group-hover:translate-y-10">
+                        <div className="absolute bottom-0 left-4 right-4 top-32 h-[500px] translate-y-[-25px] rounded-t-2xl bg-gradient-to-br from-slate-900 to-slate-600 p-4 transition-transform duration-[250ms] group-hover:rotate-[2deg] lg:h-fit lg:translate-y-[-50px] xl:translate-y-[-15px] xl:group-hover:translate-y-[-35px] 2xl:translate-y-8 2xl:group-hover:translate-y-10">
                             <span className="grid grid-cols-3 place-items-center gap-3 text-center font-semibold text-indigo-50">
                                 {backendSkills.map((skill) => (
                                     <img
+                                        key={skill.title}
                                         src={skill.src}
                                         alt={skill.alt}
                                         className="h-12 w-12"
@@ -37,6 +38,7 @@ export const BouncyCards = () => {
                             <span className="grid grid-cols-6 place-items-center gap-3 text-center font-semibold text-indigo-50">
                                 {frontendSkills.map((skill) => (
                                     <img
+                                        key={skill.title}
                                         src={skill.src}
                                         alt={skill.alt}
                                         className="h-12 w-12"
@@ -47,7 +49,7 @@ export const BouncyCards = () => {
                     </Link>
                 </BounceCard>
             </div>
-            <div className="grid grid-cols-12 gap-4 h-[400px] md:h-[200px] lg:h-fit">
+            <div className="grid h-[400px] grid-cols-12 gap-4 md:h-[200px] lg:h-fit">
                 <BounceCard className="col-span-12 cursor-default shadow-lg md:col-span-8">
                     <Link to="skills" className="cursor-pointer">
                         <CardTitle>Dev Ops</CardTitle>
@@ -55,6 +57,7 @@ export const BouncyCards = () => {
                             <span className="grid grid-cols-6 place-items-center gap-3 text-center font-semibold text-indigo-50">
                                 {otherSkills.map((skill) => (
                                     <img
+                                        key={skill.title}
                                         src={skill.src}
                                         alt={skill.alt}
                                         className="h-12 w-12"
@@ -76,7 +79,9 @@ export const BouncyCards = () => {
                                     />
                                 ))}
                             </span> */}
-                        <div className="flex"> {/*lg:w-[580px] xl:w-[700px] 2xl:w-[635px]*/}
+                        <div className="flex">
+                            {' '}
+                            {/*lg:w-[580px] xl:w-[700px] 2xl:w-[635px]*/}
                             <CtaButton link="skills" txt="Check my skills" />
                         </div>
                     </div>

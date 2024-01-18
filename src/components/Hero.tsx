@@ -22,7 +22,7 @@ export const Hero = () => {
                                 <h1 className="only-txt mt-4 text-[2.5rem] font-medium md:mt-12">
                                     Néstor Torres
                                 </h1>
-                                <p className="text-[0.95rem]">
+                                <p className="text-[0.95rem]"> {/* text-[0.95rem] */}
                                     Front-end developer with over 3 years of
                                     experience and strong business acumen
                                 </p>
@@ -32,7 +32,7 @@ export const Hero = () => {
                                 <h1 className="only-txt mt-4 font-medium md:mt-12 lg:text-[3.02rem] xl:text-[4.9rem]">
                                     Néstor Torres
                                 </h1>
-                                <p className="text-[0.95rem]">
+                                <p className="text-[1.545rem]">
                                     Front-end developer with over 3 years of
                                     experience and strong business acumen
                                 </p>
@@ -41,13 +41,13 @@ export const Hero = () => {
                         {screenSize.width <= 425 ? (
                             <>
                                 <h2 className="only-txt w-full text-[1.545rem]">
-                                    Programming is to have the power to create.
+                                    {/* Programming is to have the power to create. */}
                                 </h2>
                             </>
                         ) : (
                             <>
                                 <h2 className="only-txt w-full text-[1.545rem]">
-                                    Programming is to have the power to create.
+                                    {/* Programming is to have the power to create. */}
                                 </h2>
                             </>
                         )}
