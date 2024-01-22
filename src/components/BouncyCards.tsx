@@ -69,7 +69,7 @@ export const BouncyCards = () => {
                 </BounceCard>
                 <BounceCard className="col-span-12 shadow-lg md:col-span-4">
                     <CardTitle>Learn More</CardTitle>
-                    <div className="absolute bottom-0 left-4 right-4 top-32 h-fit translate-y-[-15px] rounded-t-2xl bg-gradient-to-br from-slate-900 to-slate-600 p-4 transition-transform duration-[250ms] group-hover:rotate-[2deg] lg:translate-y-2 lg:group-hover:translate-y-[-10px] xl:translate-y-[-10px] xl:group-hover:translate-y-[-35px] 2xl:translate-y-[100px] 2xl:group-hover:translate-y-[80px] 2xl:group-hover:rotate-[1.2deg]">
+                    <div className="absolute bottom-0 left-4 right-4 top-32 h-fit translate-y-[-15px] rounded-t-2xl bg-gradient-to-br from-slate-900 to-slate-600 p-4 transition-transform duration-[250ms] group-hover:rotate-[2deg] lg:translate-y-2 lg:group-hover:translate-y-[-10px] xl:translate-y-[-10px] xl:group-hover:translate-y-[-35px] 2xl:translate-y-[60px] 2xl:h-[200px] 2xl:group-hover:translate-y-[80px] 2xl:group-hover:rotate-[1.2deg]">
                         {/* <span className="grid grid-cols-4 place-items-center gap-3 text-center font-semibold text-indigo-50">
                                 {backendSkills.map((skill, index) => (
                                     <img
