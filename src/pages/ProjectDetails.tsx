@@ -79,7 +79,7 @@ const ProjectDetails = () => {
                             href={deployLink}
                             className="text-xs "
                         >
-                            <ButtonIcon icon={'deploy'} txt="App" />
+                            <ButtonIcon icon={'deploy'} txt="Demo" />
                         </a>
                     </div>
                 </div>
