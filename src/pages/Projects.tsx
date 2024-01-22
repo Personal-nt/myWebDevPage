@@ -184,7 +184,7 @@ const Projects = () => {
                                             >
                                                 <ButtonIcon
                                                     icon={'deploy'}
-                                                    txt="App"
+                                                    txt="Demo"
                                                 />
                                             </a>
                                             <Link
