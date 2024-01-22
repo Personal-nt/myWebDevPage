@@ -15,7 +15,7 @@ const NavBar = () => {
 
     return (
         // <div className="navbar sticky top-0 z-[999] custom-text-bg px-2 h-[50px]">
-          <div className="navbar sticky top-0 z-[999] custom-text-bg bg-slate-200/70 dark:bg-slate-700/70 px-2 h-[50px] border border-[rgba(255,255,255,0.125)] backdrop-blur-[16px] backdrop-saturate-[180%]">
+          <div className="navbar text-black sticky top-0 z-[999] custom-text-bg bg-slate-200/70 dark:bg-slate-700/70 px-2 h-[50px] border border-[rgba(255,255,255,0.125)] backdrop-blur-[16px] backdrop-saturate-[180%]">
             <div className="navbar-start ">
             {/* <div className="scroll-watcher"></div> */}
                 <div className="dropdown ">

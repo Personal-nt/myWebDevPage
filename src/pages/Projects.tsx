@@ -22,11 +22,13 @@ const Projects = () => {
                   selectedTechs.some((tech) => proj.techStack.includes(tech)),
               )
 
-    const filteredCategories = 
+    const filteredCategories =
         selectedCategories.length === 0
             ? filteredProjects
             : filteredProjects.filter((proj) =>
-                  selectedCategories.some((category) => proj.category.includes(category)),
+                  selectedCategories.some((category) =>
+                      proj.category.includes(category),
+                  ),
               )
 
     const handleCheckboxChange = (tech: Technology) => {
@@ -65,35 +67,34 @@ const Projects = () => {
                     clearFilters={clearFilters}
                     title={'Filter by Teach Stack'}
                 /> */}
-<FilterAccordion<Technology>
-    selectedFilters={selectedTechs}
-    onCheckboxChange={handleCheckboxChange}
-    clearFilters={clearFilters}
-    title="Tech Stack"
-    FilterComponent={
-        <TechFilters
-            selectedTechs={selectedTechs}
-            onCheckboxChange={handleCheckboxChange}
-        />
-    }
-/>
+                <FilterAccordion<Technology>
+                    selectedFilters={selectedTechs}
+                    onCheckboxChange={handleCheckboxChange}
+                    clearFilters={clearFilters}
+                    title="Tech Stack"
+                    FilterComponent={
+                        <TechFilters
+                            selectedTechs={selectedTechs}
+                            onCheckboxChange={handleCheckboxChange}
+                        />
+                    }
+                />
 
-<FilterAccordion<Categories>
-    selectedFilters={selectedCategories}
-    onCheckboxChange={handleCategoryChange}
-    clearFilters={clearFilters}
-    title="Categories"
-    FilterComponent={
-        <CategoryFilters
-            selectedCategories={selectedCategories}
-            onCheckboxChange={handleCategoryChange}
-        />
-    }
-/>
+                <FilterAccordion<Categories>
+                    selectedFilters={selectedCategories}
+                    onCheckboxChange={handleCategoryChange}
+                    clearFilters={clearFilters}
+                    title="Categories"
+                    FilterComponent={
+                        <CategoryFilters
+                            selectedCategories={selectedCategories}
+                            onCheckboxChange={handleCategoryChange}
+                        />
+                    }
+                />
             </div>
             <div className="mb-12 flex w-screen flex-col items-center justify-start bg-slate-900/0">
-
-                <div className="custom-text-bg grid w-11/12 grid-cols-1 place-items-center gap-12 border-0 border-blue-600 md:w-3/4 2xl:grid-cols-2">
+                <div className="custom-text-bg grid w-11/12 grid-cols-1 place-items-center gap-12 min-[1720px]:w-11/12 min-[1880px]:w-10/12 min-[2100px]:w-9/12  min-[1720px]:grid-cols-2">
                     {filteredCategories.map(
                         ({
                             id,

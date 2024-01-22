@@ -209,17 +209,17 @@ const Skills = () => {
         // </>
 
         <div className="only-txt flex h-fit w-full flex-col items-center justify-between 2xl:h-[100vh]">
-            <div className="mt-10 flex w-full flex-col gap-16 bg-pink-300/0 md:w-[80%] lg:flex-row h-auto">
+            <div className="mt-10 flex h-auto w-full flex-col gap-4 bg-pink-300/0 md:w-[80%] lg:flex-row ">
                 {/* <h1>My Skills</h1> */}
                 {/* <div className="flex w-full flex-col gap-4 text-center md:text-left"> */}
-                <div className="flex w-full flex-col gap-4 text-center md:text-center lg:text-left">
+                <div className="flex w-full flex-col gap-4 text-center md:text-center lg:text-left  items-center">
                     <h3>Frontend skills</h3>
                     {/* <div className="flex flex-wrap justify-center gap-3 md:justify-start"> */}
-                    <div className="grid w-full grid-cols-3 place-items-center gap-2 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+                    <div className="grid w-full grid-cols-3 place-items-center gap-2 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
                         {frontendSkills.map((skill, index) => (
                             <div
                                 key={index}
-                                className="min-w-[90px] max-w-[90px] flex flex-col justify-center items-center sm:min-w-[110px] sm:max-w-[110px] rounded-lg bg-slate-100 p-4 shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.1] dark:bg-slate-800"
+                                className="flex max-h-[110px] min-w-[90px] max-w-[90px] flex-col items-center justify-center rounded-lg bg-slate-100 p-4 shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.1] dark:bg-slate-800 sm:min-w-[110px] sm:max-w-[110px]"
                             >
                                 <img
                                     src={skill.src}
@@ -235,11 +235,11 @@ const Skills = () => {
                 </div>
                 <div className="flex w-full flex-col gap-4 text-center md:text-left">
                     <h3>Backend skills</h3>
-                    <div className="grid w-full grid-cols-3 place-items-center gap-2 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+                    <div className="grid w-full grid-cols-3 place-items-center gap-2 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
                         {backendSkills.map((skill, index) => (
                             <div
                                 key={index}
-                                className="min-w-[90px] max-w-[90px] flex flex-col justify-center items-center sm:min-w-[110px] sm:max-w-[110px] rounded-lg bg-slate-100 p-4 shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.1] dark:bg-slate-800"
+                                className="flex max-h-[110px] min-w-[90px] max-w-[90px] flex-col items-center justify-center rounded-lg bg-slate-100 p-4 shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.1] dark:bg-slate-800 sm:min-w-[110px] sm:max-w-[110px]"
                             >
                                 <img
                                     src={skill.src}
@@ -255,11 +255,11 @@ const Skills = () => {
                 </div>
                 <div className="flex w-full flex-col gap-4 text-center md:text-left">
                     <h3>Other skills</h3>
-                    <div className="grid w-full grid-cols-3 place-items-center gap-2 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+                    <div className="grid w-full grid-cols-3 place-items-center gap-2 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
                         {otherSkills.map((skill, index) => (
                             <div
                                 key={index}
-                                className="min-w-[90px] max-w-[90px] flex flex-col justify-center items-center sm:min-w-[110px] sm:max-w-[110px] rounded-lg bg-slate-100 p-4 shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.1] dark:bg-slate-800"
+                                className="flex max-h-[110px] min-w-[90px] max-w-[90px] flex-col items-center justify-center rounded-lg bg-slate-100 p-4 shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.1] dark:bg-slate-800 sm:min-w-[110px] sm:max-w-[110px]"
                             >
                                 <img
                                     src={skill.src}
@@ -275,7 +275,7 @@ const Skills = () => {
                 </div>
             </div>
             <div className="mb-8">
-            <Footer />
+                <Footer />
             </div>
         </div>
     )
