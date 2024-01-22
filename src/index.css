@@ -184,6 +184,7 @@ small {
 #githubCal,
 #footer {
     scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 .github-card {
