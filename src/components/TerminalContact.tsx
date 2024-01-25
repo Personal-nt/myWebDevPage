@@ -61,9 +61,9 @@ const TerminalContact = () => {
             }}
             className="custom-text-bg flex h-screen w-[70%] mx-auto items-center justify-center px-4 py-12 bg-teal-300/0"
         >
-            <div className="hidden md:flex absolute pointer-events-none">
+            {/* <div className="hidden md:flex absolute pointer-events-none">
                 <HaxCle />
-            </div>
+            </div> */}
             {errorMessage && <p className="text-red-300">{errorMessage}</p>}
             <div
                 ref={containerRef}
