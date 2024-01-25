@@ -29,6 +29,24 @@ export const timelineData = [
         title: 'Bridging Business and Tech as Regional Business Process Manager',
         description: 'In 2020, I transitioned from a decade in commercial roles to become the Regional Business Process Manager. Leveraging my operational and financial expertise, I focused on enhancing processes across departments. This role allowed me to integrate my growing technical knowledge with my business experience, driving value and efficiency improvements throughout the company. It marked a significant step in aligning my career with technology-driven business solutions.',
     },
+    {
+        id: crypto.randomUUID(),
+        date: '2021',
+        title: 'Launching Deverso Labs - A Leap into Tech Entrepreneurship and Blockchain',
+        description: '2021 marked a transformative year with the launch of Deverso Labs, my venture into tech entrepreneurship. Deverso.io, our flagship project, is at the forefront, utilizing Angular and TypeScript to create innovative B2B web applications in decentralized social media. Built on the Deso blockchain protocol, it signifies my full transition from a commercial professional to a tech entrepreneur, focusing on web development and blockchain technology to reshape social media dynamics.',
+    },
+    {
+        id: crypto.randomUUID(),
+        date: '2022-2023',
+        title: 'Advancing Skills and Diversifying Ventures',
+        description: 'During 2022-2023, while nurturing Deverso Labs, I elevated my programming skills through studies at IronHack, 42, and IT Academy. This period was pivotal in solidifying my empirical knowledge and specializing in full-stack development, with a focus on front-end technologies. Concurrently, I embarked on Desobey, a unique streetwear brand, integrating disruptive blockchain features. This phase not only honed my technical expertise but also expanded my entrepreneurial horizons in the tech-fashion interface.',
+    },
+    {
+        id: crypto.randomUUID(),
+        date: '2024',
+        title: 'Merging Experience with Innovation in Tech',
+        description: 'In 2024, my journey in tech takes a strategic turn towards consolidating my diverse skills and experiences. My goal is to join an established company where I can both contribute and grow. With a rich professional background and a strong foundation in development, I aim to bring unique value, blending my extensive knowledge with innovative tech solutions. This year is about learning, contributing, and making a meaningful impact in the tech industry, leveraging my journey from a seasoned professional to a skilled developer.',
+    },
 ]
 
      {/* <li>
